@@ -1,4 +1,6 @@
+
 create database knk;
+use knk;
 create table Rangimi
 (eid integer,
 Nr integer,
@@ -157,11 +159,24 @@ foreign key(eid) references Rangimi(eid));
 
 create table REZULTATET2017_18
 (Java integer,
+Ekipi_vendas varchar(25),
 Dita varchar(15),
 Data_ora datetime,
-Ekipi_vendas varchar(25),
 Rezultati varchar(5),
 Ekipi_mysafir varchar(25));
+
+insert into Rangimi() values (1,1,"Drita",33,18,13,2,53,21,32,67 );
+insert into Rangimi() values(2,2, "Prishtina",33,18,10,5,39,18,21,64);
+insert into Rangimi() values(3,3,"KF Llapi",33,16,6,11,51,41,10,54);
+insert into Rangimi() values(4,4,"Trepça89",33,14,11,8,41,25,16,53);
+insert into Rangimi() values(5,5 ,"KF-Feronikeli",33,10,18,5,32,18,14,48);
+insert into Rangimi() values(6,6, "Drenica",33,13,9,11,34,27,7,48);
+insert into Rangimi() values(7,7, "Liria",33,13,9,11,34,30,4,48);
+insert into Rangimi() values(8,8, "Gjilani",33,10,16,7,29,21,8,46);
+insert into Rangimi() values(9,9, "Vellaznimi",33,10,14,9,29,28,1,44);
+insert into Rangimi() values(10,10, "Flamurtari",33,6,7,20,28,53,-25,25);
+insert into Rangimi() values(11,11, "Besa Peje",33,6,4,23,28,64,-36,22);
+insert into Rangimi() values(12,12, "Vllaznia Pozhoran",33,3,5,25,16,68,-52,14);
 
 insert into Drenica () values (6,1,"Kosove",'Pt',"Arion Ymeri");
 insert into Drenica () values (6,3,"Kosove",'Mb',"Drilon Bekteshi");
@@ -229,19 +244,6 @@ insert into Vllaznimi () values (9,8,"Kosove",'Mf',"Ardit Vokshi");
 insert into Vllaznimi () values (9,13,"Kosove",'Pt',"Artik Muhaxhiri");
 insert into Vllaznimi () values (9,6,"Kosove",'Mf',"Kushtrim Gashi");
 insert into Vllaznimi () values (9,2,"Kosove",'Mb',"Yll Myrta");
-
-insert into Rangimi() values (1,1,"Drita",33,18,13,2,53,21,32,67 );
-insert into Rangimi() values(2,2, "Prishtina",33,18,10,5,39,18,21,64);
-insert into Rangimi() values(3,3,"KF Llapi",33,16,6,11,51,41,10,54);
-insert into Rangimi() values(4,4,"Trepça",89,33,14,11,8,41,25,16,53);
-insert into Rangimi() values(5,5 ,"KF-Feronikeli",33,10,18,5,32,18,14,48);
-insert into Rangimi() values(6,6, "Drenica",33,13,9,11,34,27,7,48);
-insert into Rangimi() values(7,7, "Liria",33,13,9,11,34,30,4,48);
-insert into Rangimi() values(8,8, "Gjilani",33,10,16,7,29,21,8,46);
-insert into Rangimi() values(9,9, "Vellaznimi",33,10,14,9,29,28,1,44);
-insert into Rangimi() values(10,10, "Flamurtari",33,6,7,20,28,53,-25,25);
-insert into Rangimi() values(11,11, "Besa Peje",33,6,4,23,28,64,-36,22);
-insert into Rangimi() values(12,12, "Vllaznia Pozhoran",33,3,5,25,16,68,-52,14);
 
 insert into BesaPeje() values(11, 1, "Kosove", 'Pt', "Visar Haxhijaj");
 insert into BesaPeje() values(11, 3, "Kosove", 'Mb', "Fatlum Pishtani");
@@ -388,7 +390,7 @@ insert into KFFeronikeli () values(5,10,"Kosove",'Mf',"Astrit Fazliu");
 insert into KFFeronikeli () values(5,11,"Brazil",'Mf',"Jean Carioca");
 insert into KFFeronikeli () values(5,13,"Kosove",'Pt',"Florian Smakiqi");
 insert into KFFeronikeli () values(5,15,"Kosove",'Mf',"Alush Gavazaj");
-insert into KFFeronikeli () values(16,"Kosove",'Mf',"Albutrint Morina");
+insert into KFFeronikeli () values(5,16,"Kosove",'Mf',"Albutrint Morina");
 insert into KFFeronikeli () values(5,17,"Bregu I Fildishte",'Sm',"Hamed Koné");
 insert into KFFeronikeli () values(5,19,"Kosove",'Mf',"Lulzim Doshlaku");
 insert into KFFeronikeli () values(5,21,"Kosove",'Mb',"Përparim Islami");
@@ -455,18 +457,18 @@ insert into Trepça89() values (4,29,"Shqiperi",'Mf',"Renato Hyshmeri");
 insert into Trepça89() values (4,30,"Kosove",'Mf',"Taulant Avdyli");
 insert into Trepça89() values (4,31,"Kosove",'Sm',"Urim Statovci");
 
-insert into Stadiumet() values ("Drita","Stadiumi i qytetit Gjilan","Gjilan",10000,"Intelektualet");
-insert into Stadiumet() values ("Besa" "Peje,Stadiumi Shahin Haxhiislami","Peje",8500,"Shqiponjat");
-insert into Stadiumet() values ("Drenica","Stadiumi Bajram Aliu","Skenderaj",3000,"Shqiponjat e zeza");
-insert into Stadiumet() values ("Flamurtari","Stadiumi Xhemal Ibishi","Prishtine",5000,"Armata Kuq e Zi");
-insert into Stadiumet() values ("Gjilani","Stadiumi i qytetit Gjilan","Gjilan",15000,"Skifterat");
-insert into Stadiumet() values ("KF Feronikeli","Stadiumi Rexhep Rexhepi","Drenas",6000,"Tigrat e Zi");
-insert into Stadiumet() values ("KF LLapi","Stadiumi Zahir Pajaziti","Podujeve",10000,"Legjendat");
-insert into Stadiumet() values ("Liria","Stadiumi Perparim Thaçi","Prizren",15000,"Arpagjikt");
-insert into Stadiumet() values ("Prishtina","Stadiumi Fadil Vokrri","Prishtine",13500,"Bradh dhe kaltert");
-insert into Stadiumet() values ("Trepça 89","Stadiumi Riza Lushta","Mitrovice",5000,"Minatoret");
-insert into Stadiumet() values ("Vellaznimi","Stadiumi Qytetit Gjakove","Gjakove",6000,"Kuq e Zinjet");
-insert into Stadiumet() values ("Vllaznia Pozheran","Stadiumi Ibrahim Kurteshi","Vitije","10000,Tigrat");
+insert into Stadiumet() values (1,"Drita","Stadiumi i qytetit Gjilan","Gjilan",10000,"Intelektualet");
+insert into Stadiumet() values (11,"Besa","Peje,Stadiumi Shahin Haxhiislami","Peje",8500,"Shqiponjat");
+insert into Stadiumet() values (6,"Drenica","Stadiumi Bajram Aliu","Skenderaj",3000,"Shqiponjat e zeza");
+insert into Stadiumet() values (10,"Flamurtari","Stadiumi Xhemal Ibishi","Prishtine",5000,"Armata Kuq e Zi");
+insert into Stadiumet() values (8,"Gjilani","Stadiumi i qytetit Gjilan","Gjilan",15000,"Skifterat");
+insert into Stadiumet() values (5,"KF Feronikeli","Stadiumi Rexhep Rexhepi","Drenas",6000,"Tigrat e Zi");
+insert into Stadiumet() values (3,"KF LLapi","Stadiumi Zahir Pajaziti","Podujeve",10000,"Legjendat");
+insert into Stadiumet() values (7,"Liria","Stadiumi Perparim Thaçi","Prizren",15000,"Arpagjikt");
+insert into Stadiumet() values (2,"Prishtina","Stadiumi Fadil Vokrri","Prishtine",13500,"Bradh dhe kaltert");
+insert into Stadiumet() values (4,"Trepça 89","Stadiumi Riza Lushta","Mitrovice",5000,"Minatoret");
+insert into Stadiumet() values (9,"Vellaznimi","Stadiumi Qytetit Gjakove","Gjakove",6000,"Kuq e Zinjet");
+insert into Stadiumet() values (12,"Vllaznia Pozheran","Stadiumi Ibrahim Kurteshi","Vitije",10000,"Tigrat");
 
 insert into REZULTATET2017_18 values (1,"Trepça 89","E premte",'2017-08-18 16:30:00',"3-1","Flamurtari");
 insert into REZULTATET2017_18 values (1,"Feronikeli","E shtune",'2017-08-19 16:30:00',"1-0","Vllaznia Pozhoran");
