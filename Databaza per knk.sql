@@ -154,6 +154,13 @@ Qyteti varchar(20),
 Kapaciteti integer,
 Nofka varchar(30),
 foreign key(eid) references Rangimi(eid));
+create table REZULTATET2017_18
+(Java integer,
+Dita varchar(15),
+Data_ora datetime,
+Ekipi_vendas varchar(25),
+Rezultati varchar(5),
+Ekipi_mysafir varchar(25));
 
 insert into Drenica () values (6,1,"Kosove",'Pt',"Arion Ymeri");
 insert into Drenica () values (6,3,"Kosove",'Mb',"Drilon Bekteshi");
@@ -369,6 +376,7 @@ insert into VllazniaPozhoran() values (12,17,"Kosove",'Sm',"Bergin Maliqi");
 insert into VllazniaPozhoran() values (12,1,"Kosove",'Pt',"Alban Rrexhepi");
 insert into VllazniaPozhoran() values (12,8,"Kosove",'Mf',"Shkumbin Salihi");
 insert into VllazniaPozhoran() values (12,85,"Kosove",'Mf',"Elbasan Thaqi");
+
 insert into KFFeronikeli () values(5,4,"Kosove",'Mf',"Albert Dabiqaj");
 insert into KFFeronikeli () values(5,5,"Kosove",'Mb',"Lapidar Lladrovci(Kapiten)");
 insert into KFFeronikeli () values(5,6,"Kosove",'Mb',"Astrit Thaqi");
