@@ -46,8 +46,7 @@ create table BesaPeje
 Numri integer,
 Shtetesia varchar(20),
 Pozicioni char(2),
-Emri varchar(10),
-Mbiemri varchar(10),
+EmriMbiemri varchar(30),
 foreign key(eid) references Rangimi(eid));
 
 create table Trepça89
@@ -55,8 +54,7 @@ create table Trepça89
 Numri integer,
 Shtetesia varchar(20),
 Pozicioni char(2),
-Emri varchar(10),
-Mbiemri varchar(10),
+EmriMbiemri varchar(30),
 foreign key(eid) references Rangimi(eid));
 
 create table Prishtina
@@ -64,8 +62,7 @@ create table Prishtina
 Numri integer,
 Shtetesia varchar(20),
 Pozicioni char(2),
-Emri varchar(10),
-Mbiemri varchar(10),
+EmriMbiemri varchar(30),
 foreign key(eid) references Rangimi(eid));
 
 create table Liria
@@ -73,8 +70,7 @@ create table Liria
 Numri integer,
 Shtetesia varchar(20),
 Pozicioni char(2),
-Emri varchar(10),
-Mbiemri varchar(10),
+EmriMbiemri varchar(30),
 foreign key(eid) references Rangimi(eid));
 
 create table KFLlapi
@@ -82,8 +78,7 @@ create table KFLlapi
 Numri integer,
 Shtetesia varchar(20),
 Pozicioni char(2),
-Emri varchar(10),
-Mbiemri varchar(10),
+EmriMbiemri varchar(30),
 foreign key(eid) references Rangimi(eid));
 
 create table KFFeronikeli
@@ -91,8 +86,7 @@ create table KFFeronikeli
 Numri integer,
 Shtetesia varchar(20),
 Pozicioni char(2),
-Emri varchar(10),
-Mbiemri varchar(10),
+EmriMbiemri varchar(30),
 foreign key(eid) references Rangimi(eid));
 
 create table Gjilani
@@ -100,8 +94,7 @@ create table Gjilani
 Numri integer,
 Shtetesia varchar(20),
 Pozicioni char(2),
-Emri varchar(10),
-Mbiemri varchar(10),
+EmriMbiemri varchar(30),
 foreign key(eid) references Rangimi(eid));
 
 create table Flamurtari
@@ -109,8 +102,7 @@ create table Flamurtari
 Numri integer,
 Shtetesia varchar(20),
 Pozicioni char(2),
-Emri varchar(10),
-Mbiemri varchar(10),
+EmriMbiemri varchar(30),
 foreign key(eid) references Rangimi(eid));
 
 create table Drita
@@ -118,17 +110,15 @@ create table Drita
 Numri integer,
 Shtetesia varchar(20),
 Pozicioni char(2),
-Emri varchar(10),
-Mbiemri varchar(10),
+EmriMbiemri varchar(30),
 foreign key(eid) references Rangimi(eid));
 
-create table Dranica
+create table Drenica
 (eid integer,
 Numri integer,
 Shtetesia varchar(20),
 Pozicioni char(2),
-Emri varchar(10),
-Mbiemri varchar(10),
+EmriMbiemri varchar(30),
 foreign key(eid) references Rangimi(eid));
 
 create table Vllaznimi
@@ -136,8 +126,7 @@ create table Vllaznimi
 Numri integer,
 Shtetesia varchar(20),
 Pozicioni char(2),
-Emri varchar(10),
-Mbiemri varchar(10),
+EmriMbiemri varchar(30),
 foreign key(eid) references Rangimi(eid));
 
 create table VllazniaPozhoran
@@ -145,8 +134,7 @@ create table VllazniaPozhoran
 Numri integer,
 Shtetesia varchar(20),
 Pozicioni char(2),
-Emri varchar(10),
-Mbiemri varchar(10),
+EmriMbiemri varchar(30),
 foreign key(eid) references Rangimi(eid));
 
 create table Ekipet
