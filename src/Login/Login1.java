@@ -13,9 +13,10 @@ import javafx.stage.Stage;
 
 public class Login1 extends Application {
 	public void start(Stage primaryStage) {
-		VBox pane = new VBox();
+		VBox pane = new VBox(10);
 		pane.setAlignment(Pos.CENTER);
-		pane.setPadding(new Insets(-20,0,0,0));
+		pane.setStyle("-fx-background-image:url(images/fotologin1.jpg)");
+		pane.setPadding(new Insets(0,0,0,0));
 		pane.setSpacing(0);
 		HBox Hpane = new HBox();
 		Hpane.setPadding(new Insets(0,20,0,200));
@@ -27,14 +28,14 @@ public class Login1 extends Application {
 		
 		ImageView imageView = new ImageView(image);
 		imageView.setFitWidth(300);
-		imageView.setFitHeight(250);
+		imageView.setFitHeight(200);
 		Hpane.getChildren().addAll(btnLogin,btnSignup);
 		pane.getChildren().addAll(imageView,Hpane);
 		
 		Scene scene = new Scene(pane,600,400);
 		primaryStage.setScene(scene);
 		primaryStage.setResizable(false);
-		primaryStage.setTitle("Login");
+		primaryStage.setTitle("Ipko SuperLiga");
 		primaryStage.show();
 		
 	}
