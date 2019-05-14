@@ -4,11 +4,8 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.layout.*;
-import javafx.scene.text.Text;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuBar;
 import javafx.stage.Stage;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -16,7 +13,7 @@ import javafx.scene.image.ImageView;
 
 
 public class kryefaqja extends Application {
-
+	@Override
 	public void start(Stage primaryStage)
 	{
 		VBox pane = new VBox(10);
@@ -53,7 +50,7 @@ public class kryefaqja extends Application {
 		vpozhoran.setStyle(LabelCSS);
 		
 		
-		//pane.add(new Label("Prshtina"), 0, 0);
+		
 		
 		
 		Image image = new Image("images/Superliga.jpg");
