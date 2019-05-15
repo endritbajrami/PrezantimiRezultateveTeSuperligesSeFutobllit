@@ -14,7 +14,7 @@ import javafx.scene.image.ImageView;
 
 public class kryefaqja extends Application {
 	@Override
-	public void start(Stage primaryStage)
+	public void start(Stage primaryStage) 
 	{
 		VBox pane = new VBox(10);
 		pane.setPadding(new Insets(20, 20, 20, 20)); 
