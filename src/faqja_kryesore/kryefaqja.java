@@ -53,7 +53,7 @@ public class kryefaqja extends Application {
 		
 		
 		
-		Image image = new Image("images/Superliga.jpg");
+		Image image = new Image("images/fotologin.png");
 		ImageView imageView = new ImageView(image);
 		imageView.setFitHeight(100);
 		imageView.setFitWidth(150);
