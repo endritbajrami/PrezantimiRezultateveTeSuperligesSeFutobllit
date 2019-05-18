@@ -29,7 +29,8 @@ public class SignUp extends Application {
 		TextField Pwd = new TextField();
 		Pwd.setMaxWidth(300);
 		Pwd.setMinHeight(30);
-		Button signupBtn = new Button("SIGNUP");
+		Button signupBtn = new Button("SIGN UP");
+		signupBtn.setStyle("-fx-background-color: green; -fx-text-fill: white;-fx-border-color:white");
 		
 		hpane.getChildren().add(signupBtn);
 		vpane.getChildren().addAll(username,Uname,pass,Pwd,hpane);
@@ -37,7 +38,7 @@ public class SignUp extends Application {
 		Scene scene = new Scene(vpane,600,400);
 		primaryStage.setScene(scene);
 		primaryStage.setResizable(false);
-		primaryStage.setTitle("Login");
+		primaryStage.setTitle("Sign up");
 		primaryStage.show();
 		
 		
