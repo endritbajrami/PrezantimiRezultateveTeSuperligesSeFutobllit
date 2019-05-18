@@ -30,6 +30,7 @@ public class Login2 extends Application {
 		Pwd.setMaxWidth(300);
 		Pwd.setMinHeight(30);
 		Button loginBtn = new Button("LOGIN");
+		loginBtn.setStyle("-fx-background-color: green; -fx-text-fill: white;-fx-border-color:white");
 		
 		hpane.getChildren().add(loginBtn);
 		vpane.getChildren().addAll(username,Uname,pass,Pwd,hpane);
