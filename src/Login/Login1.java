@@ -23,7 +23,9 @@ public class Login1 extends Application {
 		Hpane.setSpacing(60);
 		
 		Button btnLogin = new Button("LOGIN");
+		 btnLogin.setStyle("-fx-background-color: black; -fx-text-fill: white;-fx-background-radius: 15");
 		Button btnSignup = new Button("SIGNUP");
+		 btnSignup.setStyle("-fx-background-color: black; -fx-text-fill: white;-fx-background-radius: 15");
 		Image image = new Image("images/fotologin.png");
 		
 		ImageView imageView = new ImageView(image);
