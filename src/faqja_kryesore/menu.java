@@ -24,7 +24,7 @@ public class menu extends Application {
         Scene scene = new Scene(root, 300, 250, Color.DARKOLIVEGREEN); //DARKKHAKI
         
         MenuBar menuBar = new MenuBar();
-        
+    
         Menu menu = new Menu("Rangimi");
         Menu menu2 = new Menu("Rezultatet");
        
@@ -61,6 +61,8 @@ public class menu extends Application {
         menuBar.getMenus().addAll(menu, menu2, menu3, menu4);
         
         menuBar.prefWidthProperty().bind(primaryStage.widthProperty());
+        
+        
         
         root.getChildren().add(menuBar); 
         primaryStage.setScene(scene);

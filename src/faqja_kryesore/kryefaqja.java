@@ -22,18 +22,18 @@ public class kryefaqja extends Application {
 		Label ekipet= new Label("Ekipet Pjesemarrese");
 		ekipet.setStyle("-fx-font-weight: bold;-fx-font-size:16");
 		
-		Label pr = new Label("Prishtina");
-		Label besa = new Label("Besa Peje");
-		Label trepca89 = new Label("Trepca 89");
-		Label drita = new Label("Drita");
-		Label kfllapi = new Label("KF Llapi");
-		Label kfferonikeli = new Label("KF Feronikeli");
-		Label drenica = new Label("Drenica");
-		Label liria = new Label("Liria");
-		Label gjilani = new Label("Gjilani");
-		Label vellaznimi = new Label("Vellaznimi");
-		Label flamurtari = new Label("Flamurtari");
-		Label vpozhoran =new Label("Vllaznia Pozhoran");
+		Label pr = new Label("2. Prishtina");
+		Label besa = new Label("11. Besa Peje");
+		Label trepca89 = new Label("4. Trepca 89");
+		Label drita = new Label("1. Drita");
+		Label kfllapi = new Label("3. KF Llapi");
+		Label kfferonikeli = new Label("5. KF Feronikeli");
+		Label drenica = new Label("6. Drenica");
+		Label liria = new Label("7. Liria");
+		Label gjilani = new Label("8. Gjilani");
+		Label vellaznimi = new Label("9. Vellaznimi");
+		Label flamurtari = new Label("10. Flamurtari");
+		Label vpozhoran =new Label("12. Vllaznia Pozhoran");
 		
 		String LabelCSS=(" -fx-text-fill:black;-fx-font-size:16");
 		pr.setStyle(LabelCSS);
