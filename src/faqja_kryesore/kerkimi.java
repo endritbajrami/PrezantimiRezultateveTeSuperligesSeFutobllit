@@ -1,9 +1,6 @@
 package faqja_kryesore;
 
-
-
 import javafx.application.Application;
-
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.geometry.Insets;
@@ -16,11 +13,11 @@ import java.sql.*;
 
 
 public class kerkimi extends Application {
-
+	
 	private TextField nameTxt;
 	private Label resultLabel;
 	private Connection dbConnection;
-@Override
+	@Override
 	public void start(Stage primaryStage) {
 		setConnection();
 		HBox hbox = new HBox(5);
