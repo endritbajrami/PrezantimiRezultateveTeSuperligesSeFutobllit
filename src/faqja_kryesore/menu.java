@@ -53,7 +53,7 @@ public class menu extends Application {
      
         
         Menu menu3= new Menu("Ekipet");
-        menu3.getItems().addAll(new MenuItem("Prishtina"), new MenuItem("Besa-Peje"),new MenuItem("Trepca 89"),new MenuItem("Drita"),new MenuItem("KF Llapi"),new MenuItem("KF Feronikeli"),new MenuItem("Drenica"),new MenuItem("Liria"),new MenuItem("Gjilani"),new MenuItem("Vellazenimi"),new MenuItem("Flamurtari"),new MenuItem("Vllaznia Pozhoran"));
+        menu3.getItems().addAll(new MenuItem("Prishtina"), new MenuItem("Besa-Peje"),new MenuItem("Trepca 89"),new MenuItem("Drita"),new MenuItem("KF Llapi"),new MenuItem("KF Feronikeli"),new MenuItem("Drenica"),new MenuItem("Liria"),new MenuItem("Gjilani"),new MenuItem("Vellazenimi"),new MenuItem("Flamurtari"),new MenuItem("V.Pozhoran"));
         menu3.setGraphic(new ImageView("images/football-player.png"));
         Menu menu4=new Menu("Formacioni");
        menu4.setGraphic(new ImageView("images/tshirt.png"));

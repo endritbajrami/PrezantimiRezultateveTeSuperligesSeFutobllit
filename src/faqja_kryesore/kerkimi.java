@@ -45,7 +45,7 @@ public class kerkimi extends Application {
 
 		Scene scene = new Scene(vbox, 400, 300);
 
-		primaryStage.setTitle("Find tool");
+		primaryStage.setTitle("Hapesira per kerkim");
 		primaryStage.setScene(scene);
 
 		primaryStage.show();
@@ -74,7 +74,7 @@ public class kerkimi extends Application {
 			if(resultSet.next()) {
 				resultLabel.setText("Ekipi : "+resultSet.getString(3)+ "  "+ "NrLojëve :" + resultSet.getString(4) +"  "+ " Fitore: " + resultSet.getString(5) +"  "+ " Barazime: " + resultSet.getString(6)+"  " +"Humbje: "+resultSet.getString(7));
 			} else {
-				resultLabel.setText("Rangimi not found!");
+				resultLabel.setText("Rangimi nuk eshte gjetur!");
 			}
 			
 		} catch(SQLException ex) {
