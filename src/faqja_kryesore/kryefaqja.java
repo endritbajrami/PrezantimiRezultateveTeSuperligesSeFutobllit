@@ -49,15 +49,11 @@ public class kryefaqja extends Application {
 		flamurtari.setStyle(LabelCSS);
 		vpozhoran.setStyle(LabelCSS);
 		
-		
-		
-		
-		
 		Image image = new Image("images/fotologin.png");
 		ImageView imageView = new ImageView(image);
 		imageView.setFitHeight(100);
 		imageView.setFitWidth(150);
-		pane.getChildren().addAll(imageView,ekipet, pr,besa,trepca89,drita, kfllapi, kfferonikeli,drenica,liria,gjilani,vellaznimi,flamurtari,vpozhoran );
+		pane.getChildren().addAll(imageView,ekipet,drita,pr,kfllapi,trepca89,kfferonikeli,drenica,liria,gjilani,vellaznimi,flamurtari,besa,vpozhoran );
 		
 		
 		Scene scene = new Scene(pane);

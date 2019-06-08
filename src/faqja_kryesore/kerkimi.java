@@ -9,6 +9,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+
 import java.sql.*;
 
 
@@ -23,11 +25,11 @@ public class kerkimi extends Application {
 		HBox hbox = new HBox(5);
 		nameTxt = new TextField();
 		Label labelId = new Label("Numri i ekipit: ");
-		labelId.setStyle(" -fx-text-fill:#0000ff;-fx-font-size:18px;");
+		labelId.setStyle(" -fx-text-fill:darkblue;-fx-font-size:18px;");
 		
 
 		Button btnFind = new Button("Kerko");
-		 btnFind.setStyle("-fx-border-color: #0000ff; -fx-border-width: 1px;");
+		 btnFind.setStyle("-fx-border-color: darkblue; -fx-border-width: 1px;");
 
 		hbox.getChildren().addAll(labelId, nameTxt, btnFind);
 
@@ -40,6 +42,8 @@ public class kerkimi extends Application {
 		vbox.setPadding(new Insets(20, 20, 20, 20));
 
 		resultLabel = new Label();
+		resultLabel.setStyle("-fx-background-color: darkblue; -fx-text-fill:white");
+		resultLabel.setFont(new Font("Arial", 18));
 
 		vbox.getChildren().addAll(hbox, resultLabel);
 
@@ -72,7 +76,7 @@ public class kerkimi extends Application {
 			ResultSet resultSet = statement.executeQuery(query);
 
 			if(resultSet.next()) {
-				resultLabel.setText("Ekipi : "+resultSet.getString(3)+ "  "+ "NrLojëve :" + resultSet.getString(4) +"  "+ " Fitore: " + resultSet.getString(5) +"  "+ " Barazime: " + resultSet.getString(6)+"  " +"Humbje: "+resultSet.getString(7));
+				resultLabel.setText("Ekipi:" +resultSet.getString(3)+ "  "+"NrLojëve:" +resultSet.getString(4) +"  "+"Fitore:" +resultSet.getString(5)+"  "+"Barazime:" +resultSet.getString(6)+"  " +"Humbje: "+resultSet.getString(7));
 			} else {
 				resultLabel.setText("Rangimi nuk eshte gjetur!");
 			}
