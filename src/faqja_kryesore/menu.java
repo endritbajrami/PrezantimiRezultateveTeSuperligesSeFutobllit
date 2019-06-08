@@ -21,7 +21,7 @@ public class menu extends Application {
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Menus");
         Group root = new Group();
-        Scene scene = new Scene(root, 300, 250, Color.DARKOLIVEGREEN); //DARKKHAKI
+        Scene scene = new Scene(root, 1000, 600, Color.DARKOLIVEGREEN); //DARKKHAKI
         
         MenuBar menuBar = new MenuBar();
     
@@ -66,6 +66,7 @@ public class menu extends Application {
         
         root.getChildren().add(menuBar); 
         primaryStage.setScene(scene);
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 }

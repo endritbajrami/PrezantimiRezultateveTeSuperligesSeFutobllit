@@ -7,12 +7,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseButton;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class Login2 extends Application {
+	private Stage Login22;
 	public void start(Stage primaryStage) {
+		Login22 = primaryStage;
 		VBox vpane = new VBox();
 		vpane.setAlignment(Pos.CENTER);
 		vpane.setPadding(new Insets(80,20,20,20));
@@ -29,10 +32,21 @@ public class Login2 extends Application {
 		TextField Pwd = new TextField();
 		Pwd.setMaxWidth(300);
 		Pwd.setMinHeight(30);
-		Button loginBtn = new Button("LOGIN");
+		Button loginBtn = new Button("LogIn");
+		Button back = new Button("Back");
+		back.setOnMouseClicked(e->{
+			 if(e.getButton()== MouseButton.PRIMARY) {
+				 Login22.hide();			 
+				 Stage Login1Stage = new Stage();
+				 Login1 L1 = new Login1();
+				 L1.start(Login1Stage);
+				 Login1Stage.show();
+			 }
+		});
+		back.setStyle("-fx-background-color: green; -fx-text-fill: white;-fx-border-color:white");
 		loginBtn.setStyle("-fx-background-color: green; -fx-text-fill: white;-fx-border-color:white");
 		
-		hpane.getChildren().add(loginBtn);
+		hpane.getChildren().addAll(back,loginBtn);
 		vpane.getChildren().addAll(username,Uname,pass,Pwd,hpane);
 		
 		Scene scene = new Scene(vpane,600,400);
