@@ -1,5 +1,6 @@
 package Login;
 
+import faqja_kryesore.menu;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -33,6 +34,15 @@ public class Login2 extends Application {
 		Pwd.setMaxWidth(300);
 		Pwd.setMinHeight(30);
 		Button loginBtn = new Button("LogIn");
+		loginBtn.setOnMouseClicked(e->{
+			 if(e.getButton()== MouseButton.PRIMARY) {
+				 Login22.hide();			 
+				 Stage Menu = new Stage();
+				 menu M = new menu();
+				 M.start(Menu);
+				 Menu.show();
+			 }
+		});
 		Button back = new Button("Back");
 		back.setOnMouseClicked(e->{
 			 if(e.getButton()== MouseButton.PRIMARY) {
@@ -43,8 +53,8 @@ public class Login2 extends Application {
 				 Login1Stage.show();
 			 }
 		});
-		back.setStyle("-fx-background-color: green; -fx-text-fill: white;-fx-border-color:white");
-		loginBtn.setStyle("-fx-background-color: green; -fx-text-fill: white;-fx-border-color:white");
+		back.setStyle("-fx-background-color: black; -fx-text-fill: white;-fx-background-radius: 15");
+		loginBtn.setStyle("-fx-background-color: black; -fx-text-fill: white;-fx-background-radius: 15");
 		
 		hpane.getChildren().addAll(back,loginBtn);
 		vpane.getChildren().addAll(username,Uname,pass,Pwd,hpane);

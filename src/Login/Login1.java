@@ -25,7 +25,7 @@ public class Login1 extends Application {
 		Hpane.setPadding(new Insets(0,20,0,200));
 		Hpane.setSpacing(60);
 		
-		Button btnLogin = new Button("LOGIN");
+		Button btnLogin = new Button("LogIn");
 		 btnLogin.setStyle("-fx-background-color: black; -fx-text-fill: white;-fx-background-radius: 15");
 		 btnLogin.setOnMouseClicked(e->{
 			 if(e.getButton()== MouseButton.PRIMARY) {
@@ -36,7 +36,7 @@ public class Login1 extends Application {
 				 Login2Stage.show();
 			 }
 		 });
-		Button btnSignup = new Button("SIGNUP");
+		Button btnSignup = new Button("SignUp");
 		 btnSignup.setStyle("-fx-background-color: black; -fx-text-fill: white;-fx-background-radius: 15");
 		 btnSignup.setOnMouseClicked(e->{
 			 if(e.getButton()== MouseButton.PRIMARY) {
