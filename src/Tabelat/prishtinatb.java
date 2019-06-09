@@ -10,6 +10,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class prishtinatb extends Application {
@@ -17,7 +18,7 @@ public class prishtinatb extends Application {
 	// Table views
 	private TableView prishtinaTable = new TableView();
 	
-	public void start(Stage primaryStage) {
+	public Pane start() {
 		
 		
 		// Rangimi table
@@ -62,14 +63,11 @@ public class prishtinatb extends Application {
 		mainPane.setPadding(new Insets(15, 15, 15 ,15));
 		
 		
-		Scene scene = new Scene(mainPane, 543, 355);
-		
-		primaryStage.setTitle("Prishtina");
-		primaryStage.setScene(scene);
 		
 		showPrishtina();
+		return mainPane;
 		
-		primaryStage.show();
+	
 	}
 	
 

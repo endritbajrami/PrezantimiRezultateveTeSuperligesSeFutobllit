@@ -33,6 +33,15 @@ public class SignUp extends Application {
 		Pwd.setMaxWidth(300);
 		Pwd.setMinHeight(30);
 		Button signupBtn = new Button("SignUp");
+		signupBtn.setOnMouseClicked(e->{
+			 if(e.getButton()== MouseButton.PRIMARY) {
+				 Signup.hide();			 
+				 Stage Login2Stage = new Stage();
+				 Login2 L2 = new Login2();
+				 L2.start(Login2Stage);
+				 Login2Stage.show();
+			 }
+		});
 		Button back = new Button("Back");
 		back.setOnMouseClicked(e->{
 			 if(e.getButton()== MouseButton.PRIMARY) {
@@ -43,8 +52,8 @@ public class SignUp extends Application {
 				 Login1Stage.show();
 			 }
 		});
-		back.setStyle("-fx-background-color: green; -fx-text-fill: white;-fx-border-color:white");
-		signupBtn.setStyle("-fx-background-color: green; -fx-text-fill: white;-fx-border-color:white");
+		back.setStyle("-fx-background-color: black; -fx-text-fill: white;-fx-background-radius: 15");
+		signupBtn.setStyle("-fx-background-color: black; -fx-text-fill: white;-fx-background-radius: 15");
 		
 		hpane.getChildren().addAll(back,signupBtn);
 		vpane.getChildren().addAll(username,Uname,pass,Pwd,hpane);

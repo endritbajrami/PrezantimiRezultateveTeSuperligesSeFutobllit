@@ -12,9 +12,8 @@ import javafx.scene.image.ImageView;
 
 
 
-public class kryefaqja extends Application {
-	@Override
-	public void start(Stage primaryStage) 
+public class kryefaqja {
+	public Pane start() 
 	{
 		VBox pane = new VBox(10);
 		pane.setPadding(new Insets(20, 20, 20, 20)); 
@@ -54,16 +53,9 @@ public class kryefaqja extends Application {
 		imageView.setFitHeight(100);
 		imageView.setFitWidth(150);
 		pane.getChildren().addAll(imageView,ekipet,drita,pr,kfllapi,trepca89,kfferonikeli,drenica,liria,gjilani,vellaznimi,flamurtari,besa,vpozhoran );
-		
-		
-		Scene scene = new Scene(pane);
-		primaryStage.setTitle("Paraqitja e Rezultateve te Superliges se Kosoves");
-		primaryStage.setScene(scene);
-		primaryStage.show();
-		
-		
-		
-		
+		pane.setStyle("-fx-background-color: DARKSEAGREEN ");
+		pane.setMaxHeight(300);
+		return pane;
 		
 	}
 	public static void main(String[] args) {
