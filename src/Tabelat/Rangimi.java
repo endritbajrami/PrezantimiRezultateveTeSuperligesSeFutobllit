@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Rangimi {
 
-	private int eid;
+	
 	private int Nr;
 	private String Ekipi;
 	private int NrLojëve;
@@ -19,8 +19,8 @@ public class Rangimi {
 	private int Pikët;
 	
 	
-	public Rangimi(int eid, int Nr, String Ekipi, int NrLojëve,int Fitore, int Barazime, int Humbje, int Golplus, int Golminus, int Average, int Pikët ) {
-		this.eid = eid;
+	public Rangimi( int Nr, String Ekipi, int NrLojëve,int Fitore, int Barazime, int Humbje, int Golplus, int Golminus, int Average, int Pikët ) {
+		
 		this.Nr = Nr;
 		this.Ekipi = Ekipi;
 		this.NrLojëve = NrLojëve;
@@ -33,13 +33,7 @@ public class Rangimi {
 		this.Pikët=Pikët;
 	}
 	
-	public int getEid() {
-		return eid;
-	}
-	
-	public void setEid(int eid) {
-		this.eid = eid;
-	}
+
 	
 	public int getNr() {
 		return Nr;
@@ -131,7 +125,7 @@ public class Rangimi {
 			ResultSet resultSet = preparedStatement.executeQuery();
 			
 			while(resultSet.next()) {
-				Rangimi rangimi = new Rangimi(resultSet.getInt(1), resultSet.getInt(2), resultSet.getString(3), resultSet.getInt(4), resultSet.getInt(5), resultSet.getInt(6), resultSet.getInt(7), resultSet.getInt(8), resultSet.getInt(9), resultSet.getInt(10), resultSet.getInt(11));
+				Rangimi rangimi = new Rangimi(resultSet.getInt(2), resultSet.getString(3), resultSet.getInt(4), resultSet.getInt(5), resultSet.getInt(6), resultSet.getInt(7), resultSet.getInt(8), resultSet.getInt(9), resultSet.getInt(10), resultSet.getInt(11));
 				rangimiList.add(rangimi);
 			}
 		} catch(SQLException ex) {
