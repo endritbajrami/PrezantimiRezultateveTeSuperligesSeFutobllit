@@ -40,7 +40,7 @@ public class EkipetTb {
 		ekipetTable.getColumns().add(column4);
 		ekipetTable.getColumns().add(column5);
 		
-		ekipetTable.setPrefWidth(1064);
+		ekipetTable.setPrefWidth(460);
 		ekipetTable.setPrefHeight(400);
 		
 		ekipetTable.setStyle("-fx-base: darkred;");
