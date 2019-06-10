@@ -13,13 +13,11 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
-import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import Tabelat.*;
 import Login.Login1;
@@ -289,7 +287,7 @@ public class menu extends Application {
         });
         
         switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ra.start(),bt.start());
-        
+    	
         
         
         

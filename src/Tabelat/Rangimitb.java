@@ -17,6 +17,7 @@ import javafx.stage.Stage;
 
 public class Rangimitb{
 
+
 	// Table views
 	private TableView rangimiTable = new TableView();
 	
