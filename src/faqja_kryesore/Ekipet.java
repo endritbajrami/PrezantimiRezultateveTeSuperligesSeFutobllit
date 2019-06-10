@@ -1,28 +1,24 @@
-package Tabelat;
-
+package faqja_kryesore;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Liria {
+import Tabelat.LidhjaDB;
 
+public class Ekipet {
 	private int eid;
 	private int Numri;
 	private String Shtetesia;
 	private String Pozicioni;
 	private String EmriMbiemri;
-
 	
-	
-	public Liria(int eid, int Numri, String Shtetesia, String Pozicioni,String EmriMbiemri) {
+	public Ekipet(int eid, int Numri, String Shtetesia, String Pozicioni,String EmriMbiemri) {
 		this.eid = eid;
 		this.Numri = Numri;
 		this.Shtetesia = Shtetesia;
 		this.Pozicioni = Pozicioni;
 		this.EmriMbiemri = EmriMbiemri;
-		
 	}
-	
 	public int getEid() {
 		return eid;
 	}
@@ -61,31 +57,25 @@ public class Liria {
 	}
 	
 	
-
-
-	
-	public static List<Liria> getliria() {
-		List<Liria> liriaList = new ArrayList();
+	public static List<Ekipet> getEkipet(String ekipi) {
+		List<Ekipet> EkipiList = new ArrayList();
 		
-		String query = "Select * from liria";
+		String query = "Select * from "+ekipi;
 		
 		try {
 			PreparedStatement preparedStatement = LidhjaDB.getConnection().prepareStatement(query);
 			ResultSet resultSet = preparedStatement.executeQuery();
 			
 			while(resultSet.next()) {
-				Liria liria = new Liria(resultSet.getInt(1), resultSet.getInt(2), resultSet.getString(3), resultSet.getString(4), resultSet.getString(5));
-				liriaList.add(liria);
+				Ekipet ekipii = new Ekipet(resultSet.getInt(1), resultSet.getInt(2), resultSet.getString(3), resultSet.getString(4), resultSet.getString(5));
+				EkipiList.add(ekipii);
 			}
 		} catch(SQLException ex) {
 			ex.printStackTrace();
 		}
 		
-		return liriaList;
+		return EkipiList;
+	
+	
 	}
 }
-
-
-
-
-

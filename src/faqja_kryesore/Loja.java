@@ -2,6 +2,7 @@ package faqja_kryesore;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
@@ -9,8 +10,10 @@ import javafx.stage.Stage;
 
 
 public class Loja extends Application{
+	private Stage loja;
 	@Override 
-	public void start(Stage primaryStage) throws Exception{
+	public void start(Stage primaryStage) {
+		loja = primaryStage;
 		Pane pane = new Pane();
 		pane.setStyle("-fx-background-image:url(images/fusha.jpg)");
 		
@@ -39,7 +42,17 @@ public class Loja extends Application{
 		text9.setStyle(TEXT);
 		text10.setStyle(TEXT);
 		text11.setStyle(TEXT);
-		
+		Button backBtn = new Button("<-");
+		backBtn.setStyle("-fx-background-color: black; -fx-text-fill: white;-fx-background-radius: 15");
+		backBtn.setOnMouseClicked(e->{
+			if(e.getButton()==MouseButton.PRIMARY) {
+				loja.hide();
+				Stage menu = new Stage();
+				menu Menu = new menu();
+				Menu.start(menu);
+				menu.show();
+			}
+		});
 		
 		
 		text1.setOnMouseDragged(e ->{
@@ -109,12 +122,13 @@ public class Loja extends Application{
 				text11.setY(e.getY());
 			}
 		});
-		pane.getChildren().addAll(text1, text2,text3, text4,text5,text6,text7,text8,text9,text10,text11);
+		pane.getChildren().addAll(backBtn,text1, text2,text3, text4,text5,text6,text7,text8,text9,text10,text11);
 		
 		
-		Scene scene = new Scene (pane, 300, 100);
+		Scene scene = new Scene (pane, 1300, 850);
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Krijoni ekipin tuaj");
+		primaryStage.setResizable(false);
 		primaryStage.show();
 		
 	}

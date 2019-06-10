@@ -7,12 +7,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseButton;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class Login1 extends Application {
+	private Stage Login11;
 	public void start(Stage primaryStage) {
+		Login11 = primaryStage;
 		VBox pane = new VBox(10);
 		pane.setAlignment(Pos.CENTER);
 		pane.setStyle("-fx-background-image:url(images/fotologin1.jpg)");
@@ -22,11 +25,29 @@ public class Login1 extends Application {
 		Hpane.setPadding(new Insets(0,20,0,200));
 		Hpane.setSpacing(60);
 		
-		Button btnLogin = new Button("LOGIN");
+		Button btnLogin = new Button("LogIn");
 		 btnLogin.setStyle("-fx-background-color: black; -fx-text-fill: white;-fx-background-radius: 15");
-		Button btnSignup = new Button("SIGNUP");
+		 btnLogin.setOnMouseClicked(e->{
+			 if(e.getButton()== MouseButton.PRIMARY) {
+				 Login11.hide();			 
+				 Stage Login2Stage = new Stage();
+				 Login2 L2 = new Login2();
+				 L2.start(Login2Stage);
+				 Login2Stage.show();
+			 }
+		 });
+		Button btnSignup = new Button("SignUp");
 		 btnSignup.setStyle("-fx-background-color: black; -fx-text-fill: white;-fx-background-radius: 15");
-		Image image = new Image("images/fotologin.png");
+		 btnSignup.setOnMouseClicked(e->{
+			 if(e.getButton()== MouseButton.PRIMARY) {
+				 Login11.hide();			 
+				 Stage SignupStage = new Stage();
+				 SignUp Su = new SignUp();
+				 Su.start(SignupStage);
+				 SignupStage.show();
+			 }
+		 });
+		 Image image = new Image("images/fotologin.png");
 		
 		ImageView imageView = new ImageView(image);
 		imageView.setFitWidth(300);

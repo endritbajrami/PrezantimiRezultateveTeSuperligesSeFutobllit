@@ -12,6 +12,7 @@ import javafx.scene.control.TableView;
 
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class Rangimitb extends Application {
@@ -19,7 +20,7 @@ public class Rangimitb extends Application {
 	// Table views
 	private TableView rangimiTable = new TableView();
 	
-	public void start(Stage primaryStage) {
+	public Pane start() {
 		
 		
 		// Rangimi table
@@ -80,8 +81,8 @@ public class Rangimitb extends Application {
 		rangimiTable.getColumns().add(column10);
 		rangimiTable.getColumns().add(column11);
 		
-		rangimiTable.setPrefWidth(1065);
-		rangimiTable.setPrefHeight(160);
+		rangimiTable.setPrefWidth(1000);
+		rangimiTable.setPrefHeight(500);
 		
 	rangimiTable.setStyle("-fx-base: palegreen;");
 		// Main Pane
@@ -90,16 +91,11 @@ public class Rangimitb extends Application {
 		mainPane.getChildren().add(rangimiTable);
 		
 		mainPane.setPadding(new Insets(15, 15, 15 ,15));
-		
-		
-		Scene scene = new Scene(mainPane, 1550, 400);
-		
-		primaryStage.setTitle("Rangimi kryesor");
-		primaryStage.setScene(scene);
-		
 		showRangimi();
+	
+		mainPane.setMaxSize(700, 500);
+		return mainPane;
 		
-		primaryStage.show();
 	}
 	
 
