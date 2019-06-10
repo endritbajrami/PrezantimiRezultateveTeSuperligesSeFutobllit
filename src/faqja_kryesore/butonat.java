@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
@@ -34,9 +35,9 @@ public class butonat extends Application {
   
     final ImageView iv1 = new ImageView();
     final ImageView iv2 = new ImageView();
-    final ImageView iv3 = new ImageView();
-    final ImageView iv4 = new ImageView();
-    final ImageView iv5 = new ImageView();
+//    final ImageView iv3 = new ImageView();
+//    final ImageView iv4 = new ImageView();
+//    final ImageView iv5 = new ImageView();
    
 
     primaryStage.setTitle("TE DHENAT E FUNDIT!");
@@ -66,6 +67,7 @@ public class butonat extends Application {
         iv1.setImage(image);
         iv1.setX(50);
         iv1.setY(150);
+        iv2.setImage(null);
         
       }
     });
@@ -75,15 +77,15 @@ public class butonat extends Application {
         public void handle(ActionEvent event) {
           lbl.setText("Trepça'89 dhe Gjilani!");
          
-          iv2.setImage(image2);
-          iv2.setX(50);
-          iv2.setY(150);
+          iv1.setImage(image2);
+          iv1.setX(50);
+          iv1.setY(150);
         
-          iv3.setImage(image3);
-          iv3.setX(200);
-          iv3.setY(150);
-          iv3.setFitHeight(100);
-          iv3.setFitWidth(100);
+          iv2.setImage(image3);
+          iv2.setX(200);
+          iv2.setY(150);
+          iv2.setFitHeight(100);
+          iv2.setFitWidth(100);
         }
       });
     btn3.setOnAction(new EventHandler<ActionEvent>() {
@@ -92,25 +94,25 @@ public class butonat extends Application {
         public void handle(ActionEvent event) {
           lbl.setText("KEK-u dhe Liria!");
          
-          iv4.setImage(image4);
-          iv4.setX(50);
-          iv4.setY(150);
+          iv1.setImage(image4);
+          iv1.setX(50);
+          iv1.setY(150);
           
-          iv5.setImage(image5);
-          iv5.setX(200);
-          iv5.setY(150);
-          iv5.setFitHeight(150);
-          iv5.setFitWidth(150);
+          iv2.setImage(image5);
+          iv2.setX(200);
+          iv2.setY(150);
+          iv2.setFitHeight(150);
+          iv2.setFitWidth(150);
           
         }
       });
 
-    Group root = new Group();
+    HBox hbox= new HBox ();
 
-    root.getChildren().addAll(btn, btn2, btn3);
-    root.getChildren().add(lbl);
-    root.getChildren().addAll(iv1,iv2,iv3,iv4,iv5);
-    primaryStage.setScene(new Scene(root, 450, 250));
+    hbox.getChildren().addAll(btn, btn2, btn3);
+    hbox.getChildren().add(lbl);
+    hbox.getChildren().addAll(iv1,iv2);
+    primaryStage.setScene(new Scene(hbox, 450, 250));
     primaryStage.show();
   }
 }
