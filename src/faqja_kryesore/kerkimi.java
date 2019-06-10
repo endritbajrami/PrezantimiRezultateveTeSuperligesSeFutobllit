@@ -58,7 +58,7 @@ public class kerkimi extends Application {
 	 private void setConnection() {
 			try {
 				Class.forName("com.mysql.jdbc.Driver");
-				dbConnection = DriverManager.getConnection("jdbc:mysql://localhost/knk?autoReconnect=true&useSSL=false", "root", "");
+				dbConnection = DriverManager.getConnection("jdbc:mysql://localhost/knk?autoReconnect=true&useSSL=false", "root", "root");
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			}

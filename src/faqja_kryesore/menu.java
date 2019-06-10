@@ -3,6 +3,7 @@ package faqja_kryesore;
 
 
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.RadioMenuItem;
@@ -24,7 +25,7 @@ import Login.Login1;
 public class menu extends Application {
 	
 	private Stage Menu;
-    private Pane pane = new Pane();
+    private Pane pane;
     public static void main(String[] args) {
         Application.launch(args);
     }
@@ -32,6 +33,7 @@ public class menu extends Application {
     	this.pane = pane;
     }
     public Pane getPane() {
+    	
     	return pane;
     }
     @Override
@@ -40,10 +42,8 @@ public class menu extends Application {
     	Menu = primaryStage;
         primaryStage.setTitle("Menus");
         Group root = new Group();
-        Rangimitb rangimiKryesor = new Rangimitb();
         
         MenuBar menuBar = new MenuBar();
-        
         Menu menu = new Menu("Rangimi");
         Menu menu2 = new Menu("Rezultatet");
         Label logoutL = new Label("                                                                                                             LogOut");
@@ -61,16 +61,18 @@ public class menu extends Application {
         Menu logout = new Menu("",logoutL);
         
         
+	    
         ToggleGroup menuToggle = new ToggleGroup();
-        
+        Rangimitb ra = new Rangimitb();
+        setPane(ra.start());
         RadioMenuItem Kr =new RadioMenuItem("Kryesor");
+        Kr.setOnAction(e->setPane(ra.start()));
         RadioMenuItem Ve =new RadioMenuItem("Vendor");
         RadioMenuItem My = new RadioMenuItem("Mysafir");
-        
+       
         Kr.setToggleGroup(menuToggle);
         Ve.setToggleGroup(menuToggle);
         My.setToggleGroup(menuToggle);
-        
         
         menu.setGraphic(new ImageView("images/trofe.png"));
         menu.getItems().addAll(Kr,Ve,My);
@@ -96,6 +98,8 @@ public class menu extends Application {
         
         Menu menu3= new Menu("Ekipet");
         RadioMenuItem Pri = new RadioMenuItem("Prishtina");
+        prishtinatb pr = new prishtinatb();
+        Pri.setOnAction(e->setPane(pr.start()));
         RadioMenuItem BP = new RadioMenuItem("Besa-Peje");
         RadioMenuItem T89 = new RadioMenuItem("Trepca 89");
         RadioMenuItem Dri = new RadioMenuItem("Drita");
@@ -121,11 +125,6 @@ public class menu extends Application {
         Flam.setToggleGroup(menuToggle);
         VP.setToggleGroup(menuToggle);
         
-		if(Pri.isSelected()) {
-		       prishtinatb PRtb = new prishtinatb();
-		       setPane(PRtb.start());
-		        }
-        
         
         menu3.getItems().addAll(Pri,BP,T89,Dri,KLl,KFero,Dre,Lir,Gjil,Vell,Flam,VP);
         menu3.setGraphic(new ImageView("images/football-player.png"));
@@ -145,26 +144,40 @@ public class menu extends Application {
         Menu menu4=new Menu("",FormLabel);
         HBox hb = new HBox();
         VBox vb = new VBox();
-        
-        
+        VBox vb1 = new VBox();
+        vb.setPadding(new Insets(0,0,0,0));
         menuBar.getMenus().addAll(menu, menu2, menu3, menu4,logout);
         
+        
+        
         kryefaqja kr = new kryefaqja();
-        
+        butonat bt = new butonat();
         menuBar.prefWidthProperty().bind(primaryStage.widthProperty());
-        getPane().setMaxSize(900, 500);
+        getPane().setMaxSize(900, 800);
+        vb1.setMaxWidth(primaryStage.getMaxWidth()-vb.getMaxWidth());
+        vb1.setMaxHeight(primaryStage.getMaxHeight()-vb.getMaxHeight());
+        vb1.setPadding(new Insets(0,0,0,0));
+        vb1.setSpacing(0);
         
-        pane.setMaxSize(800, 400);
+        getPane().setMaxSize(1000, 400);
         root.getChildren().addAll(menuBar); 
+        
        
-    	hb.getChildren().addAll(kr.start(),getPane());
+        vb1.getChildren().addAll(getPane(),bt.start());
+            
+        
+        
+        
+    	hb.getChildren().addAll(kr.start(),vb1);
     	
         
        
+    	
         vb.getChildren().addAll(root,hb);
         vb.setStyle("-fx-background-color: Darkolivegreen");
-        Scene scene = new Scene(vb, 1000, 600); //DARKKHAKI
+        Scene scene = new Scene(vb, 1000, 700); //DARKKHAKI
         primaryStage.setScene(scene);
+        primaryStage.setTitle("Paraqitja e Rezultateve te Superliges se Kosoves");
         primaryStage.setResizable(false);
         primaryStage.show();
     }

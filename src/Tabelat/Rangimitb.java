@@ -81,8 +81,8 @@ public class Rangimitb extends Application {
 		rangimiTable.getColumns().add(column10);
 		rangimiTable.getColumns().add(column11);
 		
-		rangimiTable.setPrefWidth(1065);
-		rangimiTable.setPrefHeight(160);
+		rangimiTable.setPrefWidth(1000);
+		rangimiTable.setPrefHeight(500);
 		
 	rangimiTable.setStyle("-fx-base: palegreen;");
 		// Main Pane
