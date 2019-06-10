@@ -72,6 +72,7 @@ public class butonat {
         iv3.setImage(null);
         iv4.setImage(null);
         iv5.setImage(null);
+
         
       }
     });
@@ -80,7 +81,6 @@ public class butonat {
         @Override
         public void handle(ActionEvent event) {
           lbl.setText("Trepça'89 dhe Gjilani!");
-         
           iv2.setImage(image2);
           iv2.setX(300);
           iv2.setY(50);
@@ -119,11 +119,14 @@ public class butonat {
         }
       });
 
+
+
     Pane root = new Pane();
 
     root.getChildren().addAll(btn, btn2, btn3);
     root.getChildren().add(lbl);
     root.getChildren().addAll(iv1,iv2,iv3,iv4,iv5);
     return root;
+
   }
 }
