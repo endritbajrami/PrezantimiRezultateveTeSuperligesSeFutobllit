@@ -177,13 +177,14 @@ public class menu extends Application {
     		vb1.setMaxWidth(primaryStage.getMaxWidth()-vb.getMaxWidth());
             vb1.setMaxHeight(primaryStage.getMaxHeight()-vb.getMaxHeight());
             vb1.setPadding(new Insets(0,0,0,0));
-            
+            Tabela.setMaxSize(1000, 350);
+            Butonat.setMaxSize(400, 400);
             vb1.setSpacing(0);
     		 vb.setPadding(new Insets(0,0,0,0));
     		vb1.getChildren().addAll(Tabela,Butonat);
         	hb.getChildren().addAll(FK,vb1);
         	 vb.getChildren().addAll(root,hb);
-        	 Scene sc = new Scene(vb,1000,700);
+        	 Scene sc = new Scene(vb,1000,625);
         	 
         	 primaryStage.setScene(sc);
         	 primaryStage.setTitle("Paraqitja e Rezultateve te Superliges se Kosoves");

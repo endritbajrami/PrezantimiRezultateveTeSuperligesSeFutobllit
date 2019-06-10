@@ -1,12 +1,9 @@
 package faqja_kryesore;
 
-import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.layout.*;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.stage.Stage;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -59,8 +56,4 @@ public class kryefaqja {
 		return pane;
 		
 	}
-	public static void main(String[] args) {
-		Application.launch(args);
-
-}
 }

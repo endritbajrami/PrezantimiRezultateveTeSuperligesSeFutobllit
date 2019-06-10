@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Tabelat.LidhjaDB;
-import Tabelat.Prishtina;
+
 public class Ekipet {
 	private int eid;
 	private int Numri;
