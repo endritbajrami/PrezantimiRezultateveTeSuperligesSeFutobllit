@@ -3,6 +3,8 @@ package faqja_kryesore;
 
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -145,24 +147,133 @@ public class menu extends Application {
       
         root.getChildren().addAll(menuBar); 
         
+ 
+
+        
+        Pri.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent t) {
+            	EkipetTb ekipet = new EkipetTb();
+                Stage stage = new Stage();
+                Scene scene = new Scene(new VBox(ekipet.start("prishtina")));
+                stage.setTitle("Prishtina");
+                stage.setScene(scene);
+                stage.show();
+            }
+        });
+        
+        
+        BP.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent t) {
+            	EkipetTb ekipet = new EkipetTb();
+                Stage stage = new Stage();
+                Scene scene = new Scene(new VBox(ekipet.start("besapeje")));
+                stage.setTitle("Besa-Peje");
+                stage.setScene(scene);
+                stage.show();
+            }
+        });
+        T89.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent t) {
+            	EkipetTb ekipet = new EkipetTb();
+                Stage stage = new Stage();
+                Scene scene = new Scene(new VBox(ekipet.start("trepça89")));
+                stage.setTitle("Trepca 89");
+                stage.setScene(scene);
+                stage.show();
+            }
+        });
+        Dri.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent t) {
+            	EkipetTb ekipet = new EkipetTb();
+                Stage stage = new Stage();
+                Scene scene = new Scene(new VBox(ekipet.start("drita")));
+                stage.setTitle("Drita");
+                stage.setScene(scene);
+                stage.show();
+            }
+        });
+        KLl.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent t) {
+            	EkipetTb ekipet = new EkipetTb();
+                Stage stage = new Stage();
+                Scene scene = new Scene(new VBox(ekipet.start("kfllapi")));
+                stage.setTitle("KF Llapi");
+                stage.setScene(scene);
+                stage.show();
+            }
+        });
+        KFero.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent t) {
+            	EkipetTb ekipet = new EkipetTb();
+                Stage stage = new Stage();
+                Scene scene = new Scene(new VBox(ekipet.start("kfferonikeli")));
+                stage.setTitle("KF Feronikeli");
+                stage.setScene(scene);
+                stage.show();
+            }
+        });
+        Dre.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent t) {
+            	EkipetTb ekipet = new EkipetTb();
+                Stage stage = new Stage();
+                Scene scene = new Scene(new VBox(ekipet.start("drenica")));
+                stage.setTitle("Drenica");
+                stage.setScene(scene);
+                stage.show();
+            }
+        });
+        Lir.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent t) {
+            	EkipetTb ekipet = new EkipetTb();
+                Stage stage = new Stage();
+                Scene scene = new Scene(new VBox(ekipet.start("liria")));
+                stage.setTitle("Liria");
+                stage.setScene(scene);
+                stage.show();
+            }
+        });
+        Gjil.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent t) {
+            	EkipetTb ekipet = new EkipetTb();
+                Stage stage = new Stage();
+                Scene scene = new Scene(new VBox(ekipet.start("gjilani")));
+                stage.setTitle("Gjilani");
+                stage.setScene(scene);
+                stage.show();
+            }
+        });
+        Vell.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent t) {
+            	EkipetTb ekipet = new EkipetTb();
+                Stage stage = new Stage();
+                Scene scene = new Scene(new VBox(ekipet.start("vllaznimi")));
+                stage.setTitle("Vellaznimi");
+                stage.setScene(scene);
+                stage.show();
+            }
+        });
+        Flam.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent t) {
+            	EkipetTb ekipet = new EkipetTb();
+                Stage stage = new Stage();
+                Scene scene = new Scene(new VBox(ekipet.start("flamurtari")));
+                stage.setTitle("Flamurtari");
+                stage.setScene(scene);
+                stage.show();
+            }
+        });
+        VP.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent t) {
+            	EkipetTb ekipet = new EkipetTb();
+                Stage stage = new Stage();
+                Scene scene = new Scene(new VBox(ekipet.start("vllazniapozhoran")));
+                stage.setTitle("Vllanzia Pozhoran");
+                stage.setScene(scene);
+                stage.show();
+            }
+        });
        
-        EkipetTb ekipet = new EkipetTb();
-        Pri.setOnAction(e->{
-        	
-        	switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ekipet.start("prishtina"),bt.start());
-        });
-       BP.setOnAction(e->{
-    	   switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ekipet.start("besapeje"),bt.start());
-       });
-       BP.setOnAction(e->{
-    	   switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ekipet.start("besapeje"),bt.start());
-       });
-       BP.setOnAction(e->{
-    	   switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ekipet.start("besapeje"),bt.start());
-       });
-        Kr.setOnAction(e->{
-        	switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ra.start(),bt.start());	
-        });
+       
         
         switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ra.start(),bt.start());
     	
