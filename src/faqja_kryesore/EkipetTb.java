@@ -1,8 +1,9 @@
-package Tabelat;
-
-
+package faqja_kryesore;
 
 import java.util.List;
+
+
+import Tabelat.Rangimi;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -12,17 +13,14 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class drenicatb extends Application {
 
-	// Table views
-	private TableView drenicaTable = new TableView();
-	
-	public void start(Stage primaryStage) {
+public class EkipetTb {
+	private TableView ekipetTable = new TableView();
+	public Pane start(String ekipi) {
 		
-		
-		// Rangimi table
 		TableColumn<String, Rangimi> column1 = new TableColumn<>("ID");
 		column1.setCellValueFactory(new PropertyValueFactory("eid"));
 		column1.setPrefWidth(60);
@@ -43,56 +41,42 @@ public class drenicatb extends Application {
 		column5.setCellValueFactory(new PropertyValueFactory("EmriMbiemri"));
 		column5.setPrefWidth(150);
 		
+		ekipetTable.getColumns().add(column1);
+		ekipetTable.getColumns().add(column2);
+		ekipetTable.getColumns().add(column3);
+		ekipetTable.getColumns().add(column4);
+		ekipetTable.getColumns().add(column5);
 		
+		ekipetTable.setPrefWidth(1064);
+		ekipetTable.setPrefHeight(400);
 		
-		drenicaTable.getColumns().add(column1);
-		drenicaTable.getColumns().add(column2);
-		drenicaTable.getColumns().add(column3);
-		drenicaTable.getColumns().add(column4);
-		drenicaTable.getColumns().add(column5);
-	
+		ekipetTable.setStyle("-fx-base: darkred;");
 		
-		drenicaTable.setPrefWidth(1064);
-		drenicaTable.setPrefHeight(400);
-		
-		drenicaTable.setStyle("-fx-base: darkred;");
-		// Main Pane
 		HBox mainPane = new HBox(10);
 		
-		mainPane.getChildren().add(drenicaTable);
+		mainPane.getChildren().add(ekipetTable);
 		
 		mainPane.setPadding(new Insets(15, 15, 15 ,15));
 		
 		
-		Scene scene = new Scene(mainPane, 543, 355);
 		
-		primaryStage.setTitle("Drenica");
-		primaryStage.setScene(scene);
+		showEkipi(ekipi);
+		return mainPane;
 		
-		showDrenica();
-		
-		primaryStage.show();
 	}
-	
-
-	public static void main(String[] args) {
-		Application.launch(args);
-	}
-	
-	public void showDrenica() {
-		List<Drenica> drenica = Drenica.getdrenica();
+	public void showEkipi(String ekipi) {
+		List<Ekipet> Ekipii = Ekipet.getEkipet(ekipi);
 		
-		ObservableList<Drenica> drenicaList = FXCollections.observableArrayList();
+		ObservableList<Ekipet> EKipetList = FXCollections.observableArrayList();
 		
-		for(int i = 0; i < drenica.size(); i++) {
-			drenicaList.add(drenica.get(i));
+		for(int i = 0; i < Ekipii.size(); i++) {
+			EKipetList.add(Ekipii.get(i));
 		}
 		
-		drenicaTable.setItems(drenicaList);
+		ekipetTable.setItems(EKipetList);
 	}
+	
+	
 	
 	
 }
-
-
-

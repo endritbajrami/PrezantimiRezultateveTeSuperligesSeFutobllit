@@ -25,20 +25,14 @@ import Login.Login1;
 public class menu extends Application {
 	
 	private Stage Menu;
-    private Pane pane;
     public static void main(String[] args) {
         Application.launch(args);
     }
-    public void setPane(Pane pane) {
-    	this.pane = pane;
-    }
-    public Pane getPane() {
-    	
-    	return pane;
-    }
+  
     @Override
     
     public void start(Stage primaryStage) {
+    	primaryStage.setScene(null);
     	Menu = primaryStage;
         primaryStage.setTitle("Menus");
         Group root = new Group();
@@ -64,9 +58,8 @@ public class menu extends Application {
 	    
         ToggleGroup menuToggle = new ToggleGroup();
         Rangimitb ra = new Rangimitb();
-        setPane(ra.start());
+        
         RadioMenuItem Kr =new RadioMenuItem("Kryesor");
-        Kr.setOnAction(e->setPane(ra.start()));
         RadioMenuItem Ve =new RadioMenuItem("Vendor");
         RadioMenuItem My = new RadioMenuItem("Mysafir");
        
@@ -98,8 +91,6 @@ public class menu extends Application {
         
         Menu menu3= new Menu("Ekipet");
         RadioMenuItem Pri = new RadioMenuItem("Prishtina");
-        prishtinatb pr = new prishtinatb();
-        Pri.setOnAction(e->setPane(pr.start()));
         RadioMenuItem BP = new RadioMenuItem("Besa-Peje");
         RadioMenuItem T89 = new RadioMenuItem("Trepca 89");
         RadioMenuItem Dri = new RadioMenuItem("Drita");
@@ -145,7 +136,7 @@ public class menu extends Application {
         HBox hb = new HBox();
         VBox vb = new VBox();
         VBox vb1 = new VBox();
-        vb.setPadding(new Insets(0,0,0,0));
+       
         menuBar.getMenus().addAll(menu, menu2, menu3, menu4,logout);
         
         
@@ -153,32 +144,57 @@ public class menu extends Application {
         kryefaqja kr = new kryefaqja();
         butonat bt = new butonat();
         menuBar.prefWidthProperty().bind(primaryStage.widthProperty());
-        getPane().setMaxSize(900, 800);
-        vb1.setMaxWidth(primaryStage.getMaxWidth()-vb.getMaxWidth());
-        vb1.setMaxHeight(primaryStage.getMaxHeight()-vb.getMaxHeight());
-        vb1.setPadding(new Insets(0,0,0,0));
-        vb1.setSpacing(0);
-        
-        getPane().setMaxSize(1000, 400);
+      
         root.getChildren().addAll(menuBar); 
         
        
-        vb1.getChildren().addAll(getPane(),bt.start());
-            
+        
+        Pri.setOnAction(e->{
+        	EkipetTb ekipet = new EkipetTb();
+        	switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ekipet.start("prishtina"),bt.start());
+        	
+        });
+       
+        Kr.setOnAction(e->{
+        	switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ra.start(),bt.start());
+        	
+        });
+        
+        switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ra.start(),bt.start());
         
         
         
-    	hb.getChildren().addAll(kr.start(),vb1);
-    	
         
        
-    	
-        vb.getChildren().addAll(root,hb);
-        vb.setStyle("-fx-background-color: Darkolivegreen");
-        Scene scene = new Scene(vb, 1000, 700); //DARKKHAKI
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Paraqitja e Rezultateve te Superliges se Kosoves");
-        primaryStage.setResizable(false);
-        primaryStage.show();
+        
+        
+    }
+    public void switchScenes(Stage primaryStage,VBox vb,Group root,HBox hb,Pane FK,VBox vb1,Pane Tabela,Pane Butonat) {
+    	try {
+    		
+    		
+    		vb.setStyle("-fx-background-color: Darkolivegreen");
+    		vb1.setMaxWidth(primaryStage.getMaxWidth()-vb.getMaxWidth());
+            vb1.setMaxHeight(primaryStage.getMaxHeight()-vb.getMaxHeight());
+            vb1.setPadding(new Insets(0,0,0,0));
+            
+            vb1.setSpacing(0);
+    		 vb.setPadding(new Insets(0,0,0,0));
+    		vb1.getChildren().addAll(Tabela,Butonat);
+        	hb.getChildren().addAll(FK,vb1);
+        	 vb.getChildren().addAll(root,hb);
+        	 Scene sc = new Scene(vb,1000,700);
+        	 
+        	 primaryStage.setScene(sc);
+        	 primaryStage.setTitle("Paraqitja e Rezultateve te Superliges se Kosoves");
+             primaryStage.setResizable(false);
+             primaryStage.show();
+             
+             
+        	 
+        	 throw new Exception();
+    	}catch(Exception er) {
+    		er.getStackTrace();
+    	}
     }
 }
