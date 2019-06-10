@@ -17,10 +17,7 @@ import javafx.scene.layout.Pane;
 public class EkipetTb {
 	private TableView ekipetTable = new TableView();
 	public Pane start(String ekipi) {
-		
-		TableColumn<String, Rangimi> column1 = new TableColumn<>("ID");
-		column1.setCellValueFactory(new PropertyValueFactory("eid"));
-		column1.setPrefWidth(60);
+
 		
 		TableColumn<String, Rangimi> column2 = new TableColumn<>("NUMRI");
 		column2.setCellValueFactory(new PropertyValueFactory("Numri"));
@@ -37,8 +34,7 @@ public class EkipetTb {
 		TableColumn<String, Rangimi> column5 = new TableColumn<>("EMRI DHE MBIEMRI");
 		column5.setCellValueFactory(new PropertyValueFactory("EmriMbiemri"));
 		column5.setPrefWidth(150);
-		
-		ekipetTable.getColumns().add(column1);
+
 		ekipetTable.getColumns().add(column2);
 		ekipetTable.getColumns().add(column3);
 		ekipetTable.getColumns().add(column4);
