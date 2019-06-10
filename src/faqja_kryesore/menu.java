@@ -146,16 +146,22 @@ public class menu extends Application {
         root.getChildren().addAll(menuBar); 
         
        
-        
+        EkipetTb ekipet = new EkipetTb();
         Pri.setOnAction(e->{
-        	EkipetTb ekipet = new EkipetTb();
+        	
         	switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ekipet.start("prishtina"),bt.start());
-        	
         });
-       
+       BP.setOnAction(e->{
+    	   switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ekipet.start("besapeje"),bt.start());
+       });
+       BP.setOnAction(e->{
+    	   switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ekipet.start("besapeje"),bt.start());
+       });
+       BP.setOnAction(e->{
+    	   switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ekipet.start("besapeje"),bt.start());
+       });
         Kr.setOnAction(e->{
-        	switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ra.start(),bt.start());
-        	
+        	switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ra.start(),bt.start());	
         });
         
         switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ra.start(),bt.start());
