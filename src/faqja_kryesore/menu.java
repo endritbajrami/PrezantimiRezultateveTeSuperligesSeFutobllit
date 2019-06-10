@@ -149,22 +149,14 @@ public class menu extends Application {
         
  
 
-        
-        Pri.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent t) {
-            	EkipetTb ekipet = new EkipetTb();
-                Stage stage = new Stage();
-                Scene scene = new Scene(new VBox(ekipet.start("prishtina")));
-                stage.setTitle("Prishtina");
-                stage.setScene(scene);
-                stage.show();
-            }
+        EkipetTb ekipet = new EkipetTb();
+        Pri.setOnAction(e->{
+        	
         });
         
         
         BP.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent t) {
-            	EkipetTb ekipet = new EkipetTb();
+            public void handle(ActionEvent t) {           	
                 Stage stage = new Stage();
                 Scene scene = new Scene(new VBox(ekipet.start("besapeje")));
                 stage.setTitle("Besa-Peje");
@@ -173,8 +165,7 @@ public class menu extends Application {
             }
         });
         T89.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent t) {
-            	EkipetTb ekipet = new EkipetTb();
+            public void handle(ActionEvent t) {            	
                 Stage stage = new Stage();
                 Scene scene = new Scene(new VBox(ekipet.start("trepça89")));
                 stage.setTitle("Trepca 89");
@@ -183,8 +174,7 @@ public class menu extends Application {
             }
         });
         Dri.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent t) {
-            	EkipetTb ekipet = new EkipetTb();
+            public void handle(ActionEvent t) {            	
                 Stage stage = new Stage();
                 Scene scene = new Scene(new VBox(ekipet.start("drita")));
                 stage.setTitle("Drita");
@@ -193,8 +183,7 @@ public class menu extends Application {
             }
         });
         KLl.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent t) {
-            	EkipetTb ekipet = new EkipetTb();
+            public void handle(ActionEvent t) {           	
                 Stage stage = new Stage();
                 Scene scene = new Scene(new VBox(ekipet.start("kfllapi")));
                 stage.setTitle("KF Llapi");
@@ -203,8 +192,7 @@ public class menu extends Application {
             }
         });
         KFero.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent t) {
-            	EkipetTb ekipet = new EkipetTb();
+            public void handle(ActionEvent t) {           	
                 Stage stage = new Stage();
                 Scene scene = new Scene(new VBox(ekipet.start("kfferonikeli")));
                 stage.setTitle("KF Feronikeli");
@@ -213,8 +201,7 @@ public class menu extends Application {
             }
         });
         Dre.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent t) {
-            	EkipetTb ekipet = new EkipetTb();
+            public void handle(ActionEvent t) {           	
                 Stage stage = new Stage();
                 Scene scene = new Scene(new VBox(ekipet.start("drenica")));
                 stage.setTitle("Drenica");
@@ -223,8 +210,7 @@ public class menu extends Application {
             }
         });
         Lir.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent t) {
-            	EkipetTb ekipet = new EkipetTb();
+            public void handle(ActionEvent t) {           	
                 Stage stage = new Stage();
                 Scene scene = new Scene(new VBox(ekipet.start("liria")));
                 stage.setTitle("Liria");
@@ -233,8 +219,7 @@ public class menu extends Application {
             }
         });
         Gjil.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent t) {
-            	EkipetTb ekipet = new EkipetTb();
+            public void handle(ActionEvent t) {            	
                 Stage stage = new Stage();
                 Scene scene = new Scene(new VBox(ekipet.start("gjilani")));
                 stage.setTitle("Gjilani");
@@ -243,8 +228,7 @@ public class menu extends Application {
             }
         });
         Vell.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent t) {
-            	EkipetTb ekipet = new EkipetTb();
+            public void handle(ActionEvent t) {            	
                 Stage stage = new Stage();
                 Scene scene = new Scene(new VBox(ekipet.start("vllaznimi")));
                 stage.setTitle("Vellaznimi");
@@ -252,26 +236,8 @@ public class menu extends Application {
                 stage.show();
             }
         });
-        Flam.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent t) {
-            	EkipetTb ekipet = new EkipetTb();
-                Stage stage = new Stage();
-                Scene scene = new Scene(new VBox(ekipet.start("flamurtari")));
-                stage.setTitle("Flamurtari");
-                stage.setScene(scene);
-                stage.show();
-            }
-        });
-        VP.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent t) {
-            	EkipetTb ekipet = new EkipetTb();
-                Stage stage = new Stage();
-                Scene scene = new Scene(new VBox(ekipet.start("vllazniapozhoran")));
-                stage.setTitle("Vllanzia Pozhoran");
-                stage.setScene(scene);
-                stage.show();
-            }
-        });
+        Flam.setOnAction(e->{tabelatEkipeve("flamurtari");});
+        VP.setOnAction(e->{tabelatEkipeve("vllazniapozhoran");});
        
        
         
@@ -284,6 +250,16 @@ public class menu extends Application {
         
         
     }
+    
+    public void tabelatEkipeve(String ekipi) {
+    	 EkipetTb ekipet = new EkipetTb();
+    	 Stage stage = new Stage();
+         Scene scene = new Scene(new VBox(ekipet.start(ekipi)));
+         stage.setTitle(ekipi);
+         stage.setScene(scene);
+         stage.show();
+    }
+    
     public void switchScenes(Stage primaryStage,VBox vb,Group root,HBox hb,Pane FK,VBox vb1,Pane Tabela,Pane Butonat) {
     	try {
     		

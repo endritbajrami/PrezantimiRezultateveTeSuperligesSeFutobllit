@@ -77,8 +77,8 @@ public class SignUp extends Application {
 							 Login2Stage.show();
 						} else {
 							resultLabel.setText("Student not added!");
-							Uname.setText("");
-							Pwd.setText("");
+							Uname.setText(" ");
+							Pwd.setText(" ");
 						}
 						
 						
