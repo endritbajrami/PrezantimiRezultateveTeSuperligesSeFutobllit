@@ -1,13 +1,21 @@
 package Login;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import faqja_kryesore.LidhjaDB;
 import faqja_kryesore.menu;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -15,6 +23,8 @@ import javafx.stage.Stage;
 
 public class Login2 extends Application {
 	private Stage Login22;
+	private TextField Uname = new TextField();
+	private PasswordField Pwd = new PasswordField();
 	public void start(Stage primaryStage) {
 		Login22 = primaryStage;
 		VBox vpane = new VBox();
@@ -27,20 +37,60 @@ public class Login2 extends Application {
 		hpane.setAlignment(Pos.CENTER_RIGHT);
 		Label username = new Label("Username");
 		Label pass = new Label("Password");
-		TextField Uname = new TextField();
+		
 		Uname.setMaxWidth(300);
 		Uname.setMinHeight(30);
-		TextField Pwd = new TextField();
+		
 		Pwd.setMaxWidth(300);
 		Pwd.setMinHeight(30);
 		Button loginBtn = new Button("LogIn");
 		loginBtn.setOnMouseClicked(e->{
 			 if(e.getButton()== MouseButton.PRIMARY) {
-				 Login22.hide();			 
-				 Stage Menu = new Stage();
-				 menu M = new menu();
-				 M.start(Menu);
-				 Menu.show();
+				 String query = "Select * from users where username = ? AND password = ?";
+					
+					try {
+						
+						PreparedStatement preparedStatement = LidhjaDB.getConnection().prepareStatement(query);
+						
+						preparedStatement.setString(1, Uname.getText());
+						preparedStatement.setString(2, Pwd.getText());
+
+						ResultSet result = preparedStatement.executeQuery();
+						
+						if(result.next()) {
+							Alert alert = new Alert(AlertType.INFORMATION);
+							alert.setTitle("Login result");
+							alert.setHeaderText(null);
+							alert.setContentText("You are logged in!");
+							alert.showAndWait();
+							
+							Login22.hide();			 
+							 Stage Menu = new Stage();
+							 menu M = new menu();
+							 M.start(Menu);
+							 Menu.show();
+							
+						} else {
+							Alert alert = new Alert(AlertType.INFORMATION);
+							alert.setTitle("Login result");
+							alert.setHeaderText(null);
+							alert.setContentText("Email or password is wrong!");
+							alert.showAndWait();
+							
+						}
+						
+					} catch(SQLException ex) {
+						Alert alert = new Alert(AlertType.ERROR);
+						alert.setTitle("Database problem");
+						alert.setHeaderText(null);
+						alert.setContentText(ex.getMessage());
+						alert.showAndWait();
+						System.exit(0);
+					}
+				
+
+				 
+				 
 			 }
 		});
 		Button back = new Button("Back");

@@ -147,13 +147,8 @@ public class menu extends Application {
       
         root.getChildren().addAll(menuBar); 
         
-       
-        
-//        Pri.setOnAction(e->{
-//        	EkipetTb ekipet = new EkipetTb();
-//        	switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ekipet.start("prishtina"),bt.start());
-//        	
-//        });
+ 
+
         
         Pri.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent t) {
@@ -279,12 +274,6 @@ public class menu extends Application {
         });
        
        
-       
-       
-        Kr.setOnAction(e->{
-        	switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ra.start(),bt.start());
-        	
-        });
         
         switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ra.start(),bt.start());
     	

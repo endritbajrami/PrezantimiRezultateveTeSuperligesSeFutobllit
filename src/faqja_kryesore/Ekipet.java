@@ -3,8 +3,6 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import Tabelat.LidhjaDB;
-
 public class Ekipet {
 
 	private int Numri;
