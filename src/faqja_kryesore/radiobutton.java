@@ -23,7 +23,7 @@ public class radiobutton extends Application {
 
 		// create a label 
 		Label l = new Label("Zgjidhni ekipin qe mendoni se do te fitoj sivjet kampionatin:"); 
-		Label l2 = new Label(""); 
+		Label l2 = new Label("Momentalisht nuk eshte zgjedhur asnje ekip"); 
 
 		// create a toggle group 
 		ToggleGroup tg = new ToggleGroup(); 

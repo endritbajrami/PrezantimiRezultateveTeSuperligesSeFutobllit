@@ -46,7 +46,7 @@ public class Help {
 
 		Scene sc = new Scene(browser, 600, 300);
 
-		helpAboutStage.setTitle("Help - About");
+		helpAboutStage.setTitle("Help");
 		helpAboutStage.setScene(sc);
 
 		helpAboutStage.show();
