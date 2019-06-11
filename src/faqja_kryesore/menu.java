@@ -237,7 +237,7 @@ public class menu extends Application {
        
         
         Menu ComboBoxMenu = new Menu("",languagesCbo);
-        Menu hapsira = new Menu("                                                                     ");
+        Menu hapsira = new Menu("                                              ");
         menuBar.getMenus().addAll(menuT, menu2T, menu3T, menu4,hapsira,ComboBoxMenu,menuh,menuf,logout);
 
         
