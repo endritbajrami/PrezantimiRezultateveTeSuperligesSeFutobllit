@@ -67,7 +67,10 @@ public class Stadiumet extends Application  {
 		Application.launch(args);
 	}
 
+	
+	
 	private void findRecord() { 
+		
 		try {
 			Statement statement = dbConnection.createStatement();
 			String query = "Select * from stadiumet where eid =" + nameTxt.getText();
