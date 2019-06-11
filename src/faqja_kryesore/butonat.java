@@ -41,14 +41,14 @@ public class butonat {
 
     
 
-    lbl.setLayoutX(130);
+    lbl.setLayoutX(100);//130
     lbl.setLayoutY(0);
     lbl.setFont(Font.font("Cambria", 32));
 
     btn.setLayoutX(0);
     btn.setLayoutY(200);
     btn.setStyle("-fx-background-color:green");
-    btn2.setLayoutX(200);
+    btn2.setLayoutX(180);
     btn2.setLayoutY(200);
     btn2.setStyle("-fx-background-color:orange");
     btn3.setLayoutX(300);
@@ -64,8 +64,8 @@ public class butonat {
       public void handle(ActionEvent event) {
         lbl.setText("KF Feronikeli!");
         iv1.setImage(image);
-        iv1.setX(180);
-        iv1.setY(50);
+        iv1.setX(150);//180
+        iv1.setY(50);//50
         iv1.setFitHeight(120);
         iv1.setFitWidth(120);
         iv2.setImage(null);
@@ -80,18 +80,18 @@ public class butonat {
 
         @Override
         public void handle(ActionEvent event) {
-          lbl.setText("Trepça'89 dhe Gjilani!");
+          lbl.setText("Trepça dhe Gjilani!");
           iv2.setImage(image2);
-          iv2.setX(100);
-          iv2.setY(50);
+          iv2.setX(30); //100
+          iv2.setY(50);//50
           iv2.setFitHeight(120);
           iv2.setFitWidth(120);
           iv4.setImage(null);
           iv5.setImage(null);
           iv1.setImage(null);
           iv3.setImage(image3);
-          iv3.setX(300);
-          iv3.setY(50);
+          iv3.setX(250);//300
+          iv3.setY(50);//50
           iv3.setFitHeight(120);
           iv3.setFitWidth(120);
         }
@@ -105,14 +105,14 @@ public class butonat {
           iv2.setImage(null);
           iv3.setImage(null);
           iv4.setImage(image4);
-          iv4.setX(100);
-          iv4.setY(50);
+          iv4.setX(30); //100 //40
+          iv4.setY(50);//50
           iv4.setFitHeight(120);
           iv4.setFitWidth(120);
           
           iv5.setImage(image5);
-          iv5.setX(300);
-          iv5.setY(50);
+          iv5.setX(250);//300
+          iv5.setY(50);//50
           iv5.setFitHeight(120);
           iv5.setFitWidth(120);
           

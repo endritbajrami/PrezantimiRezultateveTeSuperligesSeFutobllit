@@ -105,7 +105,7 @@ public class Rangimitb{
 		
 		ObservableList<Rangimi> rangimiList = FXCollections.observableArrayList();
 		
-		for(int i = 0; i < rangimi.size(); i++) {
+		for(int i = 0; i<rangimi.size(); i++) {
 			rangimiList.add(rangimi.get(i));
 		}
 		
