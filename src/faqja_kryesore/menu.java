@@ -45,6 +45,7 @@ public class menu extends Application {
     	languagesCbo.getItems().addAll(allowedLanguages);
 		languagesCbo.setValue(I18N.getDefaultLocale().getLanguage());
 		languagesCbo.setOnAction(e -> switchLanguage());
+		languagesCbo.setStyle("-fx-background: -fx-accent;-fx-background-color:black -fx-selection-bar:black;-fx-text-fill:white; -fx-selection-bar-text:white");
     	
     	
     	primaryStage.setScene(null);
@@ -55,7 +56,7 @@ public class menu extends Application {
         MenuBar menuBar = new MenuBar();
         Menu menu = new Menu("Rangimi");
         Menu menuT =  I18N.getMenu(menu,menu.getText());
-       
+        
         Label logoutL = new Label("LogOut");
         Label logoutT = I18N.getLabel(logoutL,logoutL.getText());
         logoutT.setMaxHeight(menuBar.getMaxHeight());
