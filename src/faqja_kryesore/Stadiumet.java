@@ -56,7 +56,7 @@ public class Stadiumet extends Application  {
 	 private void setConnection() {
 			try {
 				Class.forName("com.mysql.jdbc.Driver");
-				dbConnection = DriverManager.getConnection("jdbc:mysql://localhost/knk?autoReconnect=true&useSSL=false", "root", "ber.99DM");
+				dbConnection = DriverManager.getConnection("jdbc:mysql://localhost/knk?autoReconnect=true&useSSL=false", "root", "");
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			}
