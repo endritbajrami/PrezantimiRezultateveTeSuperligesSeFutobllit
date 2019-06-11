@@ -206,27 +206,30 @@ public class menu extends Application {
         });
         
         Menu menuh = new Menu ("Help");
-        MenuItem aboutHelpItem = new MenuItem("About"); 
-        menuh.getItems().add(aboutHelpItem); 
-        menuh.setGraphic(new ImageView("images/help.png"));
+        Menu menuhT =  I18N.getMenu(menuh,menuh.getText());
+        RadioMenuItem aboutHelpItem = new RadioMenuItem("About"); 
+        RadioMenuItem aboutHelpItemT = I18N.getRMenu(aboutHelpItem,aboutHelpItem.getText());
+        menuhT.getItems().add(aboutHelpItemT); 
+        menuhT.setGraphic(new ImageView("images/help.png"));
         
         
-        aboutHelpItem.setOnAction(e -> {
+        aboutHelpItemT.setOnAction(e -> {
         	Help.about();
         });
         
         Menu menuf = new Menu("Exit");
-
-        MenuItem exitItem = new MenuItem("Exit", null);
-        exitItem.setMnemonicParsing(true);
-        exitItem.setAccelerator(new KeyCodeCombination(KeyCode.X,KeyCombination.CONTROL_DOWN));
-        exitItem.setOnAction(new EventHandler<ActionEvent>() {
+        Menu menufT =  I18N.getMenu(menuf,menuf.getText());
+        RadioMenuItem exitItem = new RadioMenuItem("Exitt");
+        RadioMenuItem exitItemT = I18N.getRMenu(exitItem,exitItem.getText());
+        exitItemT.setMnemonicParsing(true);
+        exitItemT.setAccelerator(new KeyCodeCombination(KeyCode.X,KeyCombination.CONTROL_DOWN));
+        exitItemT.setOnAction(new EventHandler<ActionEvent>() {
           public void handle(ActionEvent event) {
             Platform.exit();
           }
         });
-        menuf.getItems().add(exitItem);
-        menuf.setGraphic(new ImageView("images/exit.png"));
+        menufT.getItems().add(exitItemT);
+        menufT.setGraphic(new ImageView("images/exit.png"));
        
         
         Menu menu4=new Menu("",FormLabelT);
@@ -236,8 +239,8 @@ public class menu extends Application {
        
         
         Menu ComboBoxMenu = new Menu("",languagesCbo);
-        Menu hapsira = new Menu("                                              ");
-        menuBar.getMenus().addAll(menuT, menu2T, menu3T, menu4,hapsira,ComboBoxMenu,menuh,menuf,logout);
+        Menu hapsira = new Menu("                                  ");
+        menuBar.getMenus().addAll(menuT, menu2T, menu3T, menu4,hapsira,ComboBoxMenu,menuhT,menufT,logout);
 
         
         
