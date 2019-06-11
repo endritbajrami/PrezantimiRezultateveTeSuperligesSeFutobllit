@@ -8,7 +8,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.*; 
 import javafx.scene.layout.*; 
 import javafx.stage.Stage; 
-import javafx.beans.value.*; 
+import javafx.beans.value.*;
+import javafx.geometry.Insets; 
 public class radiobutton extends Application { 
 
 	// launch the application 
@@ -54,7 +55,11 @@ public class radiobutton extends Application {
 		r9.setToggleGroup(tg); 
 		r10.setToggleGroup(tg);
 		r11.setToggleGroup(tg); 
-		r12.setToggleGroup(tg); 
+		r12.setToggleGroup(tg);
+		
+	
+		
+
 
 		// add label 
 		r.getChildren().add(l); 
@@ -71,6 +76,8 @@ public class radiobutton extends Application {
 		r.getChildren().add(r11);
 		r.getChildren().add(r12);
 		r.getChildren().add(l2); 
+		
+		r.setPadding(new Insets(10,10,10,10));
 
 		// create a scene 
 		Scene sc = new Scene(r, 400, 280); 
