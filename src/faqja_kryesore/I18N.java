@@ -12,7 +12,9 @@ import javafx.beans.binding.StringBinding;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.scene.control.Label;
+import javafx.scene.control.Menu;
 import javafx.scene.control.RadioMenuItem;
+import javafx.scene.image.ImageView;
 
 public class I18N {
 public static ObjectProperty<Locale> locale;
@@ -52,15 +54,19 @@ public static ObjectProperty<Locale> locale;
 		return Bindings.createStringBinding(() -> get(key, args), locale);
 	}
 	
-	public static Label getLabel(String key, Object... args) {
-		Label label = new Label();
+	public static Label getLabel(Label label,String key, Object... args) {
 		label.textProperty().bind(createStringBinding(key, args));
 		return label;		
 	}
-	public static RadioMenuItem getRMenu(String key, Object... args) {
-		RadioMenuItem RM = new RadioMenuItem();
+	public static RadioMenuItem getRMenu(RadioMenuItem RM,String key, Object... args) {
 		RM.textProperty().bind(createStringBinding(key, args));
 		return RM;		
 	}
+	public static Menu getMenu(Menu RM,String key, Object... args) {
+		
+		RM.textProperty().bind(createStringBinding(key, args));
+		return RM;		
+	}
+	
 	
 }

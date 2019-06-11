@@ -3,6 +3,8 @@ package faqja_kryesore;
 
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -47,15 +49,17 @@ public class menu extends Application {
     	
     	primaryStage.setScene(null);
     	Menu = primaryStage;
-        primaryStage.setTitle("Menus");
+       
         Group root = new Group();
         
         MenuBar menuBar = new MenuBar();
         Menu menu = new Menu("Rangimi");
+        Menu menuT =  I18N.getMenu(menu,menu.getText());
        
-        Label logoutL = new Label("                                                                                                             LogOut");
-        logoutL.setMaxHeight(menuBar.getMaxHeight());
-        logoutL.setOnMouseClicked(e->{
+        Label logoutL = new Label("LogOut");
+        Label logoutT = I18N.getLabel(logoutL,logoutL.getText());
+        logoutT.setMaxHeight(menuBar.getMaxHeight());
+        logoutT.setOnMouseClicked(e->{
         	if(e.getButton() == MouseButton.PRIMARY) {
         		Menu.hide();
         		Stage Login1S = new Stage();
@@ -65,7 +69,7 @@ public class menu extends Application {
         		Login1S.show();
         	}
         });
-        Menu logout = new Menu("",logoutL);
+        Menu logout = new Menu("",logoutT);
         
         
 	    
@@ -74,12 +78,13 @@ public class menu extends Application {
         
         RadioMenuItem Kr =new RadioMenuItem("Kryesor");
         RadioMenuItem St =new RadioMenuItem("Stadiumet");
+        RadioMenuItem KrT =  I18N.getRMenu(Kr,Kr.getText());
+        RadioMenuItem StT = I18N.getRMenu(St,St.getText());
        
-       
-        Kr.setToggleGroup(menuToggle);
-        St.setToggleGroup(menuToggle);
+        KrT.setToggleGroup(menuToggle);
+        StT.setToggleGroup(menuToggle);
         
-        St.setOnAction(e->{
+        StT.setOnAction(e->{
     		Stage StadiumetStage = new Stage();
     		Stadiumet stadiumet = new Stadiumet();
     		stadiumet.start(StadiumetStage);
@@ -87,47 +92,64 @@ public class menu extends Application {
         });
       
         
-        menu.setGraphic(new ImageView("images/trofe.png"));
-        menu.getItems().addAll(Kr,St);
+        menuT.setGraphic(new ImageView("images/trofe.png"));
+        menuT.getItems().addAll(KrT,StT);
         
        
         Menu menu2 = new Menu("Rezultatet");
+        Menu menu2T =  I18N.getMenu(menu2,menu2.getText());
         RadioMenuItem j1 = new RadioMenuItem("Java1");
+        RadioMenuItem j1T = I18N.getRMenu(j1,j1.getText());
         RadioMenuItem j2 = new RadioMenuItem("Java2");
+        RadioMenuItem j2T = I18N.getRMenu(j2,j2.getText());
         RadioMenuItem j3 = new RadioMenuItem("Java3");
+        RadioMenuItem j3T = I18N.getRMenu(j3,j3.getText());
         RadioMenuItem j4 = new RadioMenuItem("Java4");
+        RadioMenuItem j4T = I18N.getRMenu(j4,j4.getText());
         RadioMenuItem j5 = new RadioMenuItem("Java5");
+        RadioMenuItem j5T = I18N.getRMenu(j5,j5.getText());
         RadioMenuItem j6 = new RadioMenuItem("Java6");
+        RadioMenuItem j6T = I18N.getRMenu(j6,j6.getText());
         RadioMenuItem j7 = new RadioMenuItem("Java7");
+        RadioMenuItem j7T = I18N.getRMenu(j7,j7.getText());
         RadioMenuItem j8 = new RadioMenuItem("Java8");
+        RadioMenuItem j8T = I18N.getRMenu(j8,j8.getText());
         RadioMenuItem j9 = new RadioMenuItem("Java9");
+        RadioMenuItem j9T = I18N.getRMenu(j9,j9.getText());
         RadioMenuItem j10 = new RadioMenuItem("Java10");
+        RadioMenuItem j10T = I18N.getRMenu(j10,j10.getText());
         RadioMenuItem j11 = new RadioMenuItem("Java11");
+        RadioMenuItem j11T = I18N.getRMenu(j11,j11.getText());
         RadioMenuItem j12 = new RadioMenuItem("Java12");
+        RadioMenuItem j12T = I18N.getRMenu(j12,j12.getText());
         RadioMenuItem j13 = new RadioMenuItem("Java13");
+        RadioMenuItem j13T = I18N.getRMenu(j13,j13.getText());
         RadioMenuItem j14 = new RadioMenuItem("Java14");
+        RadioMenuItem j14T = I18N.getRMenu(j14,j14.getText());
         RadioMenuItem j15 = new RadioMenuItem("Java15");
+        RadioMenuItem j15T = I18N.getRMenu(j15,j15.getText());
         
-        j1.setToggleGroup(menuToggle);
-        j2.setToggleGroup(menuToggle);
-        j3.setToggleGroup(menuToggle);
-        j4.setToggleGroup(menuToggle);
-        j5.setToggleGroup(menuToggle);
-        j6.setToggleGroup(menuToggle);
-        j7.setToggleGroup(menuToggle);
-        j8.setToggleGroup(menuToggle);
-        j9.setToggleGroup(menuToggle);
-        j10.setToggleGroup(menuToggle);
-        j11.setToggleGroup(menuToggle);
-        j12.setToggleGroup(menuToggle);
-        j13.setToggleGroup(menuToggle);
-        j14.setToggleGroup(menuToggle);
-        j15.setToggleGroup(menuToggle);
+        j1T.setToggleGroup(menuToggle);
+        j2T.setToggleGroup(menuToggle);
+        j3T.setToggleGroup(menuToggle);
+        j4T.setToggleGroup(menuToggle);
+        j5T.setToggleGroup(menuToggle);
+        j6T.setToggleGroup(menuToggle);
+        j7T.setToggleGroup(menuToggle);
+        j8T.setToggleGroup(menuToggle);
+        j9T.setToggleGroup(menuToggle);
+        j10T.setToggleGroup(menuToggle);
+        j11T.setToggleGroup(menuToggle);
+        j12T.setToggleGroup(menuToggle);
+        j13T.setToggleGroup(menuToggle);
+        j14T.setToggleGroup(menuToggle);
+        j15T.setToggleGroup(menuToggle);
         
-        menu2.setGraphic(new ImageView("images/ball.png"));
-        menu2.getItems().addAll(j1,j2,j3,j4,j5,j6,j7,j8,j9,j10,j11,j12,j13,j14,j15);
+        menu2T.setGraphic(new ImageView("images/ball.png"));
+        menu2T.getItems().addAll(j1T,j2T,j3T,j4T,j5T,j6T,j7T,j8T,j9T,j10T,j11T,j12T,j13T,j14T,j15T);
         
         Menu menu3= new Menu("Ekipet");
+        Menu menu3T = I18N.getMenu(menu3,menu3.getText());
         RadioMenuItem Pri = new RadioMenuItem("Prishtina");
         RadioMenuItem BP = new RadioMenuItem("Besa-Peje");
         RadioMenuItem T89 = new RadioMenuItem("Trepca 89");
@@ -156,13 +178,14 @@ public class menu extends Application {
         
 
         
-        menu3.getItems().addAll(Pri,BP,T89,Dri,KLl,KFero,Dre,Lir,Gjil,Vell,Flam,VP);
-        menu3.setGraphic(new ImageView("images/football-player.png"));
+        menu3T.getItems().addAll(Pri,BP,T89,Dri,KLl,KFero,Dre,Lir,Gjil,Vell,Flam,VP);
+        menu3T.setGraphic(new ImageView("images/football-player.png"));
         
         Label FormLabel = new Label("Formacioni");
-        FormLabel.setGraphic(new ImageView("images/tshirt.png"));
-        FormLabel.setMaxHeight(menuBar.getMaxHeight());
-        FormLabel.setOnMouseClicked(e->{
+        Label FormLabelT = I18N.getLabel(FormLabel,FormLabel.getText());
+        FormLabelT.setGraphic(new ImageView("images/tshirt.png"));
+        FormLabelT.setMaxHeight(menuBar.getMaxHeight());
+        FormLabelT.setOnMouseClicked(e->{
         	if(e.getButton() == MouseButton.PRIMARY) {
         		Menu.hide();
         		Stage LojaStage = new Stage();
@@ -171,12 +194,12 @@ public class menu extends Application {
         		LojaStage.show();
         	}
         });
-        Menu menu4=new Menu("",FormLabel);
+        Menu menu4=new Menu("",FormLabelT);
         HBox hb = new HBox();
         VBox vb = new VBox();
         VBox vb1 = new VBox();
        
-        menuBar.getMenus().addAll(menu, menu2, menu3, menu4,logout);
+        menuBar.getMenus().addAll(menuT, menu2T, menu3T, menu4,logout);
         
         
         
@@ -216,14 +239,6 @@ public class menu extends Application {
         j14.setOnAction(e->{tabelatJavet("rezultatet2017_18_java14");});
         j15.setOnAction(e->{tabelatJavet("rezultatet2017_18_java15");});
 
-       
-        
-        Pri.setOnAction(e->{
-        	EkipetTb ekipet = new EkipetTb();
-        	switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ekipet.start("prishtina"),bt.start());
-        	
-        });
-       
 
         
         vb.setStyle("-fx-background-color: Darkolivegreen");
@@ -243,8 +258,8 @@ public class menu extends Application {
     	 primaryStage.setTitle("Paraqitja e Rezultateve te Superliges se Kosoves");
          primaryStage.setResizable(false);
          primaryStage.show();
-          
-
+    
+    }
         
 
     
