@@ -3,8 +3,6 @@ package faqja_kryesore;
 
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -13,11 +11,13 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import Tabelat.*;
 import Login.Login1;
@@ -116,6 +116,7 @@ public class menu extends Application {
         Flam.setToggleGroup(menuToggle);
         VP.setToggleGroup(menuToggle);
         
+        
         menu3.getItems().addAll(Pri,BP,T89,Dri,KLl,KFero,Dre,Lir,Gjil,Vell,Flam,VP);
         menu3.setGraphic(new ImageView("images/football-player.png"));
         
@@ -138,38 +139,36 @@ public class menu extends Application {
        
         menuBar.getMenus().addAll(menu, menu2, menu3, menu4,logout);
         
+        
+        
         kryefaqja kr = new kryefaqja();
         butonat bt = new butonat();
         menuBar.prefWidthProperty().bind(primaryStage.widthProperty());
       
         root.getChildren().addAll(menuBar); 
         
-        Pri.setOnAction(e->{tabelatEkipeve("prishtina");});
-        BP.setOnAction(e->{tabelatEkipeve("besapeje");});
-        T89.setOnAction(e->{tabelatEkipeve("trepça89");});
-        Dri.setOnAction(e->{tabelatEkipeve("drita");});
-        KLl.setOnAction(e->{tabelatEkipeve("kfllapi");});
-        KFero.setOnAction(e->{tabelatEkipeve("kfferonikeli");});
-        Dre.setOnAction(e->{tabelatEkipeve("Drenica");});
-        Lir.setOnAction(e->{tabelatEkipeve("liria");});
-        Gjil.setOnAction(e->{tabelatEkipeve("gjilani");});
-        Vell.setOnAction(e->{tabelatEkipeve("vllaznimi");});
-        Flam.setOnAction(e->{tabelatEkipeve("flamurtari");});
-        VP.setOnAction(e->{tabelatEkipeve("vllazniapozhoran");});
        
-        switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ra.start(),bt.start());    
+        
+        Pri.setOnAction(e->{
+        	EkipetTb ekipet = new EkipetTb();
+        	switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ekipet.start("prishtina"),bt.start());
+        	
+        });
+       
+        Kr.setOnAction(e->{
+        	switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ra.start(),bt.start());
+        	
+        });
+        
+        switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ra.start(),bt.start());
+        
+        
+        
+        
+       
+        
+        
     }
-    
-    public void tabelatEkipeve(String ekipi) {
-    	 EkipetTb ekipet = new EkipetTb();
-    	 Stage stage = new Stage();
-         Scene scene = new Scene(new VBox(ekipet.start(ekipi)));
-         stage.setTitle(ekipi);
-         stage.setScene(scene);
-         stage.setResizable(false);
-         stage.show();
-    }
-    
     public void switchScenes(Stage primaryStage,VBox vb,Group root,HBox hb,Pane FK,VBox vb1,Pane Tabela,Pane Butonat) {
     	try {
     		
