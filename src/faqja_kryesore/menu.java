@@ -28,7 +28,7 @@ import Tabelat.*;
 import java.util.Locale;
 
 import Login.Login1;
-import Prova.Help;
+import faqja_kryesore.Help;
 
 public class menu extends Application {
 	ComboBox<String> languagesCbo = new ComboBox<>();
