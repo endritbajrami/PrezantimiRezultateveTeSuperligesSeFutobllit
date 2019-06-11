@@ -47,8 +47,7 @@ public class menu extends Application {
     	languagesCbo.getItems().addAll(allowedLanguages);
 		languagesCbo.setValue(I18N.getDefaultLocale().getLanguage());
 		languagesCbo.setOnAction(e -> switchLanguage());
-		languagesCbo.setStyle("-fx-background: -fx-accent;-fx-background-color:black -fx-selection-bar:black;-fx-text-fill:white; -fx-selection-bar-text:white");
-    	
+		
     	
     	primaryStage.setScene(null);
     	Menu = primaryStage;
@@ -213,7 +212,10 @@ public class menu extends Application {
         VBox vb = new VBox();
         VBox vb1 = new VBox();
        
-        menuBar.getMenus().addAll(menuT, menu2T, menu3T, menu4,menuh,logout);
+        
+        Menu ComboBoxMenu = new Menu("",languagesCbo);
+        Menu hapsira = new Menu("                                                                     ");
+        menuBar.getMenus().addAll(menuT, menu2T, menu3T, menu4,hapsira,ComboBoxMenu,menuh,logout);
         
         
         
@@ -259,11 +261,11 @@ public class menu extends Application {
 		vb1.setMaxWidth(primaryStage.getMaxWidth()-vb.getMaxWidth());
         vb1.setMaxHeight(primaryStage.getMaxHeight()-vb.getMaxHeight());
         vb1.setPadding(new Insets(0,0,0,0));
-        ra.start().setMaxSize(1000, 350);
-        bt.start().setMaxSize(400, 400);
+        ra.start().setMaxSize(1100, 300);
+        bt.start().setMaxSize(300, 300);
         vb1.setSpacing(0);
 		 vb.setPadding(new Insets(0,0,0,0));
-		vb1.getChildren().addAll(languagesCbo,ra.start(),bt.start());
+		vb1.getChildren().addAll(ra.start(),bt.start());
     	hb.getChildren().addAll(kr.start(),vb1);
     	 vb.getChildren().addAll(root,hb);
     	 Scene sc = new Scene(vb,1000,625);
