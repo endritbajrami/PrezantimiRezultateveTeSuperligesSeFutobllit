@@ -157,7 +157,175 @@ Kapaciteti integer,
 Nofka varchar(30),
 foreign key(eid) references Rangimi(eid));
 
-create table REZULTATET2017_18
+create table REZULTATET2017_18_JAVA1
+(Java integer,
+Ekipi_vendas varchar(25),
+Dita varchar(15),
+Data_ora datetime,
+Rezultati varchar(5),
+Ekipi_mysafir varchar(25));
+
+create table REZULTATET2017_18_JAVA2
+(Java integer,
+Ekipi_vendas varchar(25),
+Dita varchar(15),
+Data_ora datetime,
+Rezultati varchar(5),
+Ekipi_mysafir varchar(25));
+
+create table REZULTATET2017_18_JAVA3
+(Java integer,
+Ekipi_vendas varchar(25),
+Dita varchar(15),
+Data_ora datetime,
+Rezultati varchar(5),
+Ekipi_mysafir varchar(25));
+
+create table REZULTATET2017_18_JAVA4
+(Java integer,
+Ekipi_vendas varchar(25),
+Dita varchar(15),
+Data_ora datetime,
+Rezultati varchar(5),
+Ekipi_mysafir varchar(25));
+
+create table REZULTATET2017_18_JAVA5
+(Java integer,
+Ekipi_vendas varchar(25),
+Dita varchar(15),
+Data_ora datetime,
+Rezultati varchar(5),
+Ekipi_mysafir varchar(25));
+
+create table REZULTATET2017_18_JAVA6
+(Java integer,
+Ekipi_vendas varchar(25),
+Dita varchar(15),
+Data_ora datetime,
+Rezultati varchar(5),
+Ekipi_mysafir varchar(25));
+
+create table REZULTATET2017_18_JAVA7
+(Java integer,
+Ekipi_vendas varchar(25),
+Dita varchar(15),
+Data_ora datetime,
+Rezultati varchar(5),
+Ekipi_mysafir varchar(25));
+
+create table REZULTATET2017_18_JAVA8
+(Java integer,
+Ekipi_vendas varchar(25),
+Dita varchar(15),
+Data_ora datetime,
+Rezultati varchar(5),
+Ekipi_mysafir varchar(25));
+
+create table REZULTATET2017_18_JAVA9
+(Java integer,
+Ekipi_vendas varchar(25),
+Dita varchar(15),
+Data_ora datetime,
+Rezultati varchar(5),
+Ekipi_mysafir varchar(25));
+
+create table REZULTATET2017_18_JAVA10
+(Java integer,
+Ekipi_vendas varchar(25),
+Dita varchar(15),
+Data_ora datetime,
+Rezultati varchar(5),
+Ekipi_mysafir varchar(25));
+
+create table REZULTATET2017_18_JAVA11
+(Java integer,
+Ekipi_vendas varchar(25),
+Dita varchar(15),
+Data_ora datetime,
+Rezultati varchar(5),
+Ekipi_mysafir varchar(25));
+
+create table REZULTATET2017_18_JAVA12
+(Java integer,
+Ekipi_vendas varchar(25),
+Dita varchar(15),
+Data_ora datetime,
+Rezultati varchar(5),
+Ekipi_mysafir varchar(25));
+
+create table REZULTATET2017_18_JAVA13
+(Java integer,
+Ekipi_vendas varchar(25),
+Dita varchar(15),
+Data_ora datetime,
+Rezultati varchar(5),
+Ekipi_mysafir varchar(25));
+
+create table REZULTATET2017_18_JAVA14
+(Java integer,
+Ekipi_vendas varchar(25),
+Dita varchar(15),
+Data_ora datetime,
+Rezultati varchar(5),
+Ekipi_mysafir varchar(25));
+
+create table REZULTATET2017_18_JAVA15
+(Java integer,
+Ekipi_vendas varchar(25),
+Dita varchar(15),
+Data_ora datetime,
+Rezultati varchar(5),
+Ekipi_mysafir varchar(25));
+
+create table REZULTATET2017_18_JAVA16
+(Java integer,
+Ekipi_vendas varchar(25),
+Dita varchar(15),
+Data_ora datetime,
+Rezultati varchar(5),
+Ekipi_mysafir varchar(25));
+
+create table REZULTATET2017_18_JAVA17
+(Java integer,
+Ekipi_vendas varchar(25),
+Dita varchar(15),
+Data_ora datetime,
+Rezultati varchar(5),
+Ekipi_mysafir varchar(25));
+
+create table REZULTATET2017_18_JAVA18
+(Java integer,
+Ekipi_vendas varchar(25),
+Dita varchar(15),
+Data_ora datetime,
+Rezultati varchar(5),
+Ekipi_mysafir varchar(25));
+
+create table REZULTATET2017_18_JAVA19
+(Java integer,
+Ekipi_vendas varchar(25),
+Dita varchar(15),
+Data_ora datetime,
+Rezultati varchar(5),
+Ekipi_mysafir varchar(25));
+
+create table REZULTATET2017_18_JAVA20
+(Java integer,
+Ekipi_vendas varchar(25),
+Dita varchar(15),
+Data_ora datetime,
+Rezultati varchar(5),
+Ekipi_mysafir varchar(25));
+
+create table REZULTATET2017_18_JAVA21
+(Java integer,
+Ekipi_vendas varchar(25),
+Dita varchar(15),
+Data_ora datetime,
+Rezultati varchar(5),
+Ekipi_mysafir varchar(25));
+
+create table REZULTATET2017_18_JAVA22
 (Java integer,
 Ekipi_vendas varchar(25),
 Dita varchar(15),
@@ -477,136 +645,153 @@ insert into Stadiumet() values (4,"Trepça 89","Stadiumi Riza Lushta","Mitrovice
 insert into Stadiumet() values (9,"Vellaznimi","Stadiumi Qytetit Gjakove","Gjakove",6000,"Kuq e Zinjet");
 insert into Stadiumet() values (12,"Vllaznia Pozheran","Stadiumi Ibrahim Kurteshi","Vitije",10000,"Tigrat");
 
-insert into REZULTATET2017_18 values (1,"Trepça 89","E premte",'2017-08-18 16:30:00',"3-1","Flamurtari");
-insert into REZULTATET2017_18 values (1,"Feronikeli","E shtune",'2017-08-19 16:30:00',"1-0","Vllaznia Pozhoran");
-insert into REZULTATET2017_18 values (1,"Llapi","E shtune",'2017-08-19 16:30:00',"1-0","Drenica");
-insert into REZULTATET2017_18 values (1,"Gjilani","E diel",'2017-08-20 18:00:00',"2-1","Besa Peja");
-insert into REZULTATET2017_18 values(1,"Prishtina","E diel",'2017-08-20 18:00:00',"0-1","Drita");
-insert into REZULTATET2017_18 values (1,"Vllaznimi","E diel",'2017-08-20 18:00:00',"1-0","Liria");
-insert into REZULTATET2017_18 values(2,"Vllaznia Pozhoran","E premte",'2017-08-25 16:30:00',"0-1","Llapi");
-insert into REZULTATET2017_18 values(2,"Drenica","E shtune",'2017-08-26 16:30:00',"1-0","Vllaznimi");
-insert into REZULTATET2017_18 values(2,"Flamurtari","E shtune",'2017-08-26 16:30:00',"0-2","Prishtina");
-insert into REZULTATET2017_18 values(2,"Liria","E shtune",'2017-08-26 18:00:00',"1-0","Trepça 89");
-insert into REZULTATET2017_18 values(2,"Besa Peja","E diele",'2017-08-27 18:00:00',"2-0","Drita");
-insert into REZULTATET2017_18 values(2,"Gjilan","E diele",'2017-08-27 18:00:00',"1-1","Feronikeli");
-insert into REZULTATET2017_18 values(3,"Feronikeli","E premte",'2017-09-08 16:30:00',"2-1","Besa Peja");
-insert into REZULTATET2017_18 values(3,"Llapi","E premte",'2017-09-08 16:30:00',"1-1","Gjilani");
-insert into REZULTATET2017_18 values(3,"Prishtina","E shtune",'2017-09-09 16:30:00',"1-0","Liria");
-insert into REZULTATET2017_18 values(3,"Drita","E shtune",'2017-09-09 16:30:00',"0-0","Flamurtari");
-insert into REZULTATET2017_18 values(3,"Vllaznimi","E diele",'2017-09-10 18:00:00',"3-0","Vllaznia Pozhoran");
-insert into REZULTATET2017_18 values(3,"Trepça 89","E diele",'2017-09-10 18:00:00',"1-0","Drenica");
-insert into REZULTATET2017_18 values(4,"Feronikeli","E marte",'2017-09-12 16:30:00',"0-0","Llapi");
-insert into REZULTATET2017_18 values(4,"Besa","E merkure",'2017-09-13 16:30:00',"2-0","Flamurtari");
-insert into REZULTATET2017_18 values(4,"Liria","E merkure",'2017-09-13 16:00:00',"2-0","Drita");
-insert into REZULTATET2017_18 values(4,"Drenica","E merkure",'2017-09-13 16:00:00',"1-1","Prishtina");
-insert into REZULTATET2017_18 values(4,"Vllaznia Pozhoran","E merkure",'2017-09-13 16:00:00',"2-1","Trepça 89");
-insert into REZULTATET2017_18 values(4,"Gjilan","E enjte",'2017-09-14 16:00:00',"1-1","Vllaznimi");
-insert into REZULTATET2017_18 values(5,"FLamurtari","E shtune",'2017-09-16 16:30:00',"0-0","Liria");
-insert into REZULTATET2017_18 values(5,"Prishtina","E shtune",'2017-09-08 16:30:00',"2-1","Vllaznia Pozhoran");
-insert into REZULTATET2017_18 values(5,"Llapi","E shtune",'2017-09-09 16:00:00',"2-0","Besa");
-insert into REZULTATET2017_18 values(5,"Vllaznimi","E diele",'2017-09-09 16:00:00',"0-0","Feronikeli");
-insert into REZULTATET2017_18 values(5,"Trepça 89","E diele",'2017-09-10 16:00:00',"1-2","Gjilani");
-insert into REZULTATET2017_18 values(5,"Drita","E diele",'2017-09-10 16:00:00',"3-0","Drenica");
-insert into REZULTATET2017_18 values(6,"Feronikeli","E premte",'2017-09-22 16:00:00',"0-1","Trepça 89");
-insert into REZULTATET2017_18 values(6,"Llapi","E shtune",'2017-09-23 13:30:00',"2-0","Vllaznimi");
-insert into REZULTATET2017_18 values(6,"Gjilani","E shtune",'2017-09-23 16:00:00',"0-0","Prishtina");
-insert into REZULTATET2017_18 values(6,"Besa","E shtune",'2017-09-23 16:00:00',"2-0","Liria");
-insert into REZULTATET2017_18 values(6,"Drenica","E shtune",'2017-09-23 16:00:00',"4-1","Flamurtari");
-insert into REZULTATET2017_18 values(6,"Vllaznia Pozhoran","E diele",'2017-09-24 16:00:00',"0-4","Drita");
-insert into REZULTATET2017_18 values(7,"Liria","E merkure",'2017-09-27 13:30:00',"1-0","Drenica");
-insert into REZULTATET2017_18 values(7,"Prishtina","E merkure",'2017-09-27 15:30:00',"0-0","Feronikeli");
-insert into REZULTATET2017_18 values(7,"Trepça 89","E merkure",'2017-09-27 15:30:00',"3-1","Llapi");
-insert into REZULTATET2017_18 values(7,"Vllaznimi","E merkure",'2017-09-27 15:30:00',"1-0","Besa");
-insert into REZULTATET2017_18 values(7,"Flamurtari","E merkure",'2017-09-27 15:30:00',"2-1","Vllaznia Pozhoran");
-insert into REZULTATET2017_18 values(7,"Drita","E enjte",'2017-09-28 15:30:00',"1-1","Gjilani");
-insert into REZULTATET2017_18 values(8,"Besa","E diele",'2017-10-01 15:00:00',"0-2","Drenica");
-insert into REZULTATET2017_18 values(8,"Vllaznia Pozhoran","E diele",'2017-10-01 15:00:00',"0-0","Liria");
-insert into REZULTATET2017_18 values(8,"Llapi","E diele",'2017-10-01 15:00:00',"3-0","Prishtina");
-insert into REZULTATET2017_18 values(8,"Vllaznimi","E diele",'2017-10-01 15:00:00',"0-0","Trepça 89");
-insert into REZULTATET2017_18 values(8,"Feronikeli","E hene",'2017-10-02 15:00:00',"1-1","Drita");
-insert into REZULTATET2017_18 values(8,"Gjilani","E hene",'2017-10-02 15:00:00',"1-0","Flamurtari");
-insert into REZULTATET2017_18 values(9,"Liria","E marte",'2017-10-10 14:00:00',"0-0","Gjilani");
-insert into REZULTATET2017_18 values(9,"Drita","E marte",'2017-10-10 14:00:00',"0-0","Llapi");
-insert into REZULTATET2017_18 values(9,"Flamurtari","E marte",'2017-10-10 14:00:00',"2-2","Feronikeli");
-insert into REZULTATET2017_18 values(9,"Trepça 89","E merkure",'2017-10-11 14:00:00',"3-0","Besa");
-insert into REZULTATET2017_18 values(9,"Drenica","E merkure",'2017-10-11 14:00:00',"1-0","Vllaznia Pozhoran");
-insert into REZULTATET2017_18 values(9,"Prishtina","E merkure",'2017-10-11 14:00:00',"1-0","Vllaznimi");
-insert into REZULTATET2017_18 values(10,"Llapi","E shtune",'2017-10-14 14:00:00',"1-0","Flamurtari");
-insert into REZULTATET2017_18 values(10,"Feronikeli","E shtune",'2017-10-14 14:00:00',"0-1","Liria");
-insert into REZULTATET2017_18 values(10,"Besa","E diele",'2017-10-15 14:00:00',"3-1","Vllaznia Pozhoran");
-insert into REZULTATET2017_18 values(10,"Gjilani","E diele",'2017-10-15 14:00:00',"2-1","Drenica");
-insert into REZULTATET2017_18 values(10,"Trepça 89","E diele",'2017-10-15 14:00:00',"0-2","Prishtina");
-insert into REZULTATET2017_18 values(10,"Vllaznimi","E diele",'2017-10-15 14:00:00',"1-1","Drita");
-insert into REZULTATET2017_18 values(11,"Liria","E premte",'2017-10-20 14:00:00',"3-0","Llapi");
-insert into REZULTATET2017_18 values(11,"Drita","E premte",'2017-10-20 14:00:00',"1-1","Trepça 89");
-insert into REZULTATET2017_18 values(11,"Drenica","E premte",'2017-10-20 14:00:00',"0-0","Feronikeli");
-insert into REZULTATET2017_18 values(11,"Flamurtari","E premte",'2017-10-20 14:00:00',"0-3","Vllaznimi");
-insert into REZULTATET2017_18 values(11,"Prishtina","E shtune",'2017-10-21 14:00:00',"4-0","Besa");
-insert into REZULTATET2017_18 values(11,"Vllaznia Pozhoran","E shtune",'2017-10-21 14:00:00',"0-0","Gjilani");
-insert into REZULTATET2017_18 values(12,"Liria","E marte",'2017-10-24 14:00:00',"2-2","Vllaznimi");
-insert into REZULTATET2017_18 values(12,"Drenica","E merkure",'2017-10-24 14:00:00',"1-2","Llapi");
-insert into REZULTATET2017_18 values(12,"Flamurtari","E merkure",'2017-10-25 14:00:00',"2-2","Trepça 89");
-insert into REZULTATET2017_18 values(12,"Drita","E merkure",'2017-10-25 14:00:00',"0-0","Prishtina");
-insert into REZULTATET2017_18 values(12,"Vllaznia Pozhoran","E enjte",'2017-10-26 14:00:00',"0-3","Feronikeli");
-insert into REZULTATET2017_18 values(12,"Besa","E enjte",'2017-10-26 14:00:00',"0-0","Gjilani");
-insert into REZULTATET2017_18 values(13,"Prishtina","E shtune",'2017-10-28 13:30:00',"3-1","Flamurtari");
-insert into REZULTATET2017_18 values(13,"Drita","E diele",'2017-10-29 13:00:00',"2-0","Besa");
-insert into REZULTATET2017_18 values(13,"Trepça 89","E diele",'2017-10-29 13:00:00',"2-0","Liria");
-insert into REZULTATET2017_18 values(13,"Vllaznimi","E diele",'2017-10-29 13:00:00',"1-1","Drenica");
-insert into REZULTATET2017_18 values(13,"Llapi","E diele",'2017-10-29 13:00:00',"4-1","Vllaznia Pozhoran");
-insert into REZULTATET2017_18 values(13,"Feronikeli","E hene",'2017-10-30 13:00:00',"2-1","Gjilani");
-insert into REZULTATET2017_18 values(14,"Drenica","E premte",'2017-11-03 13:00:00',"1-0","Trepça 89");
-insert into REZULTATET2017_18 values(14,"Liria","E shtune",'2017-11-04 13:00:00',"1-0","Prishtina");
-insert into REZULTATET2017_18 values(14,"Flamurtari","E shtune",'2017-11-04 13:00:00',"1-1","Drita");
-insert into REZULTATET2017_18 values(14,"Vllaznia Pozhoran","E shtune",'2017-11-04 13:00:00',"1-2","Vllaznimi");
-insert into REZULTATET2017_18 values(14,"Gjilani","E diele",'2017-11-04 13:00:00',"2-0","Llapi");
-insert into REZULTATET2017_18 values(14,"Besa","E diele",'2017-11-05 13:00:00',"0-5","Feronikeli");
-insert into REZULTATET2017_18 values(15,"Vllaznimi","E premte",'2017-11-17 13:00:00',"0-0","Gjilani");
-insert into REZULTATET2017_18 values(15,"Prishtina","E premte",'2017-11-17 13:00:00',"0-2","Drenica");
-insert into REZULTATET2017_18 values(15,"Flamurtari","E premte",'2017-11-17 13:00:00',"3-1","Besa");
-insert into REZULTATET2017_18 values(15,"Drita","E premte",'2017-11-17 13:00:00',"4-3","Liria");
-insert into REZULTATET2017_18 values(15,"Llapi","E shtune",'2017-11-17 13:00:00',"1-1","Feronikeli");
-insert into REZULTATET2017_18 values(15,"Trepça 89","E shtune",'2017-11-17 13:00:00',"2-0","Vllaznia Pozhoran");
-insert into REZULTATET2017_18 values(16,"Besa","E merkure",'2017-11-22 13:00:00',"1-6","Llapi");
-insert into REZULTATET2017_18 values(16,"Feronikeli","E merkure",'2017-11-22 13:00:00',"3-0","Vllaznimi");
-insert into REZULTATET2017_18 values(16,"Gjilani","E merkure",'2017-11-22 13:00:00',"0-0","Trepça 89");
-insert into REZULTATET2017_18 values(16,"Drenica","E merkure",'2017-11-22 13:00:00',"0-0","Drita");
-insert into REZULTATET2017_18 values(16,"Liria","E merkure",'2017-11-22 13:00:00',"2-0","Flamurtari");
-insert into REZULTATET2017_18 values(16,"Vllaznia Pozhoran","E enjte",'2017-11-23 13:00:00',"0-2","Prishtina");
+insert into REZULTATET2017_18JAVA1 values (1,"Trepça 89","E premte",'2017-08-18 16:30:00',"3-1","Flamurtari");
+insert into REZULTATET2017_18JAVA1 values (1,"Feronikeli","E shtune",'2017-08-19 16:30:00',"1-0","Vllaznia Pozhoran");
+insert into REZULTATET2017_18JAVA1 values (1,"Llapi","E shtune",'2017-08-19 16:30:00',"1-0","Drenica");
+insert into REZULTATET2017_18JAVA1 values (1,"Gjilani","E diel",'2017-08-20 18:00:00',"2-1","Besa Peja");
+insert into REZULTATET2017_18JAVA1 values(1,"Prishtina","E diel",'2017-08-20 18:00:00',"0-1","Drita");
+insert into REZULTATET2017_18JAVA1 values (1,"Vllaznimi","E diel",'2017-08-20 18:00:00',"1-0","Liria");
+
+insert into REZULTATET2017_18JAVA2 values(2,"Vllaznia Pozhoran","E premte",'2017-08-25 16:30:00',"0-1","Llapi");
+insert into REZULTATET2017_18JAVA2 values(2,"Drenica","E shtune",'2017-08-26 16:30:00',"1-0","Vllaznimi");
+insert into REZULTATET2017_18JAVA2 values(2,"Flamurtari","E shtune",'2017-08-26 16:30:00',"0-2","Prishtina");
+insert into REZULTATET2017_18JAVA2 values(2,"Liria","E shtune",'2017-08-26 18:00:00',"1-0","Trepça 89");
+insert into REZULTATET2017_18JAVA2 values(2,"Besa Peja","E diele",'2017-08-27 18:00:00',"2-0","Drita");
+insert into REZULTATET2017_18JAVA2 values(2,"Gjilan","E diele",'2017-08-27 18:00:00',"1-1","Feronikeli");
+
+insert into REZULTATET2017_18JAVA3 values(3,"Feronikeli","E premte",'2017-09-08 16:30:00',"2-1","Besa Peja");
+insert into REZULTATET2017_18JAVA3 values(3,"Llapi","E premte",'2017-09-08 16:30:00',"1-1","Gjilani");
+insert into REZULTATET2017_18JAVA3 values(3,"Prishtina","E shtune",'2017-09-09 16:30:00',"1-0","Liria");
+insert into REZULTATET2017_18JAVA3 values(3,"Drita","E shtune",'2017-09-09 16:30:00',"0-0","Flamurtari");
+insert into REZULTATET2017_18JAVA3 values(3,"Vllaznimi","E diele",'2017-09-10 18:00:00',"3-0","Vllaznia Pozhoran");
+insert into REZULTATET2017_18JAVA3 values(3,"Trepça 89","E diele",'2017-09-10 18:00:00',"1-0","Drenica");
+
+insert into REZULTATET2017_18JAVA4 values(4,"Feronikeli","E marte",'2017-09-12 16:30:00',"0-0","Llapi");
+insert into REZULTATET2017_18JAVA4 values(4,"Besa","E merkure",'2017-09-13 16:30:00',"2-0","Flamurtari");
+insert into REZULTATET2017_18JAVA4 values(4,"Liria","E merkure",'2017-09-13 16:00:00',"2-0","Drita");
+insert into REZULTATET2017_18JAVA4 values(4,"Drenica","E merkure",'2017-09-13 16:00:00',"1-1","Prishtina");
+insert into REZULTATET2017_18JAVA4 values(4,"Vllaznia Pozhoran","E merkure",'2017-09-13 16:00:00',"2-1","Trepça 89");
+insert into REZULTATET2017_18JAVA4 values(4,"Gjilan","E enjte",'2017-09-14 16:00:00',"1-1","Vllaznimi");
+
+insert into REZULTATET2017_18JAVA5 values(5,"FLamurtari","E shtune",'2017-09-16 16:30:00',"0-0","Liria");
+insert into REZULTATET2017_18JAVA5 values(5,"Prishtina","E shtune",'2017-09-08 16:30:00',"2-1","Vllaznia Pozhoran");
+insert into REZULTATET2017_18JAVA5 values(5,"Llapi","E shtune",'2017-09-09 16:00:00',"2-0","Besa");
+insert into REZULTATET2017_18JAVA5 values(5,"Vllaznimi","E diele",'2017-09-09 16:00:00',"0-0","Feronikeli");
+insert into REZULTATET2017_18JAVA5 values(5,"Trepça 89","E diele",'2017-09-10 16:00:00',"1-2","Gjilani");
+insert into REZULTATET2017_18JAVA5 values(5,"Drita","E diele",'2017-09-10 16:00:00',"3-0","Drenica");
+
+insert into REZULTATET2017_18JAVA6 values(6,"Feronikeli","E premte",'2017-09-22 16:00:00',"0-1","Trepça 89");
+insert into REZULTATET2017_18JAVA6 values(6,"Llapi","E shtune",'2017-09-23 13:30:00',"2-0","Vllaznimi");
+insert into REZULTATET2017_18JAVA6 values(6,"Gjilani","E shtune",'2017-09-23 16:00:00',"0-0","Prishtina");
+insert into REZULTATET2017_18JAVA6 values(6,"Besa","E shtune",'2017-09-23 16:00:00',"2-0","Liria");
+insert into REZULTATET2017_18JAVA6 values(6,"Drenica","E shtune",'2017-09-23 16:00:00',"4-1","Flamurtari");
+insert into REZULTATET2017_18JAVA6 values(6,"Vllaznia Pozhoran","E diele",'2017-09-24 16:00:00',"0-4","Drita");
+
+insert into REZULTATET2017_18JAVA7 values(7,"Liria","E merkure",'2017-09-27 13:30:00',"1-0","Drenica");
+insert into REZULTATET2017_18JAVA7 values(7,"Prishtina","E merkure",'2017-09-27 15:30:00',"0-0","Feronikeli");
+insert into REZULTATET2017_18JAVA7 values(7,"Trepça 89","E merkure",'2017-09-27 15:30:00',"3-1","Llapi");
+insert into REZULTATET2017_18JAVA7 values(7,"Vllaznimi","E merkure",'2017-09-27 15:30:00',"1-0","Besa");
+insert into REZULTATET2017_18JAVA7 values(7,"Flamurtari","E merkure",'2017-09-27 15:30:00',"2-1","Vllaznia Pozhoran");
+insert into REZULTATET2017_18JAVA7 values(7,"Drita","E enjte",'2017-09-28 15:30:00',"1-1","Gjilani");
+
+insert into REZULTATET2017_18JAVA8 values(8,"Besa","E diele",'2017-10-01 15:00:00',"0-2","Drenica");
+insert into REZULTATET2017_18JAVA8 values(8,"Vllaznia Pozhoran","E diele",'2017-10-01 15:00:00',"0-0","Liria");
+insert into REZULTATET2017_18JAVA8 values(8,"Llapi","E diele",'2017-10-01 15:00:00',"3-0","Prishtina");
+insert into REZULTATET2017_18JAVA8 values(8,"Vllaznimi","E diele",'2017-10-01 15:00:00',"0-0","Trepça 89");
+insert into REZULTATET2017_18JAVA8 values(8,"Feronikeli","E hene",'2017-10-02 15:00:00',"1-1","Drita");
+insert into REZULTATET2017_18JAVA8 values(8,"Gjilani","E hene",'2017-10-02 15:00:00',"1-0","Flamurtari");
+
+insert into REZULTATET2017_18JAVA9 values(9,"Liria","E marte",'2017-10-10 14:00:00',"0-0","Gjilani");
+insert into REZULTATET2017_18JAVA9 values(9,"Drita","E marte",'2017-10-10 14:00:00',"0-0","Llapi");
+insert into REZULTATET2017_18JAVA9 values(9,"Flamurtari","E marte",'2017-10-10 14:00:00',"2-2","Feronikeli");
+insert into REZULTATET2017_18JAVA9 values(9,"Trepça 89","E merkure",'2017-10-11 14:00:00',"3-0","Besa");
+insert into REZULTATET2017_18JAVA9 values(9,"Drenica","E merkure",'2017-10-11 14:00:00',"1-0","Vllaznia Pozhoran");
+insert into REZULTATET2017_18JAVA9 values(9,"Prishtina","E merkure",'2017-10-11 14:00:00',"1-0","Vllaznimi");
+
+insert into REZULTATET2017_18JAVA10 values(10,"Llapi","E shtune",'2017-10-14 14:00:00',"1-0","Flamurtari");
+insert into REZULTATET2017_18JAVA10 values(10,"Feronikeli","E shtune",'2017-10-14 14:00:00',"0-1","Liria");
+insert into REZULTATET2017_18JAVA10 values(10,"Besa","E diele",'2017-10-15 14:00:00',"3-1","Vllaznia Pozhoran");
+insert into REZULTATET2017_18JAVA10 values(10,"Gjilani","E diele",'2017-10-15 14:00:00',"2-1","Drenica");
+insert into REZULTATET2017_18JAVA10 values(10,"Trepça 89","E diele",'2017-10-15 14:00:00',"0-2","Prishtina");
+insert into REZULTATET2017_18JAVA10 values(10,"Vllaznimi","E diele",'2017-10-15 14:00:00',"1-1","Drita");
+
+insert into REZULTATET2017_18JAVA11 values(11,"Liria","E premte",'2017-10-20 14:00:00',"3-0","Llapi");
+insert into REZULTATET2017_18JAVA11 values(11,"Drita","E premte",'2017-10-20 14:00:00',"1-1","Trepça 89");
+insert into REZULTATET2017_18JAVA11 values(11,"Drenica","E premte",'2017-10-20 14:00:00',"0-0","Feronikeli");
+insert into REZULTATET2017_18JAVA11 values(11,"Flamurtari","E premte",'2017-10-20 14:00:00',"0-3","Vllaznimi");
+insert into REZULTATET2017_18JAVA11 values(11,"Prishtina","E shtune",'2017-10-21 14:00:00',"4-0","Besa");
+insert into REZULTATET2017_18JAVA11 values(11,"Vllaznia Pozhoran","E shtune",'2017-10-21 14:00:00',"0-0","Gjilani");
+
+insert into REZULTATET2017_18JAVA12 values(12,"Liria","E marte",'2017-10-24 14:00:00',"2-2","Vllaznimi");
+insert into REZULTATET2017_18JAVA12 values(12,"Drenica","E merkure",'2017-10-24 14:00:00',"1-2","Llapi");
+insert into REZULTATET2017_18JAVA12 values(12,"Flamurtari","E merkure",'2017-10-25 14:00:00',"2-2","Trepça 89");
+insert into REZULTATET2017_18JAVA12 values(12,"Drita","E merkure",'2017-10-25 14:00:00',"0-0","Prishtina");
+insert into REZULTATET2017_18JAVA12 values(12,"Vllaznia Pozhoran","E enjte",'2017-10-26 14:00:00',"0-3","Feronikeli");
+insert into REZULTATET2017_18JAVA12 values(12,"Besa","E enjte",'2017-10-26 14:00:00',"0-0","Gjilani");
+
+insert into REZULTATET2017_18JAVA13 values(13,"Prishtina","E shtune",'2017-10-28 13:30:00',"3-1","Flamurtari");
+insert into REZULTATET2017_18JAVA13 values(13,"Drita","E diele",'2017-10-29 13:00:00',"2-0","Besa");
+insert into REZULTATET2017_18JAVA13 values(13,"Trepça 89","E diele",'2017-10-29 13:00:00',"2-0","Liria");
+insert into REZULTATET2017_18JAVA13 values(13,"Vllaznimi","E diele",'2017-10-29 13:00:00',"1-1","Drenica");
+insert into REZULTATET2017_18JAVA13 values(13,"Llapi","E diele",'2017-10-29 13:00:00',"4-1","Vllaznia Pozhoran");
+insert into REZULTATET2017_18JAVA13 values(13,"Feronikeli","E hene",'2017-10-30 13:00:00',"2-1","Gjilani");
+
+insert into REZULTATET2017_18JAVA14 values(14,"Drenica","E premte",'2017-11-03 13:00:00',"1-0","Trepça 89");
+insert into REZULTATET2017_18JAVA14 values(14,"Liria","E shtune",'2017-11-04 13:00:00',"1-0","Prishtina");
+insert into REZULTATET2017_18JAVA14 values(14,"Flamurtari","E shtune",'2017-11-04 13:00:00',"1-1","Drita");
+insert into REZULTATET2017_18JAVA14 values(14,"Vllaznia Pozhoran","E shtune",'2017-11-04 13:00:00',"1-2","Vllaznimi");
+insert into REZULTATET2017_18JAVA14 values(14,"Gjilani","E diele",'2017-11-04 13:00:00',"2-0","Llapi");
+insert into REZULTATET2017_18JAVA14 values(14,"Besa","E diele",'2017-11-05 13:00:00',"0-5","Feronikeli");
+
+insert into REZULTATET2017_18JAVA15 values(15,"Vllaznimi","E premte",'2017-11-17 13:00:00',"0-0","Gjilani");
+insert into REZULTATET2017_18JAVA15 values(15,"Prishtina","E premte",'2017-11-17 13:00:00',"0-2","Drenica");
+insert into REZULTATET2017_18JAVA15 values(15,"Flamurtari","E premte",'2017-11-17 13:00:00',"3-1","Besa");
+insert into REZULTATET2017_18JAVA15 values(15,"Drita","E premte",'2017-11-17 13:00:00',"4-3","Liria");
+insert into REZULTATET2017_18JAVA15 values(15,"Llapi","E shtune",'2017-11-17 13:00:00',"1-1","Feronikeli");
+insert into REZULTATET2017_18JAVA15 values(15,"Trepça 89","E shtune",'2017-11-17 13:00:00',"2-0","Vllaznia Pozhoran");
+
+insert into REZULTATET2017_18JAVA16 values(16,"Besa","E merkure",'2017-11-22 13:00:00',"1-6","Llapi");
+insert into REZULTATET2017_18JAVA16 values(16,"Feronikeli","E merkure",'2017-11-22 13:00:00',"3-0","Vllaznimi");
+insert into REZULTATET2017_18JAVA16 values(16,"Gjilani","E merkure",'2017-11-22 13:00:00',"0-0","Trepça 89");
+insert into REZULTATET2017_18JAVA16 values(16,"Drenica","E merkure",'2017-11-22 13:00:00',"0-0","Drita");
+insert into REZULTATET2017_18JAVA16 values(16,"Liria","E merkure",'2017-11-22 13:00:00',"2-0","Flamurtari");
+insert into REZULTATET2017_18JAVA16 values(16,"Vllaznia Pozhoran","E enjte",'2017-11-23 13:00:00',"0-2","Prishtina");
 
 
+insert into REZULTATET2017_18JAVA18 values(18,"Vllaznia Pozhoran","E premte",'2017-12-01 13:00:00',"2-0","Flamurtari");
+insert into REZULTATET2017_18JAVA18 values(18,"Feronikeli","E shtune",'2017-12-02 13:00:00',"0-0","Prishtina");
+insert into REZULTATET2017_18JAVA18 values(18,"Drenica","E shtune",'2017-12-02 13:00:00',"1-0","Liria");
+insert into REZULTATET2017_18JAVA18 values(18,"Llapi","E shtune",'2017-12-02 13:00:00',"0-0","Trepça 89");
+insert into REZULTATET2017_18JAVA18 values(18,"Gjilani","E diele",'2017-12-03 13:00:00',"0-0","Drita");
+insert into REZULTATET2017_18JAVA18 values(18,"Besa","E diele",'2017-12-03 13:00:00',"1-2","Vllaznimi");
 
+insert into REZULTATET2017_18JAVA19 values(19,"Drenica","E diele",'2018-02-18 12:30:00',"2-2","Besa");
+insert into REZULTATET2017_18JAVA19 values(19,"Liria","E diele",'2018-02-18 12:30:00',"2-1","Vllaznia Pozhoran");
+insert into REZULTATET2017_18JAVA19 values(19,"Drita","E diele",'2018-02-18 12:30:00',"1-0","Feronikeli");
+insert into REZULTATET2017_18JAVA19 values(19,"Prishtina","E diele",'2018-02-18 12:30:00',"2-0","Llapi");
+insert into REZULTATET2017_18JAVA19 values(19,"Trepça 89","E diele",'2018-02-18 12:30:00',"1-0","Vllaznimi");
+insert into REZULTATET2017_18JAVA19 values(19,"Flamurtari","E hene",'2018-02-19 12:30:00',"0-1","Gjilani");
 
-insert into REZULTATET2017_18 values(18,"Vllaznia Pozhoran","E premte",'2017-12-01 13:00:00',"2-0","Flamurtari");
-insert into REZULTATET2017_18 values(18,"Feronikeli","E shtune",'2017-12-02 13:00:00',"0-0","Prishtina");
-insert into REZULTATET2017_18 values(18,"Drenica","E shtune",'2017-12-02 13:00:00',"1-0","Liria");
-insert into REZULTATET2017_18 values(18,"Llapi","E shtune",'2017-12-02 13:00:00',"0-0","Trepça 89");
-insert into REZULTATET2017_18 values(18,"Gjilani","E diele",'2017-12-03 13:00:00',"0-0","Drita");
-insert into REZULTATET2017_18 values(18,"Besa","E diele",'2017-12-03 13:00:00',"1-2","Vllaznimi");
-insert into REZULTATET2017_18 values(19,"Drenica","E diele",'2018-02-18 12:30:00',"2-2","Besa");
-insert into REZULTATET2017_18 values(19,"Liria","E diele",'2018-02-18 12:30:00',"2-1","Vllaznia Pozhoran");
-insert into REZULTATET2017_18 values(19,"Drita","E diele",'2018-02-18 12:30:00',"1-0","Feronikeli");
-insert into REZULTATET2017_18 values(19,"Prishtina","E diele",'2018-02-18 12:30:00',"2-0","Llapi");
-insert into REZULTATET2017_18 values(19,"Trepça 89","E diele",'2018-02-18 12:30:00',"1-0","Vllaznimi");
-insert into REZULTATET2017_18 values(19,"Flamurtari","E hene",'2018-02-19 12:30:00',"0-1","Gjilani");
-insert into REZULTATET2017_18 values(20,"Vllaznimi","E shtune",'2018-02-24 13:00:00',"0-0","Prishtina");
-insert into REZULTATET2017_18 values(20,"Besa","E shtune",'2018-02-24 13:00:00',"0-1","Trepça 89");
-insert into REZULTATET2017_18 values(20,"Feronikeli","E shtune",'2018-02-24 13:00:00',"1-0","Flamurtari");
-insert into REZULTATET2017_18 values(20,"LLapi","E diel",'2018-02-25 13:00:00',"0-1","Drita");
-insert into REZULTATET2017_18 values(20,"Gjilani","E diel",'2018-02-25 13:00:00',"1-0","Liria");
-insert into REZULTATET2017_18 values(20,"Vllaznia Pozhoran","E marte",'2018-02-27 13:00:00',"0-0","Drenica");
-insert into REZULTATET2017_18 values(21,"Drita","E premte",'2018-03-02 13:00:00',"1-1","Vllaznimi");
-insert into REZULTATET2017_18 values(21,"Liria","E premte",'2018-03-02 13:00:00',"1-0","Feronikeli");
-insert into REZULTATET2017_18 values(21,"Flamurtari","E shtune",'2018-03-03 13:00:00',"2-1","Llapi");
-insert into REZULTATET2017_18 values(21,"Prishtina","E shtune",'2018-03-03 13:00:00',"2-0","Trepça 89");
-insert into REZULTATET2017_18 values(21,"Drenica","E diel",'2018-03-04 13:00:00',"1-0","Gjilani");
-insert into REZULTATET2017_18 values(21,"Vllaznia","E hene",'2018-03-05 13:00:00',"1-0","Besa");
-insert into REZULTATET2017_18 values(22,"Feronikeli","E shtune",'2018-03-10 13:00:00',"1-0","Drenica");
-insert into REZULTATET2017_18 values(22,"Besa","E diel",'2018-03-11 12:30:00',"1-3","Prishtina");
-insert into REZULTATET2017_18 values(22,"Trepça 89","E diel",'2018-03-11 13:00:00',"1-1","Drita");
-insert into REZULTATET2017_18 values(22,"Vllaznimi","E diel",'2018-03-11 13:00:00',"2-0","Flamurtari");
-insert into REZULTATET2017_18 values(22,"Llapi","E diel",'2018-03-11 13:00:00',"0-2","Liria");
-insert into REZULTATET2017_18 values(22,"Gjilani","E diel",'2018-03-11 13:00:00',"1-0","Vllaznia Pozhoran");
+insert into REZULTATET2017_18JAVA20 values(20,"Vllaznimi","E shtune",'2018-02-24 13:00:00',"0-0","Prishtina");
+insert into REZULTATET2017_18JAVA20 values(20,"Besa","E shtune",'2018-02-24 13:00:00',"0-1","Trepça 89");
+insert into REZULTATET2017_18JAVA20 values(20,"Feronikeli","E shtune",'2018-02-24 13:00:00',"1-0","Flamurtari");
+insert into REZULTATET2017_18JAVA20 values(20,"LLapi","E diel",'2018-02-25 13:00:00',"0-1","Drita");
+insert into REZULTATET2017_18JAVA20 values(20,"Gjilani","E diel",'2018-02-25 13:00:00',"1-0","Liria");
+insert into REZULTATET2017_18JAVA20 values(20,"Vllaznia Pozhoran","E marte",'2018-02-27 13:00:00',"0-0","Drenica");
+
+insert into REZULTATET2017_18JAVA21 values(21,"Drita","E premte",'2018-03-02 13:00:00',"1-1","Vllaznimi");
+insert into REZULTATET2017_18JAVA21 values(21,"Liria","E premte",'2018-03-02 13:00:00',"1-0","Feronikeli");
+insert into REZULTATET2017_18JAVA21 values(21,"Flamurtari","E shtune",'2018-03-03 13:00:00',"2-1","Llapi");
+insert into REZULTATET2017_18JAVA21 values(21,"Prishtina","E shtune",'2018-03-03 13:00:00',"2-0","Trepça 89");
+insert into REZULTATET2017_18JAVA21 values(21,"Drenica","E diel",'2018-03-04 13:00:00',"1-0","Gjilani");
+insert into REZULTATET2017_18JAVA21 values(21,"Vllaznia","E hene",'2018-03-05 13:00:00',"1-0","Besa");
+
+insert into REZULTATET2017_18JAVA22 values(22,"Feronikeli","E shtune",'2018-03-10 13:00:00',"1-0","Drenica");
+insert into REZULTATET2017_18JAVA22 values(22,"Besa","E diel",'2018-03-11 12:30:00',"1-3","Prishtina");
+insert into REZULTATET2017_18JAVA22 values(22,"Trepça 89","E diel",'2018-03-11 13:00:00',"1-1","Drita");
+insert into REZULTATET2017_18JAVA22 values(22,"Vllaznimi","E diel",'2018-03-11 13:00:00',"2-0","Flamurtari");
+insert into REZULTATET2017_18JAVA22 values(22,"Llapi","E diel",'2018-03-11 13:00:00',"0-2","Liria");
+insert into REZULTATET2017_18JAVA22 values(22,"Gjilani","E diel",'2018-03-11 13:00:00',"1-0","Vllaznia Pozhoran");
 
 
 

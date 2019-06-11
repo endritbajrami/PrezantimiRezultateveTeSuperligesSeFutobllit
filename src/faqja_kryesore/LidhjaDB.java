@@ -11,6 +11,7 @@ public class LidhjaDB {
 	private final static String dbName = "knk";
 	private final static String username = "root";
 	private final static String password = "ber.99DM";
+
 	
 	public static Connection getConnection() {
 		if(dbConnection == null) {

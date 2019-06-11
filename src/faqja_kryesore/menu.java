@@ -116,7 +116,6 @@ public class menu extends Application {
         Flam.setToggleGroup(menuToggle);
         VP.setToggleGroup(menuToggle);
         
-        
         menu3.getItems().addAll(Pri,BP,T89,Dri,KLl,KFero,Dre,Lir,Gjil,Vell,Flam,VP);
         menu3.setGraphic(new ImageView("images/football-player.png"));
         
@@ -139,17 +138,12 @@ public class menu extends Application {
        
         menuBar.getMenus().addAll(menu, menu2, menu3, menu4,logout);
         
-        
-        
         kryefaqja kr = new kryefaqja();
         butonat bt = new butonat();
         menuBar.prefWidthProperty().bind(primaryStage.widthProperty());
       
         root.getChildren().addAll(menuBar); 
-        
- 
 
-  
         Pri.setOnAction(e->{tabelatEkipeve("prishtina");});
         BP.setOnAction(e->{tabelatEkipeve("besapeje");});
         T89.setOnAction(e->{tabelatEkipeve("trepça89");});
@@ -163,16 +157,7 @@ public class menu extends Application {
         Flam.setOnAction(e->{tabelatEkipeve("flamurtari");});
         VP.setOnAction(e->{tabelatEkipeve("vllazniapozhoran");});
        
-       
-        
-        switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ra.start(),bt.start());
-    	
-        
-        
-        
-       
-        
-        
+        switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ra.start(),bt.start());    
     }
     
     public void tabelatEkipeve(String ekipi) {
@@ -181,6 +166,7 @@ public class menu extends Application {
          Scene scene = new Scene(new VBox(ekipet.start(ekipi)));
          stage.setTitle(ekipi);
          stage.setScene(scene);
+         stage.setResizable(false);
          stage.show();
     }
     

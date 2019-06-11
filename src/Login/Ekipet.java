@@ -1,7 +1,9 @@
-package faqja_kryesore;
+package Login;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+
+import faqja_kryesore.LidhjaDB;
 
 public class Ekipet {
 

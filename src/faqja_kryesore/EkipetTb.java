@@ -2,7 +2,7 @@ package faqja_kryesore;
 
 import java.util.List;
 
-
+import Login.Ekipet;
 import Tabelat.Rangimi;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
