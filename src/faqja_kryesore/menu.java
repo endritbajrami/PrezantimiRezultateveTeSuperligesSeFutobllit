@@ -39,7 +39,7 @@ public class menu extends Application {
         
         MenuBar menuBar = new MenuBar();
         Menu menu = new Menu("Rangimi");
-        Menu menu2 = new Menu("Rezultatet");
+       
         Label logoutL = new Label("                                                                                                             LogOut");
         logoutL.setMaxHeight(menuBar.getMaxHeight());
         logoutL.setOnMouseClicked(e->{
@@ -60,34 +60,59 @@ public class menu extends Application {
         Rangimitb ra = new Rangimitb();
         
         RadioMenuItem Kr =new RadioMenuItem("Kryesor");
-        RadioMenuItem Ve =new RadioMenuItem("Vendor");
-        RadioMenuItem My = new RadioMenuItem("Mysafir");
+        RadioMenuItem St =new RadioMenuItem("Stadiumet");
+       
        
         Kr.setToggleGroup(menuToggle);
-        Ve.setToggleGroup(menuToggle);
-        My.setToggleGroup(menuToggle);
+        St.setToggleGroup(menuToggle);
+        
+        St.setOnAction(e->{
+    		Stage StadiumetStage = new Stage();
+    		Stadiumet stadiumet = new Stadiumet();
+    		stadiumet.start(StadiumetStage);
+    		StadiumetStage.show();
+        });
+      
         
         menu.setGraphic(new ImageView("images/trofe.png"));
-        menu.getItems().addAll(Kr,Ve,My);
+        menu.getItems().addAll(Kr,St);
         
+       
+        Menu menu2 = new Menu("Rezultatet");
+        RadioMenuItem j1 = new RadioMenuItem("Java1");
+        RadioMenuItem j2 = new RadioMenuItem("Java2");
+        RadioMenuItem j3 = new RadioMenuItem("Java3");
+        RadioMenuItem j4 = new RadioMenuItem("Java4");
+        RadioMenuItem j5 = new RadioMenuItem("Java5");
+        RadioMenuItem j6 = new RadioMenuItem("Java6");
+        RadioMenuItem j7 = new RadioMenuItem("Java7");
+        RadioMenuItem j8 = new RadioMenuItem("Java8");
+        RadioMenuItem j9 = new RadioMenuItem("Java9");
+        RadioMenuItem j10 = new RadioMenuItem("Java10");
+        RadioMenuItem j11 = new RadioMenuItem("Java11");
+        RadioMenuItem j12 = new RadioMenuItem("Java12");
+        RadioMenuItem j13 = new RadioMenuItem("Java13");
+        RadioMenuItem j14 = new RadioMenuItem("Java14");
+        RadioMenuItem j15 = new RadioMenuItem("Java15");
         
-        menu2.getItems().add(new RadioMenuItem("Java1"));
-        menu2.getItems().add(new RadioMenuItem("Java2"));
-        menu2.getItems().add(new RadioMenuItem("Java3"));
-        menu2.getItems().add(new RadioMenuItem("Java4"));
-        menu2.getItems().add(new RadioMenuItem("Java5"));
-        menu2.getItems().add(new RadioMenuItem("Java6"));
-        menu2.getItems().add(new RadioMenuItem("Java7"));
-        menu2.getItems().add(new RadioMenuItem("Java8"));
-        menu2.getItems().add(new RadioMenuItem("Java9"));
-        menu2.getItems().add(new RadioMenuItem("Java10"));
-        menu2.getItems().add(new RadioMenuItem("Java11"));
-        menu2.getItems().add(new RadioMenuItem("Java12"));
-        menu2.getItems().add(new RadioMenuItem("Java13"));
-        menu2.getItems().add(new RadioMenuItem("Java14"));
-        menu2.getItems().add(new RadioMenuItem("Java15"));
+        j1.setToggleGroup(menuToggle);
+        j2.setToggleGroup(menuToggle);
+        j3.setToggleGroup(menuToggle);
+        j4.setToggleGroup(menuToggle);
+        j5.setToggleGroup(menuToggle);
+        j6.setToggleGroup(menuToggle);
+        j7.setToggleGroup(menuToggle);
+        j8.setToggleGroup(menuToggle);
+        j9.setToggleGroup(menuToggle);
+        j10.setToggleGroup(menuToggle);
+        j11.setToggleGroup(menuToggle);
+        j12.setToggleGroup(menuToggle);
+        j13.setToggleGroup(menuToggle);
+        j14.setToggleGroup(menuToggle);
+        j15.setToggleGroup(menuToggle);
+        
         menu2.setGraphic(new ImageView("images/ball.png"));
-     
+        menu2.getItems().addAll(j1,j2,j3,j4,j5,j6,j7,j8,j9,j10,j11,j12,j13,j14,j15);
         
         Menu menu3= new Menu("Ekipet");
         RadioMenuItem Pri = new RadioMenuItem("Prishtina");
@@ -156,6 +181,22 @@ public class menu extends Application {
         Vell.setOnAction(e->{tabelatEkipeve("vllaznimi");});
         Flam.setOnAction(e->{tabelatEkipeve("flamurtari");});
         VP.setOnAction(e->{tabelatEkipeve("vllazniapozhoran");});
+        
+        j1.setOnAction(e->{tabelatJavet("rezultatet2017_18_java1");});
+        j2.setOnAction(e->{tabelatJavet("rezultatet2017_18_java2");});
+        j3.setOnAction(e->{tabelatJavet("rezultatet2017_18_java3");});
+        j4.setOnAction(e->{tabelatJavet("rezultatet2017_18_java4");});
+        j5.setOnAction(e->{tabelatJavet("rezultatet2017_18_java5");});
+        j6.setOnAction(e->{tabelatJavet("rezultatet2017_18_java6");});
+        j7.setOnAction(e->{tabelatJavet("rezultatet2017_18_java7");});
+        j8.setOnAction(e->{tabelatJavet("rezultatet2017_18_java8");});
+        j9.setOnAction(e->{tabelatJavet("rezultatet2017_18_java9");});
+        j10.setOnAction(e->{tabelatJavet("rezultatet2017_18_java10");});
+        j11.setOnAction(e->{tabelatJavet("rezultatet2017_18_java11");});
+        j12.setOnAction(e->{tabelatJavet("rezultatet2017_18_java12");});
+        j13.setOnAction(e->{tabelatJavet("rezultatet2017_18_java13");});
+        j14.setOnAction(e->{tabelatJavet("rezultatet2017_18_java14");});
+        j15.setOnAction(e->{tabelatJavet("rezultatet2017_18_java15");});
        
         switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ra.start(),bt.start());    
     }
@@ -169,6 +210,18 @@ public class menu extends Application {
          stage.setResizable(false);
          stage.show();
     }
+    
+    public void tabelatJavet(String java) {
+   	 JavaTb JAVA = new JavaTb();
+   	 Stage stage = new Stage();
+        Scene scene = new Scene(new VBox(JAVA.start(java)));
+        stage.setTitle("Java");
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+   }
+    
+   
     
     public void switchScenes(Stage primaryStage,VBox vb,Group root,HBox hb,Pane FK,VBox vb1,Pane Tabela,Pane Butonat) {
     	try {

@@ -13,6 +13,7 @@ import javafx.scene.text.Font;
 
 import java.sql.*;
 public class Stadiumet extends Application  {
+	private Stage stadiumet;
 	private TextField nameTxt;
 	private Label resultLabel;
 	private Connection dbConnection;
@@ -55,7 +56,7 @@ public class Stadiumet extends Application  {
 	 private void setConnection() {
 			try {
 				Class.forName("com.mysql.jdbc.Driver");
-				dbConnection = DriverManager.getConnection("jdbc:mysql://localhost/knk?autoReconnect=true&useSSL=false", "root", "");
+				dbConnection = DriverManager.getConnection("jdbc:mysql://localhost/knk?autoReconnect=true&useSSL=false", "root", "ber.99DM");
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			}
