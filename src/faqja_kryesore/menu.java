@@ -73,6 +73,7 @@ public class menu extends Application {
         	}
         });
         Menu logout = new Menu("",logoutT);
+       
         
         
 	    
@@ -186,7 +187,7 @@ public class menu extends Application {
         
         Label FormLabel = new Label("Formacioni");
         Label FormLabelT = I18N.getLabel(FormLabel,FormLabel.getText());
-        FormLabelT.setGraphic(new ImageView("images/tshirt.png"));
+        FormLabelT.setGraphic(new ImageView("images/form.png"));
         FormLabelT.setMaxHeight(menuBar.getMaxHeight());
         FormLabelT.setOnMouseClicked(e->{
         	if(e.getButton() == MouseButton.PRIMARY) {
@@ -201,6 +202,8 @@ public class menu extends Application {
         Menu menuh = new Menu ("Help");
         MenuItem aboutHelpItem = new MenuItem("About"); 
         menuh.getItems().add(aboutHelpItem); 
+        menuh.setGraphic(new ImageView("images/help.png"));
+        
         
         aboutHelpItem.setOnAction(e -> {
         	Help.about();
