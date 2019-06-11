@@ -4,8 +4,11 @@ package faqja_kryesore;
 
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -17,6 +20,9 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyCodeCombination;
+import javafx.scene.input.KeyCombination;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -47,6 +53,7 @@ public class menu extends Application {
     	languagesCbo.getItems().addAll(allowedLanguages);
 		languagesCbo.setValue(I18N.getDefaultLocale().getLanguage());
 		languagesCbo.setOnAction(e -> switchLanguage());
+		languagesCbo.setStyle("-fx-background: -fx-accent;-fx-background-color:black -fx-selection-bar:black;-fx-text-fill:white; -fx-selection-bar-text:white");
     	
     	
     	primaryStage.setScene(null);
@@ -58,7 +65,7 @@ public class menu extends Application {
         Menu menu = new Menu("Rangimi");
        
         Menu menuT =  I18N.getMenu(menu,menu.getText());
-       
+        
         Label logoutL = new Label("LogOut");
         Label logoutT = I18N.getLabel(logoutL,logoutL.getText());
         logoutT.setMaxHeight(menuBar.getMaxHeight());
@@ -208,6 +215,19 @@ public class menu extends Application {
         aboutHelpItem.setOnAction(e -> {
         	Help.about();
         });
+        
+        Menu menuf = new Menu("Exit");
+
+        MenuItem exitItem = new MenuItem("Exit", null);
+        exitItem.setMnemonicParsing(true);
+        exitItem.setAccelerator(new KeyCodeCombination(KeyCode.X,KeyCombination.CONTROL_DOWN));
+        exitItem.setOnAction(new EventHandler<ActionEvent>() {
+          public void handle(ActionEvent event) {
+            Platform.exit();
+          }
+        });
+        menuf.getItems().add(exitItem);
+        menuf.setGraphic(new ImageView("images/exit.png"));
        
         
         Menu menu4=new Menu("",FormLabelT);
@@ -215,7 +235,7 @@ public class menu extends Application {
         VBox vb = new VBox();
         VBox vb1 = new VBox();
        
-        menuBar.getMenus().addAll(menuT, menu2T, menu3T, menu4,menuh,logout);
+        menuBar.getMenus().addAll(menuT, menu2T, menu3T, menu4,menuh,menuf,logout);
         
         
         

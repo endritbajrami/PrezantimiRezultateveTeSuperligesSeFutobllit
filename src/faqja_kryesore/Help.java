@@ -44,7 +44,7 @@ public class Help {
 		
 		webEngine.load(url);
 
-		Scene sc = new Scene(browser, 500, 300);
+		Scene sc = new Scene(browser, 600, 300);
 
 		helpAboutStage.setTitle("Help - About");
 		helpAboutStage.setScene(sc);
