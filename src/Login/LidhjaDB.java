@@ -10,7 +10,7 @@ public class LidhjaDB {
 	private final static String host = "localhost";
 	private final static String dbName = "knk";
 	private final static String username = "root";
-	private final static String password = "";
+	private final static String password = "root";
 	
 	public static Connection getConnection() {
 		if(dbConnection == null) {
