@@ -3,13 +3,14 @@ package faqja_kryesore;
 
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.RadioMenuItem;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
@@ -20,10 +21,13 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import Tabelat.*;
+
+import java.util.Locale;
+
 import Login.Login1;
 
 public class menu extends Application {
-	
+	ComboBox<String> languagesCbo = new ComboBox<>();
 	private Stage Menu;
     public static void main(String[] args) {
         Application.launch(args);
@@ -32,6 +36,15 @@ public class menu extends Application {
     @Override
     
     public void start(Stage primaryStage) {
+    	ObservableList<String> allowedLanguages = FXCollections.observableArrayList();
+    	for(int i = 0;i < I18N.getLanguages().size();i++) {
+			allowedLanguages.add(I18N.getLanguages().get(i).getLanguage());		
+		}
+    	languagesCbo.getItems().addAll(allowedLanguages);
+		languagesCbo.setValue(I18N.getDefaultLocale().getLanguage());
+		languagesCbo.setOnAction(e -> switchLanguage());
+    	
+    	
     	primaryStage.setScene(null);
     	Menu = primaryStage;
         primaryStage.setTitle("Menus");
@@ -116,7 +129,7 @@ public class menu extends Application {
         Flam.setToggleGroup(menuToggle);
         VP.setToggleGroup(menuToggle);
         
-        menu3.getItems().addAll(Pri,BP,T89,Dri,KLl,KFero,Dre,Lir,Gjil,Vell,Flam,VP);
+        menu3.getItems().addAll(I18N.getRMenu(Pri.getText()),BP,T89,Dri,KLl,KFero,Dre,Lir,Gjil,Vell,Flam,VP);
         menu3.setGraphic(new ImageView("images/football-player.png"));
         
         Label FormLabel = new Label("Formacioni");
@@ -157,7 +170,25 @@ public class menu extends Application {
         Flam.setOnAction(e->{tabelatEkipeve("flamurtari");});
         VP.setOnAction(e->{tabelatEkipeve("vllazniapozhoran");});
        
-        switchScenes(primaryStage,vb,root,hb,kr.start(),vb1,ra.start(),bt.start());    
+        
+        vb.setStyle("-fx-background-color: Darkolivegreen");
+		vb1.setMaxWidth(primaryStage.getMaxWidth()-vb.getMaxWidth());
+        vb1.setMaxHeight(primaryStage.getMaxHeight()-vb.getMaxHeight());
+        vb1.setPadding(new Insets(0,0,0,0));
+        ra.start().setMaxSize(1000, 350);
+        bt.start().setMaxSize(400, 400);
+        vb1.setSpacing(0);
+		 vb.setPadding(new Insets(0,0,0,0));
+		vb1.getChildren().addAll(languagesCbo,ra.start(),bt.start());
+    	hb.getChildren().addAll(kr.start(),vb1);
+    	 vb.getChildren().addAll(root,hb);
+    	 Scene sc = new Scene(vb,1000,625);
+    	 
+    	 primaryStage.setScene(sc);
+    	 primaryStage.setTitle("Paraqitja e Rezultateve te Superliges se Kosoves");
+         primaryStage.setResizable(false);
+         primaryStage.show();
+          
     }
     
     public void tabelatEkipeve(String ekipi) {
@@ -169,34 +200,7 @@ public class menu extends Application {
          stage.setResizable(false);
          stage.show();
     }
-    
-    public void switchScenes(Stage primaryStage,VBox vb,Group root,HBox hb,Pane FK,VBox vb1,Pane Tabela,Pane Butonat) {
-    	try {
-    		
-    		
-    		vb.setStyle("-fx-background-color: Darkolivegreen");
-    		vb1.setMaxWidth(primaryStage.getMaxWidth()-vb.getMaxWidth());
-            vb1.setMaxHeight(primaryStage.getMaxHeight()-vb.getMaxHeight());
-            vb1.setPadding(new Insets(0,0,0,0));
-            Tabela.setMaxSize(1000, 350);
-            Butonat.setMaxSize(400, 400);
-            vb1.setSpacing(0);
-    		 vb.setPadding(new Insets(0,0,0,0));
-    		vb1.getChildren().addAll(Tabela,Butonat);
-        	hb.getChildren().addAll(FK,vb1);
-        	 vb.getChildren().addAll(root,hb);
-        	 Scene sc = new Scene(vb,1000,625);
-        	 
-        	 primaryStage.setScene(sc);
-        	 primaryStage.setTitle("Paraqitja e Rezultateve te Superliges se Kosoves");
-             primaryStage.setResizable(false);
-             primaryStage.show();
-             
-             
-        	 
-        	 throw new Exception();
-    	}catch(Exception er) {
-    		er.getStackTrace();
-    	}
-    }
+    public void switchLanguage() {
+		I18N.setLocale(new Locale(languagesCbo.getValue()));
+	}
 }
