@@ -78,8 +78,8 @@ public class Rangimitb{
 		rangimiTable.getColumns().add(column10);
 		rangimiTable.getColumns().add(column11);
 		
-		rangimiTable.setPrefWidth(1000);
-		rangimiTable.setPrefHeight(500);
+		rangimiTable.setPrefWidth(1300);
+		rangimiTable.setPrefHeight(300);
 		
 	rangimiTable.setStyle("-fx-base: palegreen;");
 		// Main Pane
@@ -90,7 +90,7 @@ public class Rangimitb{
 		mainPane.setPadding(new Insets(15, 15, 15 ,15));
 		showRangimi();
 	
-		mainPane.setMaxSize(700, 500);
+		mainPane.setMaxSize(1300, 500);
 		return mainPane;
 		
 	}

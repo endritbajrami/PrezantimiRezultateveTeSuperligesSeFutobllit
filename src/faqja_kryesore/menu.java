@@ -18,7 +18,6 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
-import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyCodeCombination;
@@ -27,7 +26,6 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import Tabelat.*;
 
@@ -237,6 +235,7 @@ public class menu extends Application {
         HBox hb = new HBox();
         VBox vb = new VBox();
         VBox vb1 = new VBox();
+        HBox vb2 = new HBox();
        
         
         Menu ComboBoxMenu = new Menu("",languagesCbo);
@@ -282,17 +281,19 @@ public class menu extends Application {
         j14.setOnAction(e->{tabelatJavet("rezultatet2017_18_java14");});
         j15.setOnAction(e->{tabelatJavet("rezultatet2017_18_java15");});
 
-
         
+
+        radiobutton rb = new radiobutton();
         vb.setStyle("-fx-background-color: Darkolivegreen");
 		vb1.setMaxWidth(primaryStage.getMaxWidth()-vb.getMaxWidth());
         vb1.setMaxHeight(primaryStage.getMaxHeight()-vb.getMaxHeight());
         vb1.setPadding(new Insets(0,0,0,0));
-        ra.start().setMaxSize(1100, 300);
+        ra.start().setMaxSize(1300, 200);
         bt.start().setMaxSize(300, 300);
         vb1.setSpacing(0);
 		 vb.setPadding(new Insets(0,0,0,0));
-		vb1.getChildren().addAll(ra.start(),bt.start());
+		 vb2.getChildren().addAll(rb.start(),bt.start());
+		vb1.getChildren().addAll(ra.start(),vb2);
     	hb.getChildren().addAll(kr.start(),vb1);
     	 vb.getChildren().addAll(root,hb);
     	 Scene sc = new Scene(vb,1000,625);

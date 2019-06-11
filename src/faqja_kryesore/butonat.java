@@ -41,17 +41,17 @@ public class butonat {
 
     
 
-    lbl.setLayoutX(330);
+    lbl.setLayoutX(130);
     lbl.setLayoutY(0);
     lbl.setFont(Font.font("Cambria", 32));
 
-    btn.setLayoutX(200);
+    btn.setLayoutX(0);
     btn.setLayoutY(200);
     btn.setStyle("-fx-background-color:green");
-    btn2.setLayoutX(400);
+    btn2.setLayoutX(200);
     btn2.setLayoutY(200);
     btn2.setStyle("-fx-background-color:orange");
-    btn3.setLayoutX(500);
+    btn3.setLayoutX(300);
     btn3.setLayoutY(200);
     btn3.setStyle("-fx-background-color:red");
     btn.setText("Champions League!");
@@ -64,7 +64,7 @@ public class butonat {
       public void handle(ActionEvent event) {
         lbl.setText("KF Feronikeli!");
         iv1.setImage(image);
-        iv1.setX(380);
+        iv1.setX(180);
         iv1.setY(50);
         iv1.setFitHeight(120);
         iv1.setFitWidth(120);
@@ -82,7 +82,7 @@ public class butonat {
         public void handle(ActionEvent event) {
           lbl.setText("Trepça'89 dhe Gjilani!");
           iv2.setImage(image2);
-          iv2.setX(300);
+          iv2.setX(100);
           iv2.setY(50);
           iv2.setFitHeight(120);
           iv2.setFitWidth(120);
@@ -90,7 +90,7 @@ public class butonat {
           iv5.setImage(null);
           iv1.setImage(null);
           iv3.setImage(image3);
-          iv3.setX(500);
+          iv3.setX(300);
           iv3.setY(50);
           iv3.setFitHeight(120);
           iv3.setFitWidth(120);
@@ -105,13 +105,13 @@ public class butonat {
           iv2.setImage(null);
           iv3.setImage(null);
           iv4.setImage(image4);
-          iv4.setX(300);
+          iv4.setX(100);
           iv4.setY(50);
           iv4.setFitHeight(120);
           iv4.setFitWidth(120);
           
           iv5.setImage(image5);
-          iv5.setX(500);
+          iv5.setX(300);
           iv5.setY(50);
           iv5.setFitHeight(120);
           iv5.setFitWidth(120);
