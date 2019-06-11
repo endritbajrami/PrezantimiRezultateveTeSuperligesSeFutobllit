@@ -1,17 +1,34 @@
 package faqja_kryesore;
 
+
+
+
+import javafx.application.Application; 
+import javafx.scene.Scene; 
 import javafx.scene.control.*; 
 import javafx.scene.layout.*; 
+import javafx.stage.Stage; 
 import javafx.beans.value.*;
 import javafx.geometry.Insets; 
-public class radiobutton { 
+public class radiobutton extends Application { 
 
-	public Pane start() 
+	// launch the application 
+	public void start(Stage s) 
 	{ 
-		GridPane r = new GridPane();
-		Label l = new Label("Kete vite do te fitoj?"); 
-		Label l2 = new Label("");
+		
+		s.setTitle(""); 
+
+		// create a tile pane 
+		TilePane r = new TilePane(); 
+
+		// create a label 
+		Label l = new Label("Zgjidhni ekipin qe mendoni se do te fitoj sivjet kampionatin:"); 
+		Label l2 = new Label("Momentalisht nuk eshte zgjedhur asnje ekip"); 
+
+		// create a toggle group 
 		ToggleGroup tg = new ToggleGroup(); 
+
+		// create radiobuttons 
 		RadioButton r1 = new RadioButton("Prishtina"); 
 		RadioButton r2 = new RadioButton("Drita"); 
 		RadioButton r3 = new RadioButton("Liria"); 
@@ -24,7 +41,9 @@ public class radiobutton {
 		RadioButton r10 = new RadioButton("Vellazenimi"); 
 		RadioButton r11 = new RadioButton("Flamurtari"); 
 		RadioButton r12 = new RadioButton("Vllaznia Pozhoran"); 
-		 
+		
+
+		// add radiobuttons to toggle group 
 		r1.setToggleGroup(tg); 
 		r2.setToggleGroup(tg); 
 		r3.setToggleGroup(tg); 
@@ -39,24 +58,31 @@ public class radiobutton {
 		r12.setToggleGroup(tg);
 		
 	
-		r.add(l,0,0); 
-		r.add(r1,0,1); 
-		r.add(r2,0,2); 
-		r.add(r3,0,3); 
-		r.add(r4,0,4);
-		r.add(r5,0,5);
-		r.add(r6,0,6);
-		r.add(r7,0,7);
-		r.add(r8,0,8);
-		r.add(r9,0,9);
-		r.add(r10,0,10);
-		r.add(r11,0,11);
-		r.add(r12,0,12);
-		r.add(l2,0,13); 
-		r.setPrefWidth(300);
-		r.setPadding(new Insets(0,0,0,20));
-
 		
+
+
+		// add label 
+		r.getChildren().add(l); 
+		r.getChildren().add(r1); 
+		r.getChildren().add(r2); 
+		r.getChildren().add(r3); 
+		r.getChildren().add(r4);
+		r.getChildren().add(r5);
+		r.getChildren().add(r6);
+		r.getChildren().add(r7);
+		r.getChildren().add(r8);
+		r.getChildren().add(r9);
+		r.getChildren().add(r10);
+		r.getChildren().add(r11);
+		r.getChildren().add(r12);
+		r.getChildren().add(l2); 
+		
+		r.setPadding(new Insets(10,10,10,10));
+
+		// create a scene 
+		Scene sc = new Scene(r, 400, 280); 
+
+		// add a change listener 
 		tg.selectedToggleProperty().addListener(new ChangeListener<Toggle>() 
 		{ 
 			public void changed(ObservableValue<? extends Toggle> ob, 
@@ -67,10 +93,22 @@ public class radiobutton {
 
 				if (rb != null) { 
 					String s = rb.getText(); 
-					l2.setText(s+" eshte zgjedhje e mire!"); 
+
+					// change the label 
+					l2.setText("Ju mendoni se ekipi fitues do te jete : " + s ); 
 				} 
 			} 
-		});
-		return r; 
+		}); 
+
+		// set the scene 
+		s.setScene(sc); 
+
+		s.show(); 
+	} 
+
+	public static void main(String args[]) 
+	{ 
+		// launch the application 
+		launch(args); 
 	} 
 } 

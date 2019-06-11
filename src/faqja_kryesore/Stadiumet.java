@@ -40,7 +40,7 @@ public class Stadiumet extends Application  {
 		vbox.setPadding(new Insets(20, 20, 20, 20));
 
 		resultLabel = new Label();
-		resultLabel.setStyle("-fx-text-fill:darkblue");
+		resultLabel.setStyle("-fx-background-color: darkblue; -fx-text-fill:white");
 		resultLabel.setFont(new Font("Arial", 18));
 
 		vbox.getChildren().addAll(hbox, resultLabel);
@@ -79,7 +79,7 @@ public class Stadiumet extends Application  {
 			ResultSet resultSet = statement.executeQuery(query);
 
 			if(resultSet.next()) {
-				resultLabel.setText("\nEmri i stadiumit: " +resultSet.getString(3)+ "  "+"Qyteti: " +resultSet.getString(4) +"  "+"Kapaciteti: " +resultSet.getString(5)+"  "+"Nofka: " +resultSet.getString(6));
+				resultLabel.setText("Emri i stadiumit: " +resultSet.getString(3)+ "  "+"Qyteti: " +resultSet.getString(4) +"  "+"Kapaciteti: " +resultSet.getString(5)+"  "+"Nofka: " +resultSet.getString(6));
 			} else {
 				resultLabel.setText("Ekipi nuk eshte gjetur!");
 			}
