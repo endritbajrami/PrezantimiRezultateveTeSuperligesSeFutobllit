@@ -149,93 +149,17 @@ public class menu extends Application {
         
  
 
-        EkipetTb ekipet = new EkipetTb();
-        Pri.setOnAction(e->{
-        	
-        });
-        
-        
-        BP.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent t) {           	
-                Stage stage = new Stage();
-                Scene scene = new Scene(new VBox(ekipet.start("besapeje")));
-                stage.setTitle("Besa-Peje");
-                stage.setScene(scene);
-                stage.show();
-            }
-        });
-        T89.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent t) {            	
-                Stage stage = new Stage();
-                Scene scene = new Scene(new VBox(ekipet.start("trepça89")));
-                stage.setTitle("Trepca 89");
-                stage.setScene(scene);
-                stage.show();
-            }
-        });
-        Dri.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent t) {            	
-                Stage stage = new Stage();
-                Scene scene = new Scene(new VBox(ekipet.start("drita")));
-                stage.setTitle("Drita");
-                stage.setScene(scene);
-                stage.show();
-            }
-        });
-        KLl.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent t) {           	
-                Stage stage = new Stage();
-                Scene scene = new Scene(new VBox(ekipet.start("kfllapi")));
-                stage.setTitle("KF Llapi");
-                stage.setScene(scene);
-                stage.show();
-            }
-        });
-        KFero.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent t) {           	
-                Stage stage = new Stage();
-                Scene scene = new Scene(new VBox(ekipet.start("kfferonikeli")));
-                stage.setTitle("KF Feronikeli");
-                stage.setScene(scene);
-                stage.show();
-            }
-        });
-        Dre.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent t) {           	
-                Stage stage = new Stage();
-                Scene scene = new Scene(new VBox(ekipet.start("drenica")));
-                stage.setTitle("Drenica");
-                stage.setScene(scene);
-                stage.show();
-            }
-        });
-        Lir.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent t) {           	
-                Stage stage = new Stage();
-                Scene scene = new Scene(new VBox(ekipet.start("liria")));
-                stage.setTitle("Liria");
-                stage.setScene(scene);
-                stage.show();
-            }
-        });
-        Gjil.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent t) {            	
-                Stage stage = new Stage();
-                Scene scene = new Scene(new VBox(ekipet.start("gjilani")));
-                stage.setTitle("Gjilani");
-                stage.setScene(scene);
-                stage.show();
-            }
-        });
-        Vell.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent t) {            	
-                Stage stage = new Stage();
-                Scene scene = new Scene(new VBox(ekipet.start("vllaznimi")));
-                stage.setTitle("Vellaznimi");
-                stage.setScene(scene);
-                stage.show();
-            }
-        });
+  
+        Pri.setOnAction(e->{tabelatEkipeve("prishtina");});
+        BP.setOnAction(e->{tabelatEkipeve("besapeje");});
+        T89.setOnAction(e->{tabelatEkipeve("trepça89");});
+        Dri.setOnAction(e->{tabelatEkipeve("drita");});
+        KLl.setOnAction(e->{tabelatEkipeve("kfllapi");});
+        KFero.setOnAction(e->{tabelatEkipeve("kfferonikeli");});
+        Dre.setOnAction(e->{tabelatEkipeve("drenica");});
+        Lir.setOnAction(e->{tabelatEkipeve("liria");});
+        Gjil.setOnAction(e->{tabelatEkipeve("gjilani");});
+        Vell.setOnAction(e->{tabelatEkipeve("vllaznimi");});
         Flam.setOnAction(e->{tabelatEkipeve("flamurtari");});
         VP.setOnAction(e->{tabelatEkipeve("vllazniapozhoran");});
        
