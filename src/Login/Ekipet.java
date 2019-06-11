@@ -1,32 +1,25 @@
-package faqja_kryesore;
+package Login;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import Tabelat.LidhjaDB;
+import faqja_kryesore.LidhjaDB;
 
 public class Ekipet {
-	private int eid;
+
 	private int Numri;
 	private String Shtetesia;
 	private String Pozicioni;
 	private String EmriMbiemri;
 	
-	public Ekipet(int eid, int Numri, String Shtetesia, String Pozicioni,String EmriMbiemri) {
-		this.eid = eid;
+	public Ekipet(int Numri, String Shtetesia, String Pozicioni,String EmriMbiemri) {
+
 		this.Numri = Numri;
 		this.Shtetesia = Shtetesia;
 		this.Pozicioni = Pozicioni;
 		this.EmriMbiemri = EmriMbiemri;
 	}
-	public int getEid() {
-		return eid;
-	}
-	
-	public void setEid(int eid) {
-		this.eid = eid;
-	}
-	
+
 	public int getNumri() {
 		return Numri;
 	}
@@ -67,7 +60,7 @@ public class Ekipet {
 			ResultSet resultSet = preparedStatement.executeQuery();
 			
 			while(resultSet.next()) {
-				Ekipet ekipii = new Ekipet(resultSet.getInt(1), resultSet.getInt(2), resultSet.getString(3), resultSet.getString(4), resultSet.getString(5));
+				Ekipet ekipii = new Ekipet(resultSet.getInt(2), resultSet.getString(3), resultSet.getString(4), resultSet.getString(5));
 				EkipiList.add(ekipii);
 			}
 		} catch(SQLException ex) {

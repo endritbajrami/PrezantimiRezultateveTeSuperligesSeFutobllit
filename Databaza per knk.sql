@@ -333,6 +333,13 @@ Data_ora datetime,
 Rezultati varchar(5),
 Ekipi_mysafir varchar(25));
 
+create table users(
+userid int(200) auto_increment,
+username varchar(45) ,
+password varchar(45),
+primary key(userid));
+
+
 insert into Rangimi() values (1,1,"Drita",33,18,13,2,53,21,32,67 );
 insert into Rangimi() values(2,2, "Prishtina",33,18,10,5,39,18,21,64);
 insert into Rangimi() values(3,3,"KF Llapi",33,16,6,11,51,41,10,54);

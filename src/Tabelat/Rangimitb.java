@@ -15,7 +15,8 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class Rangimitb extends Application {
+public class Rangimitb{
+
 
 	// Table views
 	private TableView rangimiTable = new TableView();
@@ -24,52 +25,48 @@ public class Rangimitb extends Application {
 		
 		
 		// Rangimi table
-		TableColumn<String, Rangimi> column1 = new TableColumn<>("ID");
-		column1.setCellValueFactory(new PropertyValueFactory("eid"));
-		column1.setPrefWidth(60);
-		
+	
 		TableColumn<String, Rangimi> column2 = new TableColumn<>("NUMRI");
 		column2.setCellValueFactory(new PropertyValueFactory("Nr"));
-		column2.setPrefWidth(100);
+		column2.setPrefWidth(50);
 		
 		TableColumn<String, Rangimi> column3 = new TableColumn<>("EKIPI");
 		column3.setCellValueFactory(new PropertyValueFactory("Ekipi"));
 		column3.setPrefWidth(100);
 		
-		TableColumn<String, Rangimi> column4 = new TableColumn<>("NUMRI I LOJEVE");
+		TableColumn<String, Rangimi> column4 = new TableColumn<>("NR LOJEVE");
 		column4.setCellValueFactory(new PropertyValueFactory("NrLojëve"));
-		column4.setPrefWidth(100);
+		column4.setPrefWidth(81);
 		
 		TableColumn<String, Rangimi> column5 = new TableColumn<>("FITORE");
 		column5.setCellValueFactory(new PropertyValueFactory("Fitore"));
-		column5.setPrefWidth(100);
+		column5.setPrefWidth(81);
 		
 		TableColumn<String, Rangimi> column6 = new TableColumn<>("BARAZIME");
 		column6.setCellValueFactory(new PropertyValueFactory("Barazime"));
-		column6.setPrefWidth(100);
+		column6.setPrefWidth(81);
 		
 		TableColumn<String, Rangimi> column7 = new TableColumn<>("HUMBJE");
 		column7.setCellValueFactory(new PropertyValueFactory("Humbje"));
-		column7.setPrefWidth(100);
+		column7.setPrefWidth(81);
 		
 		TableColumn<String, Rangimi> column8 = new TableColumn<>("GOLPLUS");
 		column8.setCellValueFactory(new PropertyValueFactory("Golplus"));
-		column8.setPrefWidth(100);
+		column8.setPrefWidth(81);
 		
 		TableColumn<String, Rangimi> column9 = new TableColumn<>("GOLMINUS");
 		column9.setCellValueFactory(new PropertyValueFactory("Golminus"));
-		column9.setPrefWidth(100);
+		column9.setPrefWidth(81);
 		
 		TableColumn<String, Rangimi> column10 = new TableColumn<>("AVERAGE");
 		column10.setCellValueFactory(new PropertyValueFactory("Average"));
-		column10.setPrefWidth(100);
+		column10.setPrefWidth(81);
 		
 		TableColumn<String, Rangimi> column11 = new TableColumn<>("PIKET");
 		column11.setCellValueFactory(new PropertyValueFactory("Pikët"));
-		column11.setPrefWidth(100);
+		column11.setPrefWidth(60);
 		
 		
-		rangimiTable.getColumns().add(column1);
 		rangimiTable.getColumns().add(column2);
 		rangimiTable.getColumns().add(column3);
 		rangimiTable.getColumns().add(column4);
