@@ -12,10 +12,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 
 import java.sql.*;
-
-
-public class kerkimi extends Application {
-	
+public class Stadiumet extends Application  {
 	private TextField nameTxt;
 	private Label resultLabel;
 	private Connection dbConnection;
@@ -47,9 +44,9 @@ public class kerkimi extends Application {
 
 		vbox.getChildren().addAll(hbox, resultLabel);
 
-		Scene scene = new Scene(vbox, 400, 300);
+		Scene scene = new Scene(vbox, 800, 150);
 
-		primaryStage.setTitle("Hapesira per kerkim");
+		primaryStage.setTitle("Kerko informata per stadiumet e ekipeve");
 		primaryStage.setScene(scene);
 
 		primaryStage.show();
@@ -72,13 +69,13 @@ public class kerkimi extends Application {
 	private void findRecord() { 
 		try {
 			Statement statement = dbConnection.createStatement();
-			String query = "Select * from Rangimi where Nr = " + nameTxt.getText();
+			String query = "Select * from stadiumet where eid =" + nameTxt.getText();
 			ResultSet resultSet = statement.executeQuery(query);
 
 			if(resultSet.next()) {
-				resultLabel.setText("Ekipi:" +resultSet.getString(3)+ "  "+"NrLojëve:" +resultSet.getString(4) +"  "+"Fitore:" +resultSet.getString(5)+"  "+"Barazime:" +resultSet.getString(6)+"  " +"Humbje: "+resultSet.getString(7));
+				resultLabel.setText("Emri i stadiumit: " +resultSet.getString(3)+ "  "+"Qyteti: " +resultSet.getString(4) +"  "+"Kapaciteti: " +resultSet.getString(5)+"  "+"Nofka: " +resultSet.getString(6));
 			} else {
-				resultLabel.setText("Rangimi nuk eshte gjetur!");
+				resultLabel.setText("Ekipi nuk eshte gjetur!");
 			}
 			
 		} catch(SQLException ex) {

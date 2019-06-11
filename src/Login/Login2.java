@@ -18,6 +18,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -46,6 +47,9 @@ public class Login2 extends Application {
 		Pwd.setMaxWidth(300);
 		Pwd.setMinHeight(30);
 		Button loginBtn = new Button("LogIn");
+		Button back = new Button("Back");
+		back.setStyle("-fx-background-color: black; -fx-text-fill: white;-fx-background-radius: 15");
+		loginBtn.setStyle("-fx-background-color: black; -fx-text-fill: white;-fx-background-radius: 15");
 		loginBtn.setOnMouseClicked(e->{
 			 if(e.getButton()== MouseButton.PRIMARY) {
 				 String query = "Select * from users where username = ?";
@@ -100,14 +104,68 @@ public class Login2 extends Application {
 					} catch (Exception e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
-					}
-				
+					}}
+		});
+		loginBtn.setOnKeyPressed(e->{
+			if(e.getCode() == KeyCode.ENTER) {
+				 String query = "Select * from users where username = ?";
+					
+					try {
+						
+						PreparedStatement preparedStatement = LidhjaDB.getConnection().prepareStatement(query);
+						
+						preparedStatement.setString(1, Uname.getText());
+						
 
-				 
-				 
+						ResultSet result = preparedStatement.executeQuery();
+						
+						if(result.next()) {
+							String pwdH = result.getString(3);
+							String pwd = Pwd.getText();
+							if(checkPassword(pwd, pwdH)) {
+								Alert alert = new Alert(AlertType.INFORMATION);
+								alert.setTitle("Login result");
+								alert.setHeaderText(null);
+								alert.setContentText("You are logged in!");
+								alert.showAndWait();
+								
+								Login22.hide();			 
+								 Stage Menu = new Stage();
+								 menu M = new menu();
+								 M.start(Menu);
+								 Menu.show();
+							}else {
+								Alert alert = new Alert(AlertType.INFORMATION);
+								alert.setTitle("Login result");
+								alert.setHeaderText(null);
+								alert.setContentText("Password is wrong!");
+								alert.showAndWait();
+							}
+						} else {
+							Alert alert = new Alert(AlertType.INFORMATION);
+							alert.setTitle("Login result");
+							alert.setHeaderText(null);
+							alert.setContentText("Username or password is wrong!");
+							alert.showAndWait();
+							
+						}
+						
+					} catch(SQLException ex) {
+						Alert alert = new Alert(AlertType.ERROR);
+						alert.setTitle("Database problem");
+						alert.setHeaderText(null);
+						alert.setContentText(ex.getMessage());
+						alert.showAndWait();
+						System.exit(0);
+					} catch (Exception e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+			}
+			 if(e.getCode() == KeyCode.LEFT) {
+				 back.requestFocus();
 			 }
 		});
-		Button back = new Button("Back");
 		back.setOnMouseClicked(e->{
 			 if(e.getButton()== MouseButton.PRIMARY) {
 				 Login22.hide();			 
@@ -117,8 +175,32 @@ public class Login2 extends Application {
 				 Login1Stage.show();
 			 }
 		});
-		back.setStyle("-fx-background-color: black; -fx-text-fill: white;-fx-background-radius: 15");
-		loginBtn.setStyle("-fx-background-color: black; -fx-text-fill: white;-fx-background-radius: 15");
+		back.setOnKeyPressed(e->{
+			if(e.getCode() == KeyCode.ENTER) {
+				 Login22.hide();			 
+				 Stage Login1Stage = new Stage();
+				 Login1 L1 = new Login1();
+				 L1.start(Login1Stage);
+				 Login1Stage.show();
+			}
+			 if(e.getCode() == KeyCode.RIGHT) {
+				 loginBtn.requestFocus();
+			 }
+		});
+		 Uname.setOnKeyPressed(e->{
+			 if(e.getCode() == KeyCode.DOWN) {
+				 Pwd.requestFocus();
+			 }
+		 });
+		 Pwd.setOnKeyPressed(e->{
+			 if(e.getCode() == KeyCode.DOWN) {
+				 back.requestFocus();
+			 }
+			 if(e.getCode() == KeyCode.UP) {
+				 Uname.requestFocus();
+			 }
+			 
+		 });
 		
 		hpane.getChildren().addAll(back,loginBtn);
 		vpane.getChildren().addAll(username,Uname,pass,Pwd,hpane);

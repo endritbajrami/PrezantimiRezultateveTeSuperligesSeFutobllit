@@ -43,11 +43,13 @@ public class EkipetTb {
 		ekipetTable.setPrefWidth(460);
 		ekipetTable.setPrefHeight(400);
 		
+		
 		ekipetTable.setStyle("-fx-base: darkred;");
 		
 		HBox mainPane = new HBox(10);
 		
 		mainPane.getChildren().add(ekipetTable);
+		
 		
 		mainPane.setPadding(new Insets(15, 15, 15 ,15));
 		

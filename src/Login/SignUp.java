@@ -13,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -79,17 +80,66 @@ public class SignUp extends Application {
 						} else {
 							resultLabel.setText("User not added!");
 							Uname.setText("");
-							Pwd.setText("");
-						}
-						
-						
+							Pwd.setText("");}
 					} catch(SQLException ex) {
-						ex.printStackTrace();
-					
-					}}
-				
-			 
+						ex.printStackTrace();}} 
 		});
+		 back.setOnKeyPressed(e->{
+			 if(e.getCode() == KeyCode.ENTER) {
+				 Signup.hide();			 
+				 Stage Login1Stage = new Stage();
+				 Login1 L1 = new Login1();
+				 L1.start(Login1Stage);
+				 Login1Stage.show();
+			 }
+			 if(e.getCode() == KeyCode.RIGHT) {
+				 signupBtn.requestFocus();
+			 }
+		 });
+		 signupBtn.setOnKeyPressed(e->{
+			 if(e.getCode() == KeyCode.ENTER) {
+				 try {
+						
+						String query = "INSERT INTO users(username,password) VALUES (?, ?)";
+						
+						PreparedStatement preparedStatement = LidhjaDB.getConnection().prepareStatement(query);
+						String pwd =  createPassword(Pwd.getText());
+						preparedStatement.setString(1, Uname.getText());
+						preparedStatement.setString(2,pwd);
+						String pattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{8,}";
+						
+						if((preparedStatement.executeUpdate() > 0)&&(Uname.getText().matches("[A-Za-z0-9]+"))&&(Pwd.getText().matches(pattern)) ) {
+							resultLabel.setText("Student added");
+							 Signup.hide();			 
+							 Stage Login2Stage = new Stage();
+							 Login2 L2 = new Login2();
+							 L2.start(Login2Stage);
+							 Login2Stage.show();
+						} else {
+							resultLabel.setText("User not added!");
+							Uname.setText("");
+							Pwd.setText("");}
+					} catch(SQLException ex) {
+						ex.printStackTrace();}} 
+			 
+			 if(e.getCode() == KeyCode.LEFT) {
+				 back.requestFocus();
+			 }
+		 });
+		 Uname.setOnKeyPressed(e->{
+			 if(e.getCode() == KeyCode.DOWN) {
+				 Pwd.requestFocus();
+			 }
+		 });
+		 Pwd.setOnKeyPressed(e->{
+			 if(e.getCode() == KeyCode.DOWN) {
+				 back.requestFocus();
+			 }
+			 if(e.getCode() == KeyCode.UP) {
+				 Uname.requestFocus();
+			 }
+			 
+		 });
 		
 		Scene scene = new Scene(vpane,600,400);
 		primaryStage.setScene(scene);
