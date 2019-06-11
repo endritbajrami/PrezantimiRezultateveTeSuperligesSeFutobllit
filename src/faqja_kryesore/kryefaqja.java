@@ -50,7 +50,7 @@ public class kryefaqja {
 		imageView.setFitHeight(100);
 		imageView.setFitWidth(150);
 		pane.getChildren().addAll(imageView,ekipet,drita,pr,kfllapi,trepca89,kfferonikeli,drenica,liria,gjilani,vellaznimi,flamurtari,besa,vpozhoran );
-		pane.setStyle("-fx-background-color: DARKSEAGREEN ");
+		pane.setStyle("-fx-background-color:palegreen"); 
 		pane.setMaxHeight(1000);
 		pane.setMaxWidth(500);
 		return pane;

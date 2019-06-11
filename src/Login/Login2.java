@@ -215,19 +215,11 @@ public class Login2 extends Application {
 	}
 	public boolean checkPassword(String password,String SaltedHash) throws NoSuchAlgorithmException {
 	 
-         // Static getInstance method is called with hashing MD5 
-         MessageDigest md = MessageDigest.getInstance("SHA"); 
-
-         // digest() method is called to calculate message digest 
-         //  of an input digest() return array of byte 
-         byte[] messageDigest = md.digest(password.getBytes()); 
-
-         // Convert byte array into signum representation 
-         BigInteger no = new BigInteger(1, messageDigest); 
-
-         // Convert message digest into hex value 
-         String hashtext = no.toString(16); 
-       
+         
+         MessageDigest md = MessageDigest.getInstance("SHA");
+         byte[] messageDigest = md.digest(password.getBytes());
+         BigInteger no = new BigInteger(1, messageDigest);
+         String hashtext = no.toString(16);
          if(SaltedHash.equals(hashtext)) {
         	 return true;
          }else {
