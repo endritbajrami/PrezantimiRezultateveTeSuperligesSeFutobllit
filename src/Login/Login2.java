@@ -1,9 +1,11 @@
 package Login;
 
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 import faqja_kryesore.LidhjaDB;
 import faqja_kryesore.menu;
 import javafx.application.Application;
@@ -46,35 +48,44 @@ public class Login2 extends Application {
 		Button loginBtn = new Button("LogIn");
 		loginBtn.setOnMouseClicked(e->{
 			 if(e.getButton()== MouseButton.PRIMARY) {
-				 String query = "Select * from users where username = ? AND password = ?";
+				 String query = "Select * from users where username = ?";
 					
 					try {
 						
 						PreparedStatement preparedStatement = LidhjaDB.getConnection().prepareStatement(query);
 						
 						preparedStatement.setString(1, Uname.getText());
-						preparedStatement.setString(2, Pwd.getText());
+						
 
 						ResultSet result = preparedStatement.executeQuery();
 						
 						if(result.next()) {
-							Alert alert = new Alert(AlertType.INFORMATION);
-							alert.setTitle("Login result");
-							alert.setHeaderText(null);
-							alert.setContentText("You are logged in!");
-							alert.showAndWait();
-							
-							Login22.hide();			 
-							 Stage Menu = new Stage();
-							 menu M = new menu();
-							 M.start(Menu);
-							 Menu.show();
-							
+							String pwdH = result.getString(3);
+							String pwd = Pwd.getText();
+							if(checkPassword(pwd, pwdH)) {
+								Alert alert = new Alert(AlertType.INFORMATION);
+								alert.setTitle("Login result");
+								alert.setHeaderText(null);
+								alert.setContentText("You are logged in!");
+								alert.showAndWait();
+								
+								Login22.hide();			 
+								 Stage Menu = new Stage();
+								 menu M = new menu();
+								 M.start(Menu);
+								 Menu.show();
+							}else {
+								Alert alert = new Alert(AlertType.INFORMATION);
+								alert.setTitle("Login result");
+								alert.setHeaderText(null);
+								alert.setContentText("Password is wrong!");
+								alert.showAndWait();
+							}
 						} else {
 							Alert alert = new Alert(AlertType.INFORMATION);
 							alert.setTitle("Login result");
 							alert.setHeaderText(null);
-							alert.setContentText("Email or password is wrong!");
+							alert.setContentText("Username or password is wrong!");
 							alert.showAndWait();
 							
 						}
@@ -86,6 +97,9 @@ public class Login2 extends Application {
 						alert.setContentText(ex.getMessage());
 						alert.showAndWait();
 						System.exit(0);
+					} catch (Exception e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
 					}
 				
 
@@ -117,6 +131,27 @@ public class Login2 extends Application {
 		
 		
 	}
+	public boolean checkPassword(String password,String SaltedHash) throws NoSuchAlgorithmException {
+	 
+         // Static getInstance method is called with hashing MD5 
+         MessageDigest md = MessageDigest.getInstance("SHA"); 
+
+         // digest() method is called to calculate message digest 
+         //  of an input digest() return array of byte 
+         byte[] messageDigest = md.digest(password.getBytes()); 
+
+         // Convert byte array into signum representation 
+         BigInteger no = new BigInteger(1, messageDigest); 
+
+         // Convert message digest into hex value 
+         String hashtext = no.toString(16); 
+       
+         if(SaltedHash.equals(hashtext)) {
+        	 return true;
+         }else {
+        	 return false;
+         }
+     }  
 	public static void main(String[] args) {
 		Application.launch(args);
 	}

@@ -1,8 +1,9 @@
 package Login;
-import java.sql.*;
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
 import faqja_kryesore.LidhjaDB;
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -63,12 +64,12 @@ public class SignUp extends Application {
 						String query = "INSERT INTO users(username,password) VALUES (?, ?)";
 						
 						PreparedStatement preparedStatement = LidhjaDB.getConnection().prepareStatement(query);
-						
+						String pwd =  createPassword(Pwd.getText());
 						preparedStatement.setString(1, Uname.getText());
-						preparedStatement.setString(2, Pwd.getText());
+						preparedStatement.setString(2,pwd);
+						String pattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{8,}";
 						
-						
-						if(preparedStatement.executeUpdate() > 0) {
+						if((preparedStatement.executeUpdate() > 0)&&(Uname.getText().matches("[A-Za-z0-9]+"))&&(Pwd.getText().matches(pattern)) ) {
 							resultLabel.setText("Student added");
 							 Signup.hide();			 
 							 Stage Login2Stage = new Stage();
@@ -76,16 +77,16 @@ public class SignUp extends Application {
 							 L2.start(Login2Stage);
 							 Login2Stage.show();
 						} else {
-							resultLabel.setText("Student not added!");
-							Uname.setText(" ");
-							Pwd.setText(" ");
+							resultLabel.setText("User not added!");
+							Uname.setText("");
+							Pwd.setText("");
 						}
 						
 						
 					} catch(SQLException ex) {
 						ex.printStackTrace();
-					}
-				}
+					
+					}}
 				
 			 
 		});
@@ -98,6 +99,30 @@ public class SignUp extends Application {
 		
 		
 	}
+		public  String createPassword(String password) { 
+	        try { 
+	        	  
+	            // Static getInstance method is called with hashing MD5 
+	            MessageDigest md = MessageDigest.getInstance("SHA"); 
+	  
+	            // digest() method is called to calculate message digest 
+	            //  of an input digest() return array of byte 
+	            byte[] messageDigest = md.digest(password.getBytes()); 
+	  
+	            // Convert byte array into signum representation 
+	            BigInteger no = new BigInteger(1, messageDigest); 
+	  
+	            // Convert message digest into hex value 
+	            String hashtext = no.toString(16); 
+	
+	            return hashtext; 
+	        }  
+	  
+	        // For specifying wrong message digest algorithms 
+	        catch (NoSuchAlgorithmException e) { 
+	            throw new RuntimeException(e); 
+	        } 
+	    } 
 	public static void main(String[] args) {
 		Application.launch(args);
 	}
