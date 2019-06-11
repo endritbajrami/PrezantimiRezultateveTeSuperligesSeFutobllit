@@ -79,6 +79,7 @@ public class menu extends Application {
         	}
         });
         Menu logout = new Menu("",logoutT);
+        logoutT.setGraphic(new ImageView("images/log.png"));
        
         
         
