@@ -1,3 +1,4 @@
+
 package faqja_kryesore;
 
 
@@ -27,6 +28,7 @@ import Tabelat.*;
 import java.util.Locale;
 
 import Login.Login1;
+import Prova.Help;
 
 public class menu extends Application {
 	ComboBox<String> languagesCbo = new ComboBox<>();
@@ -54,6 +56,7 @@ public class menu extends Application {
         
         MenuBar menuBar = new MenuBar();
         Menu menu = new Menu("Rangimi");
+       
         Menu menuT =  I18N.getMenu(menu,menu.getText());
        
         Label logoutL = new Label("LogOut");
@@ -194,12 +197,22 @@ public class menu extends Application {
         		LojaStage.show();
         	}
         });
+        
+        Menu menuh = new Menu ("Help");
+        MenuItem aboutHelpItem = new MenuItem("About"); 
+        menuh.getItems().add(aboutHelpItem); 
+        
+        aboutHelpItem.setOnAction(e -> {
+        	Help.about();
+        });
+       
+        
         Menu menu4=new Menu("",FormLabelT);
         HBox hb = new HBox();
         VBox vb = new VBox();
         VBox vb1 = new VBox();
        
-        menuBar.getMenus().addAll(menuT, menu2T, menu3T, menu4,logout);
+        menuBar.getMenus().addAll(menuT, menu2T, menu3T, menu4,menuh,logout);
         
         
         
