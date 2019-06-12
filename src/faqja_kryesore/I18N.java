@@ -14,7 +14,6 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.RadioMenuItem;
-import javafx.scene.image.ImageView;
 
 public class I18N {
 public static ObjectProperty<Locale> locale;
