@@ -1,4 +1,4 @@
-drop database knk;
+
 create database knk;
 use knk;
 create table Rangimi
